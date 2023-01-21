@@ -1,0 +1,70 @@
+#head_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+#header_song {
+    width: 100%;
+    background-color: #007094;
+}
+
+#page_color {
+    
+
+
+    background-color: linear-gradient(180deg, rgba(255,253,234,1) 0%, rgba(255,255,255,0.4686917003129377) 100%);
+}
+
+#song_head {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    color: #985200;
+    padding-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#player {
+    text-align: center;
+    margin-top: 60px;
+    background-color: #2E2E2E;
+    max-width: 400px;
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+#song_name {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+#singer_name {
+    color: #a7a7a7;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: -10px;
+    
+}
+
+#click_button {
+    border-radius: 100px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+    background-color: #A0DDFF;
+    color: #00659E;
+    font-weight: 700;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+

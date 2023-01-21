@@ -1,0 +1,15 @@
+#header {
+    background-color: #4A4084;
+}
+
+.talk {
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}

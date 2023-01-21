@@ -1,0 +1,29 @@
+#head_about {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+#banner_about {
+    max-width:350px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+h2 {
+    font-weight: 700;
+}
+
+p {
+    font-size: 20px;
+}
+
+#containers {
+    margin-left: 20px;
+    margin-right: 20px;
+}

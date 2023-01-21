@@ -1,0 +1,137 @@
+/* #headerbar {
+    background-color: #4A4084;
+    padding-top: 5px;
+    padding-bottom: 10px;
+} */
+
+#id {
+    background-image: url('https://img.freepik.com/premium-photo/asian-miserable-depressed-man-sitting-alone-dark-background-depression-mental-health-concept_74663-1544.jpg');
+}
+
+
+#textbox {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    margin-top: -35px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(74, 64, 132, 0.4686917003129377) 100%);
+}
+
+#head_text {
+    color: white;
+    font-weight: 500;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+#logo_img {
+    width: 40px;
+    position: absolute;
+    margin-left: 88%;
+    top: 10px;
+}
+
+#main_doc {
+    text-align: center;
+    margin-top: 35px;
+}
+
+#headline {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+#subhead {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+}
+
+#button {
+    text-decoration: none;
+    background-color: #e8be00;
+    color: #3c346a;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 8px 13px 8px 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#stock {
+    width: 330px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#flexbox1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url('');
+}
+
+#flexbox2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url('');
+}
+
+/* #flexbox2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+#description {
+    background-color: rgb(185, 188, 255);
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 10px;
+    line-height: 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.difference {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+    border: 1.5px black solid;
+    border-radius: 5px;
+}
+
+#diff {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.flexitems {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #footer {
+    background-color: #4A4084;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+} */
+
+/* <Link to={{pathname:"https://forms.gle/FC8aJN4P5nz7DXAM8"}} id='button'>Let's Talk</Link><br/> */
