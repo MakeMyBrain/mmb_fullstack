@@ -8,27 +8,18 @@ import json
 app = Flask(__name__)
 CORS(app)
 
+# x = []
+# cur = [Aao Na,https://youtu.be/q0I0YHmecJI,disgust,hindi,suzonn,medium,"69,000"]
+# x.append(cur)
+
 @ app.route("/GetSongs", methods=['GET', 'POST'])
 def search_songs():
     storage = DBStorage()
 
     if request.method == 'GET':
-        query="sssss"
-        mood = 'sad'
-        df= storage.songs_results(mood)
-        randIndex = random.randint(0, df.shape[0]-1)
-        df= storage.songs_results(mood)
-        song =df.iloc[randIndex].values
-        print(song)
-        data = {
-            "title":song[1],
-            "URL":song[2],#TODO
-        }
-        data=json.dumps(data)
-        return data
-        # return df.take([0])['title']
+        
+        return "Route working"
     elif request.method == 'POST':
-        # query = json.load(request.json)
         query=request.get_json()['mood_query']
         mood=query#Algorithm
         print(mood)
@@ -37,12 +28,16 @@ def search_songs():
         for i in range(df.shape[0]):
             song=df.iloc[i].values
             songs.append({
-            "title":song[1],
-            "URL":song[2],
-            "singer":song[5]
+            "title":song[0],
+            "URL":song[1],
+            "singer":song[4]
             })
+        # for i in range(len(df)):
+        #     songs.append({
+        #         "title":df[i][0],
+        #         "URL":df[i][1],
+        #         "singer":df[i][3]
+        #     })
         songs=json.dumps(songs)
         return songs
 
-if __name__ == "__main__":
-    app.run(debug=False, host='0.0.0.0')

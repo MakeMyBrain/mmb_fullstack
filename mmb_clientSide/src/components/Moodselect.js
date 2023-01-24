@@ -16,18 +16,7 @@ const Moodselect = ({ OnclickTag }) => {
       <header id="header_song">
         <img src={full_logo} id="head_img" />
       </header>
-      <form id="form_fill">
-        <label id="form_title">How are you feeling?</label>
-        <br />
-        <input
-          id="form_input"
-          type="text"
-          placeholder="I'm feeling depressed :("
-        />
-        <button onClick={OnclickGo} type="submit" id="click_button2">
-          Go
-        </button>
-      </form>
+      <h1 id="song_head">How are you feeling?</h1>
       <div id="flex-container">
         <Link to="/song">
           <button

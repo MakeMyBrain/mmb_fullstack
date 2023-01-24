@@ -15,8 +15,8 @@ function App() {
   const [songs, setSongs] = useState([
     {
       lind: "https://youtu.be/BddP6PYo2gs",
-      singer: "sdsd",
-      title: "dsdsd",
+      singer: "...",
+      title: "Rendering",
     },
   ]);
 

@@ -1,0 +1,12 @@
+<form id="form_fill">
+        <label id="form_title">How are you feeling?</label>
+        <br />
+        <input
+          id="form_input"
+          type="text"
+          placeholder="I'm feeling depressed :("
+        />
+        <button onClick={OnclickGo} type="submit" id="click_button2">
+          Go
+        </button>
+      </form>
