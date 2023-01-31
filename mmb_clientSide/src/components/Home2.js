@@ -1,26 +1,51 @@
 import './Home2.css'
 import open_up from '../media/open_up-removebg-preview.png'
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ModalTitle } from "react-bootstrap";
 import { TbNumber1, TbNumber2, TbNumber3 } from "react-icons/tb";
 import { GiShieldEchoes, GiDragonBalls } from "react-icons/gi";
 import { SiDiscourse } from "react-icons/si";
 import {Link} from "react-router-dom";
+import Typewriter from "typewriter-effect";
+import Aos from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import musicboy from '../media/musicboy.png';
+import companiontalk from '../media/companiontalk.png';
+import therapist from '../media/therapist.png';
+import job from '../media/job.png';
 
 const Home2 = () => {
+    useEffect(() => {
+        Aos.init({duration: 1000});
+    }, []);
     return (
         <div>
             <div className='banner'>
                 <div className="text-box">
                     <h1 class="heading-primary">
-                        <span class="heading-primary-main">Share emotions.<br />
-                            Discover a Companion.<br />
-                            Because You Matter.</span>
+                        <span class="heading-primary-main">The Best One-Stop<br />
+                        Solution for your </span> 
+                        <span className='typewrite heading-primary-main'>
+                        <Typewriter 
+                                options={{
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 40,
+                                    strings: [
+                                        "Layoff.",
+                                        "Breakup.",
+                                        "Loneliness.",
+                                        "Stress.",
+                                    ],
+                                }}
+                            /> 
+                            </span>
                         <br />
-                        <span class="heading-primary-sub ">MakeMyBrain is your partner in every tear you shed.</span>
+                        <span class="heading-primary-sub ">Choose a companion and open up about your emotions and pain.</span>
                     </h1>
                     <Link to='/mood' id='button2'>Vibe with Us</Link><br/><br/><br/>
                     <div id='subtitle_button'>Music for your Mood</div>
-                    <a href='https://forms.gle/FC8aJN4P5nz7DXAM8' id='button'>Let's Talk</a>
+                    <Link to='/companion' id='button'>Let's Talk</Link>
                 </div>
             </div>
             <br />
@@ -28,43 +53,61 @@ const Home2 = () => {
             <br />
             <br />
             <div >
-                <div className='text-center'><h2>Why is Opening up to someone so important?</h2></div>
+                <div data-aos='fade-up'><h2 className='text-center-title'>Why is Opening up to someone so important?</h2></div>
                 <br />
                 <br />
-                <Container >
+                <Container>
                     <Row className='d-flex flex-wrap'>
-                        <Col className="text-center" sm><img src={open_up} alt="" className='open_up shadow-4' /></Col>
+                        <Col className="text-center" sm  data-aos='fade-up'><img src={open_up} alt="" className='open_up shadow-4' /></Col>
                         <Col sm className="fs-3">
-                            <div><TbNumber1 className="ms-1 " size='60' />Release of excessive stress</div>
-                            <div><TbNumber2 className="ms-1" size='60' /> A different prespective of the problem</div>
-                            <div><TbNumber3 className="ms-1 " size='60' /> Arrangement of the thoughts in a proper structure</div>
+                            <div data-aos='fade-up'><TbNumber1 className="ms-1 " size='60' />Releasing stress</div>
+                            <div data-aos='fade-up'><TbNumber2 className="ms-1" size='60' />A different perspective</div>
+                            <div data-aos='fade-up'><TbNumber3 className="ms-1 " size='60' />Proper structure of thinking</div>
                         </Col>
                     </Row>
                     <br />
-                    <Row className="text-center" id='description'>
-                        <Col sm>
-                            <p className='text-wrap'>
-                                Discover the most amazing companions handpicked by us who
-                                can help you with your emotions and thoughts better
-                                than anybody else.
-                            </p>
-                        </Col>
-                    </Row>
+                    <br />
+                    <br />
+                    <div data-aos='fade-up'><h2 className='text-center-title'>What do we Offer</h2></div>
+                    <div id='flexbox'>
+                        
+                        <div className='flex-list' data-aos='fade-up'>
+                            <div><img src={musicboy} alt='Music' className='offer_img'/></div>
+                            <div className='offer_title'>Music For Your Mood</div>
+                            <Link to='/mood' className='offer_link'>Explore</Link>
+                        </div>
+                        <div className='flex-list' data-aos='fade-up'>
+                            <div><img src={companiontalk} alt='Music' className='offer_img'/></div>
+                            <div className='offer_title'>Companion Talks</div>
+                            <Link to='/companion' className='offer_link'>Explore</Link>
+                        </div>
+                        <div className='flex-list' data-aos='fade-up'>
+                            <div><img src={therapist} alt='Music' className='offer_img'/></div>
+                            <div className='offer_title'>Therapy Talks</div>
+                            <Link to='/therapist' className='offer_link'>Explore</Link>
+                        </div>
+                        <div className='flex-list' data-aos='fade-up'>
+                            <div><img src={job} alt='Music' className='offer_img'/></div>
+                            <div className='offer_title'>Job Board</div>
+                            <Link to='/jobs' className='offer_link'>Explore</Link>
+                        </div>
+                    </div>
+
                 </Container>
             </div>
             <br />
             <br />
             <br />
             <br />
-            <div className='quality'>
+            <div className='quality' data-aos='fade-up'>
                 <Container >
                     <br />
-                    <div className='text-center'><h2>What we assure</h2></div>
+                    <div data-aos='fade-up'><h2 className='text-center-title text_white'>What we assure</h2></div>
                     <br />
-                    <Row>
-                        <Col className="text-center me-2"  ><GiShieldEchoes size='60' /><h3>Privacy Ensured</h3></Col>
-                        <Col className="text-center me-2" ><GiDragonBalls size='60' /><h3>Quality Ensured</h3></Col>
-                        <Col className="text-center me-2" ><SiDiscourse size='60' /><h4>Talk without being Judged</h4></Col>
+                    <Row data-aos='fade-up'>
+                        <Col className="text-center me-2"  ><GiShieldEchoes color='orange' size='60' /><h5 className='text_white'>Your Privacy is<br/>our Responsibility</h5></Col>
+                        <Col className="text-center me-2" ><GiDragonBalls color='orange' size='60' /><h5 className='text_white'>Assured Quality<br/>of Services</h5></Col>
+                        <Col className="text-center me-2" ><SiDiscourse color='orange' size='60' /><h5 className='text_white'>Talk without<br/>being Judged</h5></Col>
                     </Row>
                 </Container>
                 <br />
@@ -74,40 +117,33 @@ const Home2 = () => {
             <br />
             <br />
             <div >
-                <div className='text-center'><h2>What our Customers say</h2></div>
-                <Container className='text-center review'>
-                    <Row>
-                        <Col sm>
-                            <div className='tab' >
-                                <p>I felt a lot of relief after the talk. I would recommend it to 
-                                    people who can not afford costly therapies.
-                                </p>
-                                <p className='fw-bold'>Shruti khokhar</p>
-                            </div>
-                        </Col>
-                        <Col sm>
-                            <div className='tab' >
-                                <p>It was a very interactive session with my companion, and I could 
-                                    say things I hesitated to talk about.
-                                </p>
-                                <p className='fw-bold'>Radhika Jangra</p>
-                            </div>
-                        </Col>
-                        <Col sm>
-                            <div className='tab' ><p>My companion listened to my whole story without 
-                                judging, and I got a new perspective.</p>
-                                <p className='fw-bold'>Pooja Bhatt</p>
-                            </div>
-                        </Col>
-                        <Col sm>
-                            <div className='tab' ><p>I am not willing to go to a therapist for every 
-                                small issue, but here I can take talks due to low prices.</p>
-                                <p className='fw-bold'>Priya Saha</p>
-                            </div>
-                        </Col>
+                <div data-aos='fade-up'><h2 className='text-center-title'>What our Customers say</h2></div>
+                
+                <div className='test_flexbox' data-aos='fade-up'>
+                    <div className='test_flexitem'>
+                        <div className='test_para'>I felt a lot of relief after the talk. I would recommend it to 
+                        people who can not afford costly therapies.</div>
+                        <div className='test_name'>Shruti Khokhar</div>
+                    </div>
+                    <div className='test_flexitem' data-aos='fade-up'>
+                        <div className='test_para'>It was a very interactive session with my companion, and I could 
+                        say things I hesitated to talk about.</div>
+                        <div className='test_name'>Radhika Jangra</div>
+                    </div>
+                    <div className='test_flexitem' data-aos='fade-up'>
+                        <div className='test_para'>My companion listened to my whole story without 
+                        judging, and I got a new perspective.</div>
+                        <div className='test_name'>Pooja Bhatt</div>
+                    </div>
+                    <div className='test_flexitem' data-aos='fade-up'>
+                        <div className='test_para'>I am not willing to go to a therapist for every 
+                        small issue, but here I can take talks due to low prices.</div>
+                        <div className='test_name'>Priya Saha</div>
+                    </div>
 
-                    </Row>
-                </Container>
+                </div>
+
+                
             </div>
             <br />
             <br />

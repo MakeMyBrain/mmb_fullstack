@@ -28,11 +28,11 @@ const NavbarComp = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav" >
                         <Nav expand="lg" className='ma-auto gap-3  font-Segoe UI'>
-                            <span className='rounded-pill border border-2 border-white text-center '>
-                                <a href="https://forms.gle/FC8aJN4P5nz7DXAM8" className='talk text-white'>Let's Talk</a>
-                            </span>
+                            
+                            <Nav.Link as={Link} to={"/companion"} id='talk_button'>Let's Talk</Nav.Link>
+                            <Nav.Link as={Link} to={"/jobs"}>Job Board</Nav.Link>
+                            <Nav.Link as={Link} to={"/mood"}>Music</Nav.Link>
                             <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
-                            <Nav.Link as={Link} to={"/blog"}>Blogs</Nav.Link>
                             <Nav.Link as={Link} to={"/about"}>About Us</Nav.Link>
                             <Nav.Link as={Link} to={"/faq"}>FAQ</Nav.Link>
                         </Nav>

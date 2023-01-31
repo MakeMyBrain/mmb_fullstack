@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "aos": "^2.3.4",
+    "typewriter-effect": "^2.19.0"
+  }
+}

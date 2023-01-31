@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = 'https://makemybrain.pythonanywhere.com';
+const baseUrl = 'https://makemybrain.pythonanywhere.com'; 
 
 export const GetSongsAction = async (history_cache, mood_query) => {
   try {

@@ -8,8 +8,12 @@ import Blog from "./components/Blogs";
 import Faq from "./components/Faq";
 import Moodselect from "./components/Moodselect";
 import Song from "./components/Song";
+import Jobs from "./components/Jobs";
+import Companion from "./components/Companion"
+import Therapist from "./components/Therapist"
 import { useState } from "react";
 import { GetSongsAction } from "./actions/songs";
+
 
 function App() {
   const [songs, setSongs] = useState([
@@ -46,10 +50,11 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/song" element={<Song song={songs} />} />
-          <Route
-            path="/mood"
-            element={<Moodselect OnclickTag={OnclickTag} />}
+          <Route path="/mood" element={<Moodselect OnclickTag={OnclickTag} />}
           />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/companion" element={<Companion />} />
+          <Route path="/therapist" element={<Therapist />} />
         </Routes>
       </main>
     </div>

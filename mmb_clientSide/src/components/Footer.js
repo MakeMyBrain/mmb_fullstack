@@ -20,9 +20,8 @@ const Footer = () => {
                         <Col sm={3}>
                             <h5>Navigation</h5>
                             <ul >
-                                <li><a href="https://forms.gle/FC8aJN4P5nz7DXAM8 " className="text-white text-decoration-none">Let's Talk</a></li>
+                                <li><Link to={"/companion"} className="text-white text-decoration-none">Let's Talk</Link></li>
                                 <li><Link to={"/"} className="text-white text-decoration-none">Home</Link></li>
-                                <li><Link to={"/blog"} className="text-white text-decoration-none">Blogs</Link></li>
                                 <li><Link to={"/about"} className="text-white text-decoration-none">About Us</Link></li>
                                 <li><Link to={"/faq"} className="text-white text-decoration-none">FAQ</Link></li>
                             </ul>
@@ -67,7 +66,7 @@ const Footer = () => {
 
             <div className="footerbottom p-2">
                 <Container>
-                    <p className="text-center text-white mt-3">Copyright <FaCopyright /> 2022, MakeMyBrain. All Rights Reserved.</p>
+                    <p className="text-center text-white mt-3">Copyright <FaCopyright /> 2023, MakeMyBrain. All Rights Reserved.</p>
                 </Container>
             </div>
         </div>

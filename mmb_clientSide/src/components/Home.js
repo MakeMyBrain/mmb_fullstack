@@ -11,7 +11,7 @@ import Home2 from './Home2'
 
 const Home = () => {
     useEffect(() => {
-        document.title = "MakeMyBrain - Because You Matter"
+        document.title = "Talk to psychologists starting at just Rs. 249 | MakeMyBrain"
     }, [])
     return (
         <div>
