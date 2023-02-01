@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
 import NavbarComp from './Navbar'
 import Footer from './Footer'
+import Chatapp from './Chatapp'
 
 const Song = ({ song }) => {
   const [currSongIndex, setCurrSongIndex] = useState(0);
@@ -33,7 +34,9 @@ const Song = ({ song }) => {
       <header id="header_song">
       <NavbarComp></NavbarComp>
       </header>
-      <main>
+      <main  id="song_chat">
+      <div>
+
         <h1 id="song_heading">Now Playing</h1>
         <ReactPlayer
           className="react_player"
@@ -50,11 +53,17 @@ const Song = ({ song }) => {
         <button onClick={playNextSong} type="submit" id="click_button">
           Next Song
         </button>
-        <div id="notifications">You can play the music even after minimising your browser 
-          by going to ⋮ on top-right corner of your 
+        <div id="notifications">You can play the music even <br/>after minimising your browser <br/>
+          by going to ⋮ on top-right corner of your <br/>
           browser and selecting "Desktop Site".
         </div>
+
+      </div>
+      <div>
+        <Chatapp></Chatapp>
+      </div>
       </main>
+      <div id="spacing"></div>
       <footer>
       <Footer></Footer>
       </footer>
