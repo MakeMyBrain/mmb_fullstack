@@ -11,12 +11,15 @@ import { FaJedi } from "react-icons/fa";
 
 
 firebase.initializeApp({
-    apiKey: "AIzaSyBE1fBMo7ldX90qZ_ziLfnNNhZbeeB7aqA",
-    authDomain: "demomakemybrain.firebaseapp.com",
-    projectId: "demomakemybrain",
-    storageBucket: "demomakemybrain.appspot.com",
-    messagingSenderId: "550508093541",
-    appId: "1:550508093541:web:620e19bba84428a27ae68c"
+
+    apiKey: "AIzaSyAoce9zcsiaPSfnVi1gF5Q9oJ0ic2jVGEY",
+  authDomain: "mmbchatbot.firebaseapp.com",
+  databaseURL: "https://mmbchatbot-default-rtdb.firebaseio.com",
+  projectId: "mmbchatbot",
+  storageBucket: "mmbchatbot.appspot.com",
+  messagingSenderId: "33231669002",
+  appId: "1:33231669002:web:cefab66ad64aec14e49cf3",
+  measurementId: "G-F3Z3L7PVQX"
 })
 
 const auth = firebase.auth();
@@ -46,7 +49,7 @@ const Chatapp = () => {
                 </div>
                 <div id="signin">
                     <section>
-                        {user ? <ChatRoom /> : <SignIn />}
+                        {user ? <ChatRoom /> : <SignIn className='signinbtn'/>}
                     </section>
                 </div>
 
@@ -72,7 +75,7 @@ function SignIn() {
 
 function SignOut() {
     return auth.currentUser && (
-        <button className="sign-out" onClick={() => auth.signOut()} id="signinbtn">Sign Out</button>
+        <button className="sign-out" onClick={() => auth.signOut()} id="signoutbtn">Sign Out</button>
     )
 }
 
@@ -104,23 +107,27 @@ function ChatRoom() {
     }
 
     return (<>
-        <main>
+        <mainchat>
 
             {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
 
             <span ref={dummy}></span>
 
-        </main>
+        </mainchat>
 
         <form onSubmit={sendMessage}>
 
-            <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+            <input  value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
 
-            <button type="submit" disabled={!formValue}>🕊️</button>
+            <button id='message_btn' onClick={clearFields} type="submit" disabled={!formValue}>►</button>
 
         </form>
     </>)
 }
+
+function clearFields(){
+    document.getElementsById('inputID').value = "";
+  }
 
 
 function ChatMessage(props) {
@@ -130,7 +137,6 @@ function ChatMessage(props) {
 
     return (<>
         <div className={`message ${messageClass}`}>
-            <img src={'robohash.org/stefan-one'} />
             <p>{text}</p>
         </div>
     </>)
