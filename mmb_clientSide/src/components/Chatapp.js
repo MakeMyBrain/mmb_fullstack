@@ -12,15 +12,22 @@ import { FaJedi } from "react-icons/fa";
 
 firebase.initializeApp({
 
-    apiKey: "AIzaSyAoce9zcsiaPSfnVi1gF5Q9oJ0ic2jVGEY",
-  authDomain: "mmbchatbot.firebaseapp.com",
-  databaseURL: "https://mmbchatbot-default-rtdb.firebaseio.com",
-  projectId: "mmbchatbot",
-  storageBucket: "mmbchatbot.appspot.com",
-  messagingSenderId: "33231669002",
-  appId: "1:33231669002:web:cefab66ad64aec14e49cf3",
-  measurementId: "G-F3Z3L7PVQX"
+    // apiKey: "AIzaSyBE1fBMo7ldX90qZ_ziLfnNNhZbeeB7aqA",
+    // authDomain: "demomakemybrain.firebaseapp.com",
+    // projectId: "demomakemybrain",
+    // storageBucket: "demomakemybrain.appspot.com",
+    // messagingSenderId: "550508093541",
+    // appId: "1:550508093541:web:620e19bba84428a27ae68c"
+    apiKey: "AIzaSyBT6b8nLlxQ2QQXOlZqatKMBTkmTZiLcpc",
+  authDomain: "mmbchatbot-5ec3d.firebaseapp.com",
+  projectId: "mmbchatbot-5ec3d",
+  storageBucket: "mmbchatbot-5ec3d.appspot.com",
+  messagingSenderId: "567953812425",
+  appId: "1:567953812425:web:36495310c64775802fd618",
+  measurementId: "G-3YE53TZV7V"
 })
+
+  
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
