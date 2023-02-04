@@ -1,5 +1,5 @@
 #chat_head {
-    margin-top: 65px;
+    margin-top: 45px;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 35px;
@@ -23,7 +23,7 @@
     background-color: #ffffff;
     border-radius: 20px;
     height: 630px;
-    width: 400px;
+    width: 350px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -34,6 +34,7 @@
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
     padding: 10px 10px 10px 20px;
+
 }
 
 #chatbot_head_head {
@@ -162,7 +163,7 @@ mainchat::-webkit-scrollbar {
     cursor: pointer;
     margin-right: 0px;
     position: relative;
-    left: 50px;
+    left: 40px;
     border-radius: 50px;
     font-size: 15px;
   }

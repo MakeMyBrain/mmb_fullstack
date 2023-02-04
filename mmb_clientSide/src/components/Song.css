@@ -25,9 +25,9 @@
 
 #player {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 30px;
     background-color: #2E2E2E;
-    max-width: 400px;
+    max-width: 380px;
     height: 100px;
     display: block;
     margin-left: auto;
@@ -38,14 +38,14 @@
 
 #song_name {
     color: #ffb963;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     padding-top: 20px;
 }
 
 #singer_name {
     color: #a7a7a7;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 300;
     margin-top: -10px;
     
@@ -55,14 +55,14 @@
     border-radius: 100px;
     border: none;
     padding: 10px 20px 10px 20px;
-    font-size: 25px;
+    font-size: 20px;
     background-color: #ffffff;
     color: #181818;
     font-weight: 700;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 #notifications {
@@ -75,7 +75,7 @@
 }
 
 #song_heading {
-    margin-top: 65px;
+    margin-top: 45px;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 35px;
@@ -88,6 +88,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+
 }
 
 #spacing {

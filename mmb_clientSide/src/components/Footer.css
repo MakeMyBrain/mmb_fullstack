@@ -5,3 +5,8 @@
 .footerbottom {
     background-color: #181818;
 }
+
+#footer_text {
+    text-align: left;
+    padding-bottom: 50px;
+}

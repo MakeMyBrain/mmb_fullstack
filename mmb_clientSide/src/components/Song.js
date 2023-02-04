@@ -7,12 +7,15 @@ import NavbarComp from './Navbar'
 import Footer from './Footer'
 import Chatapp from './Chatapp'
 
+
 const Song = ({ song }) => {
   const [currSongIndex, setCurrSongIndex] = useState(0);
 
+
+  
   useEffect(() => {}, [currSongIndex]);
   useLayoutEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0,0)
 }
   
   );
@@ -53,13 +56,13 @@ const Song = ({ song }) => {
         <button onClick={playNextSong} type="submit" id="click_button">
           Next Song
         </button>
-        <div id="notifications">You can play the music even <br/>after minimising your browser <br/>
+        {/*<div id="notifications">You can play the music even <br/>after minimising your browser <br/>
           by going to ⋮ on top-right corner of your <br/>
           browser and selecting "Desktop Site".
-        </div>
+  </div>*/}
 
       </div>
-      <div>
+      <div id="chat-window">
         <Chatapp></Chatapp>
       </div>
       </main>

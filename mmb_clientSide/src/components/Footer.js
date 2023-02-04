@@ -12,7 +12,7 @@ const Footer = () => {
                     <Row className="justify-content-md-center text-white">
                         <Col sm={3}>
                             <h5>About Us</h5>
-                            <p>MakeMyBrain aims to empower you to express your emotions 
+                            <p id="footer_text">MakeMyBrain aims to empower you to express your emotions 
                                 and thoughts to the fullest, without the fear of being 
                                 judged.
                             </p>
