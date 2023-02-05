@@ -22,7 +22,7 @@
 #chat_area {
     background-color: #ffffff;
     border-radius: 20px;
-    height: 630px;
+    height: 690px;
     width: 310px;
     display: block;
     margin-left: auto;
@@ -160,7 +160,7 @@ mainchat::-webkit-scrollbar {
 
   #message_btn {
     border: none;
-    padding: 15px 32px;
+    padding: 10px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

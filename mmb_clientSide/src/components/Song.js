@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState, useLayoutEffect, setState } from "react";
 import full_logo from "../media/full_logo.PNG";
 import "./Song.css";
 import { Link } from "react-router-dom";
@@ -10,8 +10,6 @@ import Chatapp from './Chatapp'
 
 const Song = ({ song }) => {
   const [currSongIndex, setCurrSongIndex] = useState(0);
-
-
   
   useEffect(() => {}, [currSongIndex]);
   useLayoutEffect(() => {

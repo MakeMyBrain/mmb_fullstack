@@ -124,7 +124,7 @@ function ChatRoom() {
 
         <form onSubmit={sendMessage}>
 
-            <input  value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+            <input  value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="How are you feeling" />
 
             <button id='message_btn' onClick={clearFields} type="submit" disabled={!formValue}>►</button>
 
