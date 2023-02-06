@@ -41,6 +41,7 @@ function App() {
     }
     console.log(songs);
   };
+  const shuffledSong = songs.sort((a, b) => 0.5 - Math.random())
   return (
     <div className="App">
       <main>
@@ -49,7 +50,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/song" element={<Song song={songs} />} />
+          <Route path="/song" element={<Song song={shuffledSong} />} />
           <Route path="/mood" element={<Moodselect OnclickTag={OnclickTag} />}
           />
           <Route path="/jobs" element={<Jobs />} />
