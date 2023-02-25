@@ -1,5 +1,4 @@
 import React from 'react'
-import './Chatapp.css'
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';

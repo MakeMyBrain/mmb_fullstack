@@ -41,6 +41,7 @@ function App() {
     }
     console.log(songs);
   };
+  const shuffledSong = songs.sort((a, b) => 0.5 - Math.random())
   return (
     <div className="App">
       <main>

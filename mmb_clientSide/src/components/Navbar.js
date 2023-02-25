@@ -31,7 +31,7 @@ const NavbarComp = () => {
                             
                             <Nav.Link as={Link} to={"/companion"} id='talk_button'>Let's Talk</Nav.Link>
                             <Nav.Link as={Link} to={"/jobs"}>Job Board</Nav.Link>
-                            <Nav.Link as={Link} to={"/mood"}>Music</Nav.Link>
+                            <Nav.Link as={Link} to={"/mood"}>AI Bot</Nav.Link>
                             <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                             <Nav.Link as={Link} to={"/about"}>About Us</Nav.Link>
                             <Nav.Link as={Link} to={"/faq"}>FAQ</Nav.Link>

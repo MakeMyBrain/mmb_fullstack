@@ -6,7 +6,10 @@ import ReactPlayer from "react-player";
 import NavbarComp from './Navbar'
 import Footer from './Footer'
 import Chatapp from './Chatapp'
+import Chat from "./Chat";
+import kaira from '../media/kaira.png'
 
+let done = false;
 
 const Song = ({ song }) => {
   const [currSongIndex, setCurrSongIndex] = useState(0);
@@ -18,7 +21,7 @@ const Song = ({ song }) => {
   
   );
   console.log(song);
-  const shuffledSong = song.sort((a, b) => 0.5 - Math.random());
+  const shuffledSong = song;
   //Resuffle song=TODO
   const playNextSong = () => {
     if (currSongIndex < shuffledSong.length - 1)
@@ -29,6 +32,18 @@ const Song = ({ song }) => {
   useEffect(() => {
     document.title = "Now Playing | MakeMyBrain"
 }, [])
+
+// Play and pause button
+const [playing, setPlaying] = useState(1)
+function play_pause() {
+  if (playing === 1) {
+    setPlaying(0);
+  }
+  else {
+    setPlaying(1)
+  }
+}
+
 
   return (
     <div id="page_color">
@@ -41,7 +56,7 @@ const Song = ({ song }) => {
         <h1 id="song_heading">Now Playing</h1>
         <ReactPlayer
           className="react_player"
-          /*onEnded={}*/ playing={true}
+          /*onEnded={}*/ playing={playing}
           width="360px"
           height="0px"
           url={shuffledSong[currSongIndex].lind}
@@ -51,20 +66,24 @@ const Song = ({ song }) => {
           <div id="song_name">{shuffledSong[currSongIndex].title}</div>
           <div id="singer_name">{shuffledSong[currSongIndex].singer}</div>
         </div>
+        <button onClick={play_pause} id="click_button">Play | Pause</button>
         <button onClick={playNextSong} type="submit" id="click_button">
           Next Song
         </button>
-        {/*<div id="notifications">You can play the music even <br/>after minimising your browser <br/>
-          by going to ⋮ on top-right corner of your <br/>
-          browser and selecting "Desktop Site".
-  </div>*/}
+        
+        <div id="notifications">Vibe with the music and speak your heart out to Kaira - your AI companion. 
+        Click on the icon in the bottom-right of your screen to begin.<br/>
+        <img src={kaira} id='kaira-pic'/>
+        </div>
+        
 
       </div>
-      <div id="chat-window">
+      {/*<div id="chat-window">
         <Chatapp></Chatapp>
-      </div>
+</div>*/}
       </main>
       <div id="spacing"></div>
+      <Chat></Chat>
       <footer>
       <Footer></Footer>
       </footer>

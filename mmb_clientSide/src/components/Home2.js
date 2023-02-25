@@ -43,8 +43,8 @@ const Home2 = () => {
                         <br />
                         <span class="heading-primary-sub ">Choose a companion and open up about your emotions and pain.</span>
                     </h1>
-                    <Link to='/mood' id='button2'>Vibe with Us</Link><br/><br/><br/>
-                    <div id='subtitle_button'>Music for your Mood</div>
+                    <Link to='/mood' id='button2'>Vibe with AI</Link><br/><br/><br/>
+                    <div id='subtitle_button'>Kaira - your AI Bot</div>
                     <Link to='/companion' id='button'>Let's Talk</Link>
                 </div>
             </div>
