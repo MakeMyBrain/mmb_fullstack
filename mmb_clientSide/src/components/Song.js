@@ -3,7 +3,7 @@ import full_logo from "../media/full_logo.PNG";
 import "./Song.css";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
-import NavbarComp from './Navbar'
+import NavbarComp from './Navbar2'
 import Footer from './Footer'
 import Chatapp from './Chatapp'
 import Chat from "./Chat";
@@ -46,8 +46,9 @@ function play_pause() {
 
 
   return (
-    <div id="page_color">
-      <header id="header_song">
+    <div id="newNavFlex">
+
+      <header>
       <NavbarComp></NavbarComp>
       </header>
       <main  id="song_chat">
@@ -71,10 +72,7 @@ function play_pause() {
           Next Song
         </button>
         
-        <div id="notifications">Vibe with the music and speak your heart out to Kaira - your AI companion. 
-        Click on the icon in the bottom-right of your screen to begin.<br/>
-        <img src={kaira} id='kaira-pic'/>
-        </div>
+        
         
 
       </div>
@@ -82,11 +80,7 @@ function play_pause() {
         <Chatapp></Chatapp>
 </div>*/}
       </main>
-      <div id="spacing"></div>
-      <Chat></Chat>
-      <footer>
-      <Footer></Footer>
-      </footer>
+      
     </div>
   );
 };

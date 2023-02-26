@@ -1,0 +1,23 @@
+#navBar {
+    background-color: #181818;
+    height: 100vh;
+    width: 230px;
+    color: white;
+
+}
+
+#heading {
+    font-size: 25px;
+    font-weight: 600;
+    margin-left: 27px;
+    text-decoration: none;
+    color: white;
+    position: fixed;
+    top: 40px;
+}
+
+@media screen and (max-width: 480px) {
+    #heading {
+        display: none;
+    }
+}

@@ -4,7 +4,7 @@ import { GetSongsAction } from "../actions/songs";
 import full_logo from "../media/full_logo.PNG";
 import "./Moodselect.css";
 import Song from "./Song";
-import NavbarComp from './Navbar'
+import NavbarComp from './Navbar2'
 import Footer from './Footer'
 
 const Moodselect = ({ OnclickTag }) => {
@@ -22,11 +22,14 @@ const Moodselect = ({ OnclickTag }) => {
     document.title = "Choose your mood | Music for your mood | MakeMyBrain"
 }, [])
   return (
-    <div>
+    <div id="newNavFlex">
 
       <header>
       <NavbarComp></NavbarComp>
       </header>
+
+      
+      <div>
       <h1 id="mood_heading">How are you feeling?</h1>
       <div id="flex-container">
         <Link to="/song">
@@ -67,11 +70,9 @@ const Moodselect = ({ OnclickTag }) => {
             Stressed
           </button>
         </Link>
-        {/* <Song songs={songs} /> */}
+      </div>  
       </div>
-      <footer>
-      <Footer></Footer>
-      </footer>
+ 
     </div>
   );
 };

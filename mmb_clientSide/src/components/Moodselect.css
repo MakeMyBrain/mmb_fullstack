@@ -65,3 +65,13 @@
     font-weight: 700;
 }
 
+#newNavFlex {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        display: none;
+    }
+}

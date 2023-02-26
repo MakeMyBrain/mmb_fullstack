@@ -1,11 +1,19 @@
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: url('../media/mobile-banner.jpg');
+    /*background-image: url('../media/mobile-banner.jpg');
     background-size: cover;
     background-position: 2% 30%;
-    background-repeat: no-repeat;
-    margin-top: 40px;
+    background-repeat: no-repeat;*/
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,65,142,1) 100%);
+
+}
+
+#mmb_logo {
+    height: 100px;
+    margin-top: 60px;
+    margin-bottom: 70px;
 }
 
 .text-box {
@@ -26,7 +34,7 @@
 .heading-primary-main {
     word-wrap: break-word;
     display: block;
-    font-size: 35px;
+    font-size: 20px;
     font-weight: 700;
 
 }
@@ -56,11 +64,18 @@
     color: #ffffff;
     font-weight: 700;
     font-size: 25px;
-    padding: 3px 30px 28px 30px;
+    padding: 6px 20px 6px 20px;
     border-radius: 50px;
-    border: 2px solid #00D1FF;
+    border: 2px solid #ffffff;
+    background-color: black;
     cursor: pointer;
-    box-shadow: 0 0 10px 0px #00D1FF;
+    box-shadow: 0 0 10px 0px #000000;
+}
+
+#button2:hover {
+    color: black;
+    background-color: white;
+    transition: 1s;
 }
 
 .open_up {
@@ -115,6 +130,7 @@
 
 .typewrite {
     color: #00D1FF;
+    margin-bottom: -60px;
 }
 
 #flexbox {
