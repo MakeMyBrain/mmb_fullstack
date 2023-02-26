@@ -70,8 +70,28 @@
     flex-direction: row;
 }
 
+footer {
+    display: none;
+}
+
+/* .binay {
+    display: none;
+} */
+
 @media screen and (max-width: 750px) {
     header {
         display: none;
     }
+
+    #newNavFlex {
+        flex-direction: column;
+    }
+
+    footer {
+        display: inline-block;
+    }
+
+    /* .binay {
+        display: block;
+    } */
 }

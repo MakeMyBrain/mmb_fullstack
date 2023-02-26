@@ -5,7 +5,7 @@ import './Navbar2.css'
 const Navbar2 = () => {
   return (
     <div id='navBar'>
-        <Link to="/" id='heading'>MakeMyBrain</Link>
+      <Link to="/" id='heading'>MakeMyBrain</Link>
     </div>
   )
 }
