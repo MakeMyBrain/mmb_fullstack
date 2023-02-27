@@ -13,6 +13,7 @@ import Companion from "./components/Companion"
 import Therapist from "./components/Therapist"
 import { useState } from "react";
 import { GetSongsAction } from "./actions/songs";
+Dialogchat from "./components/Dialogchat";
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
+          <Route path="/chat" element={<Dialogchat />} />
         </Routes>
       </main>
     </div>
