@@ -70,8 +70,20 @@
     flex-direction: row;
 }
 
+.nav3 {
+    display: none;
+}
+
 @media screen and (max-width: 750px) {
     header {
         display: none;
+    }
+
+    #newNavFlex {
+        flex-direction: column;
+    }
+
+    .nav3 {
+        display: flex;
     }
 }
