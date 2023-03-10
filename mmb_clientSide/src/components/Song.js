@@ -73,10 +73,6 @@ const Song = ({ song }) => {
           <button onClick={playNextSong} type="submit" id="click_button">
             Next Song
           </button>
-
-
-
-
         </div>
         {/*<div id="chat-window">
         <Chatapp></Chatapp>
@@ -85,12 +81,12 @@ const Song = ({ song }) => {
       <footer className="nav3">
         <Navbar3></Navbar3>
       </footer>
-      
+
       <footer id="player-box">
-        <Player></Player>
+        <Player songList={shuffledSong}></Player>
       </footer>
-      
-      
+
+
 
     </div>
   );
