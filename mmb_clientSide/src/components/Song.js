@@ -9,6 +9,7 @@ import Footer from './Footer'
 import Chatapp from './Chatapp'
 import Chat from "./Chat";
 import kaira from '../media/kaira.png'
+import Player from "./Player";
 
 let done = false;
 
@@ -47,7 +48,7 @@ const Song = ({ song }) => {
 
 
   return (
-    <div id="newNavFlex">
+    <div id="newNavFlex2">
 
       <header>
         <NavbarComp></NavbarComp>
@@ -84,6 +85,12 @@ const Song = ({ song }) => {
       <footer className="nav3">
         <Navbar3></Navbar3>
       </footer>
+      
+      <footer id="player-box">
+        <Player></Player>
+      </footer>
+      
+      
 
     </div>
   );

@@ -105,3 +105,39 @@
     position: fixed;
 }
 
+#newNavFlex2 {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background: rgb(24,24,24);
+    background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(24,24,24,1) 75%, rgba(57,57,7,1) 84%, rgba(124,124,0,1) 93%, rgba(199,197,0,1) 100%);
+}
+
+
+@media screen and (max-width: 750px) {
+
+    #newNavFlex2 {
+        flex-direction: column;
+    }
+
+}
+
+
+
+#fixedplayer {
+    width: 50vh;
+    background-color: #985200;
+    position: fixed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    
+}
+
+.nav3-1 {
+    position: fixed;
+    bottom: 50%;
+    width: 90%;
+    
+}

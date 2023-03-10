@@ -13,6 +13,9 @@ import Companion from "./components/Companion"
 import Therapist from "./components/Therapist"
 import { useState } from "react";
 import { GetSongsAction } from "./actions/songs";
+import Dialogflow from "./components/Dialogflow";
+import Dialoghook from "./components/Dialoghook";
+
 
 
 function App() {
@@ -56,6 +59,8 @@ function App() {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
+          <Route path="/chat" element={<Dialogflow />} />
+          <Route path="/hook" element={<Dialoghook />} />
         </Routes>
       </main>
     </div>

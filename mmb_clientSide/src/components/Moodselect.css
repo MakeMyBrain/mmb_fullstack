@@ -85,5 +85,9 @@
 
     .nav3 {
         display: flex;
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+      
     }
 }
