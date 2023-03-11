@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useLayoutEffect, setState } from "react";
 import ReactPlayer from "react-player";
-import { FaPlay, FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
+import { FaPlay, FaAngleDoubleRight, FaAngleDoubleLeft, FaPause } from "react-icons/fa";
 import "./Player.css";
+import { ToggleButton } from "react-bootstrap";
 
 const Player = ({ songList, syncCurrSongIndex }) => {
   const [currSongIndex, setCurrSongIndex] = useState(0);
@@ -48,6 +49,9 @@ const Player = ({ songList, syncCurrSongIndex }) => {
       syncCurrSongIndex(currSongIndex, 1);
     }
   }
+
+ 
+  
   // //Extracting all songs name
   // let songtitleList = [];
   // for (let i = 0; i < songList.length; i++) {
@@ -66,20 +70,26 @@ const Player = ({ songList, syncCurrSongIndex }) => {
         url={shuffledSong[currSongIndex].lind}
         onEnded={playNextSong}
       />
-      <div id="Player">
+      <div id="Player-flex">
         <div id="Song_name">{shuffledSong[currSongIndex].title}</div>
         <div id="Singer_name">{shuffledSong[currSongIndex].singer}</div>
-      </div>
+      
       <div id="btnSection">
-        <button onClick={playLastSong}>
+        <button onClick={playLastSong} id="player-btn">
           <FaAngleDoubleLeft />
         </button>
-        <button onClick={play_pause}>
-          <FaPlay />
-        </button>
-        <button onClick={playNextSong}>
+        {playing ? <button onClick={play_pause} id="play-pause-back" className="fa-pause">
+          <FaPause id="play-pause"/>
+        </button> : <button onClick={play_pause} id="play-pause-back" className="fa-pause">
+          <FaPlay id="play-pause"/>
+        </button>}
+        {/* <button onClick={play_pause} id="play-pause-back" className="fa-pause">
+          <FaPause id="play-pause"/>
+        </button> */}
+        <button onClick={playNextSong} id="player-btn">
           <FaAngleDoubleRight />
         </button>
+      </div>
       </div>
     </div>
   );

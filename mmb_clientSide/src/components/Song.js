@@ -57,7 +57,7 @@ const Song = ({ song }) => {
     songtitleList[i] = song[i].title;
   }
 
-  const TitleList = song.map((song) => <>{song.title}</>);
+  const TitleList = song.map((song) => <div className='playlist-items'>{song.title}<br/></div>);
 
   return (
     <div id="newNavFlex2">
@@ -65,8 +65,9 @@ const Song = ({ song }) => {
         <NavbarComp></NavbarComp>
       </header>
       <main id="song_chat">
-        {/* <div>
-          <h1 id="song_heading">Now Playing</h1>
+        <div>
+          <h1 id="song_heading">Your Playlist</h1>
+          {/* 
           <ReactPlayer
             className="react_player"
             playing={playing}
@@ -85,11 +86,13 @@ const Song = ({ song }) => {
           <button onClick={playNextSong} type="submit" id="click_button">
             Next Song
           </button>
-        </div> */}
+         */}
         {/*<div id="chat-window">
         <Chatapp></Chatapp>
 </div>*/}
-        {TitleList}
+      <div id="playlist-box">{TitleList}</div>
+        
+        </div>
       </main>
       <footer className="nav3">
         <Navbar3></Navbar3>

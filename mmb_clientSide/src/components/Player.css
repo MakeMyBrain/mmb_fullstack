@@ -1,94 +1,112 @@
-#player-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#btnsSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#Player {
-    text-align: center;
-    background-color: #2E2E2E;
-    width: 90%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    padding-bottom: 10px;
-}
-
 #Song_name {
-    color: #ffb963;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+
+#btnSection {
+    justify-content: space-between;
+      
+}
+
+#player-btn {
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: rgba(0, 0, 0, 0.523);
+    color: white;
+    border-radius: 50px;
+}
+
+#play-pause {
+    color: white;
+    padding: 5px;
+}
+
+#play-pause-back {
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.523);
     font-size: 20px;
-    font-weight: 700;
-    padding-top: 20px;
+    
 }
-
-#Singer_name {
-    color: #a7a7a7;
-    font-size: 12px;
-    font-weight: 300;
-    margin-top: -3px;
-
-}
-
 
 @media screen and (max-width: 480px) {
-    #player-box {
-        background-color: black;
-        color: white;
-        width: 90%;
-        height: 70px;
-        position: fixed;
-        bottom: 10%;
-        text-align: center;
-        align-content: center;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 5%;
-        margin-right: 5%;
+  #player-box {
+    background-color: black;
+    background: rgb(0,15,11);
+    background: linear-gradient(45deg, rgba(0,15,11,1) 0%, rgba(3,80,61,1) 33%, rgba(20,59,93,1) 64%, rgba(92,17,94,1) 100%);
+    color: white;
+    width: 90%;
+    height: 100px;
+    position: fixed;
+    bottom: 10%;
+    text-align: center;
+    align-content: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
 
-    }
+  }
+  #Singer_name {
+    font-size: 10px;
+    font-weight: 400;
+    padding-bottom: 10px;
+  }
+
 }
 
 @media screen and (min-width: 480px) and (max-width: 750px) {
     #player-box {
-        background-color: black;
-        color: white;
-        width: 60%;
-        height: 70px;
-        position: fixed;
-        bottom: 10%;
-        text-align: center;
-        align-content: center;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 20%;
-        margin-right: 20%;
+    background-color: black;
+    background: rgb(0,15,11);
+    background: linear-gradient(45deg, rgba(0,15,11,1) 0%, rgba(3,80,61,1) 33%, rgba(20,59,93,1) 64%, rgba(92,17,94,1) 100%);
+    color: white;
+    width: 60%;
+    height: 100px;
+    position: fixed;
+    bottom: 10%;
+    text-align: center;
+    align-content: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+        
+    }
 
+    #Singer_name {
+        font-size: 10px;
+        font-weight: 400;
+        padding-bottom: 10px;
     }
 }
 
 @media screen and (min-width: 750px) {
     #player-box {
-        background-color: black;
-        color: white;
-        width: 15%;
-        height: 25%;
-        position: fixed;
-        bottom: 20%;
-        text-align: center;
-        border-radius: 5px;
-        margin-left: 10px;
+    background: rgb(0,15,11);
+    background: linear-gradient(45deg, rgba(0,15,11,1) 0%, rgba(3,80,61,1) 33%, rgba(20,59,93,1) 64%, rgba(92,17,94,1) 100%);
+    color: white;
+    width: 200px;
+    height: 150px;
+    position: fixed;
+    bottom: 20%;
+    text-align: center;
+    align-content: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;        
+    }
 
+    #Singer_name {
+        font-size: 10px;
+        font-weight: 400;
+        padding-bottom: 20px;
     }
 }
