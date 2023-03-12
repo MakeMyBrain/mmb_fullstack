@@ -1,17 +1,17 @@
 import React from 'react'
-import "./Blogs.css"
+import "./Dashboard.css"
 import NavbarComp from "./Navbar2";
 import Navbar3 from "./Navbar3";
 import Player from './Player';
 
-const Blogs = () => {
+const Dashboard = () => {
   return (
     <div id="newNavFlex">
         <header>
             <NavbarComp></NavbarComp>
         </header>
         
-        Blogs
+        Dashboard
         <footer className="nav3">
         <Navbar3></Navbar3>
       </footer>
@@ -21,4 +21,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default Dashboard
