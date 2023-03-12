@@ -6,12 +6,12 @@ import { FaRegComments, FaSignal, FaPen, FaUserAlt } from "react-icons/fa";
 
 
 const Navbar3 = () => {
-    return (                
+    return (
         <div id='navBar3'>
-            <div><button><FaSignal /></button></div>
-            <div><button><FaRegComments /></button></div>
-            <div><button><FaPen /></button></div>
-            <div><button><FaUserAlt /></button></div>
+            <div><Link to="/mood"><button><FaSignal /></button></Link></div>
+            <div><Link to="/chat"><button><FaRegComments /></button></Link></div>
+            <div><Link to="/blogs"><button><FaPen /></button></Link></div>
+            <div><Link to="/dashboard"><button><FaUserAlt /></button></Link></div>
         </div>
     );
 }

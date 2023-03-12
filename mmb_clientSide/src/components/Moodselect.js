@@ -8,6 +8,7 @@ import NavbarComp from './Navbar2'
 import Navbar3 from "./Navbar3";
 import Footer from './Footer'
 
+
 const Moodselect = ({ OnclickTag }) => {
   const OnclickGo = (e) => {
     e.preventdefault();
