@@ -13,26 +13,26 @@ import Player from "./Player";
 
 let done = false;
 
-const Song = ({ song }) => {
-  const [currSongIndex, setCurrSongIndex] = useState(0);
-  const [currPlay, setCurrPlay] = useState(1);
+const Song = ({ song, syncCurrSongIndex }) => {
+  // const [currSongIndex, setCurrSongIndex] = useState();
+  // const [currPlay, setCurrPlay] = useState(1);
 
-  const syncCurrSongIndex = (index, isPlaying) => {
-    console.log("Syncing...");
-    setCurrSongIndex(index);
-    setCurrPlay(isPlaying);
-    console.log(currSongIndex, isPlaying);
-  };
+  // const syncCurrSongIndex = (index, isPlaying) => {
+  //   // console.log("Syncing...");
+  //   setCurrSongIndex(index);
+  //   setCurrPlay(isPlaying);
+  //   // console.log(currSongIndex, isPlaying);
+  // };
 
   useEffect(() => {
     document.title = "Now Playing | MakeMyBrain";
-    console.log(song[currSongIndex]);
-    console.log(currPlay);
-  }, [currSongIndex, currPlay]);
+    // console.log(song[currSongIndex]);
+    // console.log(currPlay);
+  }, []);
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
-  console.log(song);
+  // console.log(song);
   const shuffledSong = song;
   // //Resuffle song=TODO
   // const playNextSong = () => {
@@ -53,11 +53,16 @@ const Song = ({ song }) => {
 
   let songtitleList = [];
   for (let i = 0; i < song.length; i++) {
-    console.log(song[i].title);
+    // console.log(song[i].title);
     songtitleList[i] = song[i].title;
   }
 
-  const TitleList = song.map((song) => <div className='playlist-items'>{song.title}<br/></div>);
+  const TitleList = song.map((song) => (
+    <div className="playlist-items">
+      {song.title}
+      <br />
+    </div>
+  ));
 
   return (
     <div id="newNavFlex2">
@@ -87,11 +92,10 @@ const Song = ({ song }) => {
             Next Song
           </button>
          */}
-        {/*<div id="chat-window">
+          {/*<div id="chat-window">
         <Chatapp></Chatapp>
 </div>*/}
-      <div id="playlist-box">{TitleList}</div>
-        
+          <div id="playlist-box">{TitleList}</div>
         </div>
       </main>
       <footer className="nav3">

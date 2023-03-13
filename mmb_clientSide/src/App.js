@@ -9,16 +9,14 @@ import Faq from "./components/Faq";
 import Moodselect from "./components/Moodselect";
 import Song from "./components/Song";
 import Jobs from "./components/Jobs";
-import Companion from "./components/Companion"
-import Therapist from "./components/Therapist"
+import Companion from "./components/Companion";
+import Therapist from "./components/Therapist";
 import { useState } from "react";
 import { GetSongsAction } from "./actions/songs";
 import Dialogflow from "./components/Dialogflow";
 import Dialoghook from "./components/Dialoghook";
 import Blogs from "./components/Blogs";
 import Dashboard from "./components/Dashboard";
-
-
 
 function App() {
   const [songs, setSongs] = useState([
@@ -28,6 +26,16 @@ function App() {
       title: "Rendering",
     },
   ]);
+
+  const [currSongIndex, setCurrSongIndex] = useState(0);
+  const [currPlay, setCurrPlay] = useState(1);
+
+  const syncCurrSongIndex = async (index, isPlaying) => {
+    console.log("Syncing...");
+    await setCurrSongIndex(index);
+    await setCurrPlay(isPlaying);
+    console.log(currSongIndex, currPlay);
+  };
 
   //TODO: suffle array
   const OnclickTag = async (tag) => {
@@ -40,13 +48,14 @@ function App() {
         title: Allsongs[i].title,
       });
     });
-    console.log(AllSongsState);
+    // console.log(AllSongsState);
     if (Allsongs) {
+      AllSongsState.sort((a, b) => 0.5 - Math.random());
       setSongs(AllSongsState);
     }
-    console.log(songs);
+    // console.log(songs);
   };
-  const shuffledSong = songs.sort((a, b) => 0.5 - Math.random())
+  // songs.sort((a, b) => 0.5 - Math.random());
   return (
     <div className="App">
       <main>
@@ -55,8 +64,15 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/song" element={<Song song={songs} />} />
-          <Route path="/mood" element={<Moodselect OnclickTag={OnclickTag} />}
+          <Route
+            path="/song"
+            element={
+              <Song song={songs} syncCurrSongIndex={syncCurrSongIndex} />
+            }
+          />
+          <Route
+            path="/mood"
+            element={<Moodselect OnclickTag={OnclickTag} />}
           />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
@@ -65,7 +81,6 @@ function App() {
           <Route path="/hook" element={<Dialoghook />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          
         </Routes>
       </main>
     </div>

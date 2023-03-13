@@ -1,6 +1,11 @@
 import React, { useEffect, useState, useLayoutEffect, setState } from "react";
 import ReactPlayer from "react-player";
-import { FaPlay, FaAngleDoubleRight, FaAngleDoubleLeft, FaPause } from "react-icons/fa";
+import {
+  FaPlay,
+  FaAngleDoubleRight,
+  FaAngleDoubleLeft,
+  FaPause,
+} from "react-icons/fa";
 import "./Player.css";
 import { ToggleButton } from "react-bootstrap";
 
@@ -8,7 +13,7 @@ const Player = ({ songList, syncCurrSongIndex }) => {
   const [currSongIndex, setCurrSongIndex] = useState(0);
   const [currPlay, setCurrPlay] = useState(1);
 
-  useEffect(() => {}, [currSongIndex]);
+  useEffect(() => {}, []);
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -50,8 +55,6 @@ const Player = ({ songList, syncCurrSongIndex }) => {
     }
   }
 
- 
-  
   // //Extracting all songs name
   // let songtitleList = [];
   // for (let i = 0; i < songList.length; i++) {
@@ -73,23 +76,35 @@ const Player = ({ songList, syncCurrSongIndex }) => {
       <div id="Player-flex">
         <div id="Song_name">{shuffledSong[currSongIndex].title}</div>
         <div id="Singer_name">{shuffledSong[currSongIndex].singer}</div>
-      
-      <div id="btnSection">
-        <button onClick={playLastSong} id="player-btn">
-          <FaAngleDoubleLeft />
-        </button>
-        {playing ? <button onClick={play_pause} id="play-pause-back" className="fa-pause">
-          <FaPause id="play-pause"/>
-        </button> : <button onClick={play_pause} id="play-pause-back" className="fa-pause">
-          <FaPlay id="play-pause"/>
-        </button>}
-        {/* <button onClick={play_pause} id="play-pause-back" className="fa-pause">
+
+        <div id="btnSection">
+          <button onClick={playLastSong} id="player-btn">
+            <FaAngleDoubleLeft />
+          </button>
+          {playing ? (
+            <button
+              onClick={play_pause}
+              id="play-pause-back"
+              className="fa-pause"
+            >
+              <FaPause id="play-pause" />
+            </button>
+          ) : (
+            <button
+              onClick={play_pause}
+              id="play-pause-back"
+              className="fa-pause"
+            >
+              <FaPlay id="play-pause" />
+            </button>
+          )}
+          {/* <button onClick={play_pause} id="play-pause-back" className="fa-pause">
           <FaPause id="play-pause"/>
         </button> */}
-        <button onClick={playNextSong} id="player-btn">
-          <FaAngleDoubleRight />
-        </button>
-      </div>
+          <button onClick={playNextSong} id="player-btn">
+            <FaAngleDoubleRight />
+          </button>
+        </div>
       </div>
     </div>
   );
