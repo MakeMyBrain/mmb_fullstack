@@ -41,9 +41,14 @@ const AboutUs = () => {
                         Our Products
                     </h2>
                     <p>
-                    We offer Companion Talks. These are peer talks with someone who 
-                    will listen to what you are feeling, sympathize with you and 
-                    share his or her perspective about the problem. Unlike clinical 
+                    We offer a specialized AI Bot - KairaAI. Trained with numerous client 
+                    data and healing information, KairaAI is a conversational NLP model that 
+                    sympathizes with you at low times and provide practical and genuine 
+                    solutions to the problems which you thought would never be solved. Along 
+                    with that we have a pool of handpicked therapists who specialize in various 
+                    aspects of psychology and have the experience to handle your issues. The 
+                    Chatbot is accompanied by "Music for your Mood" feature that plays suitable 
+                    music as per your chosen present mood. Unlike clinical 
                     therapies, we are a platform where you can comfortably discuss 
                     your life without being judged. However, in case of extreme mental 
                     health issues, we advise taking clinical help.

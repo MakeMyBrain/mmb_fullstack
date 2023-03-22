@@ -21,3 +21,11 @@
     color: white;
     padding: 5px 10px 5px 10px;
 }
+
+#blog_link {
+    text-decoration: none;
+    color: rgb(155, 155, 154);
+    font-weight: 400;
+    margin-top: 5px;
+    
+}
