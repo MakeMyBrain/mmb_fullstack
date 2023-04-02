@@ -13,6 +13,8 @@ import Companion from "./components/Companion"
 import Therapist from "./components/Therapist"
 import { useState } from "react";
 import { GetSongsAction } from "./actions/songs";
+import {Users} from "./components/Users";
+import Story from "./components/Story";
 
 
 function App() {
@@ -56,6 +58,7 @@ function App() {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
+          
         </Routes>
       </main>
     </div>

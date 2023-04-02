@@ -1,11 +1,54 @@
 .banner {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-image: url('../media/mobile-banner.jpg');
     background-size: cover;
     background-position: 2% 30%;
+    
     background-repeat: no-repeat;
-    margin-top: 40px;
+    margin-top: 60px;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 17px;
+    margin-left: -30px;
+    color: rgba(255, 255, 255, 0.498);
+}
+
+.list {
+    margin-top: -100px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.listItem {
+    background-color: rgb(30, 83, 106);
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    width: 330px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.card-name {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(142, 255, 255);
 }
 
 .text-box {
@@ -13,7 +56,7 @@
     top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 .heading-primary {
@@ -21,6 +64,7 @@
     backface-visibility: hidden;
     margin-bottom: 50px;
     word-wrap: break-word;
+   
 }
 
 .heading-primary-main {
@@ -28,27 +72,55 @@
     display: block;
     font-size: 35px;
     font-weight: 700;
+    
 
 }
 
 .heading-primary-sub {
     display: block;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: -25px;
+    margin-top: 30px;
     word-wrap: break-word;
+    position: relative;
+    top: -30px;
 }
 
 #button {
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0);
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 25px;
-    padding: 15px 50px 15px 50px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 2px solid #00D1FF;
-    box-shadow: 0 0 10px 0px #00D1FF;
+    background-color: rgb(245, 245, 245);
+    color: #4a4a4a;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 5px 20px 5px 20px;
+    width: 300px;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    box-shadow: 0 0 5px 0px #212121;
+    cursor: text;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: -250px;
+}
+
+
+
+#button:active {
+    border: none;
+    text-decoration: none;
+}
+
+#go-button {
+    border: none;
+    font-size: 22px;
+    padding-bottom: 3px;
+    background-color: rgb(211,211,211);
+    border-radius: 0px 50px 50px 0px;
 }
 
 #button2 {

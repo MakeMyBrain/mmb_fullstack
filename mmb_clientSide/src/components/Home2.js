@@ -1,6 +1,7 @@
 import './Home2.css'
 import open_up from '../media/open_up-removebg-preview.png'
 import { Container, Row, Col, ModalTitle } from "react-bootstrap";
+import {FaSearch} from "react-icons/fa";
 import { TbNumber1, TbNumber2, TbNumber3 } from "react-icons/tb";
 import { GiShieldEchoes, GiDragonBalls } from "react-icons/gi";
 import { SiDiscourse } from "react-icons/si";
@@ -8,23 +9,30 @@ import {Link} from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import Aos from "aos";
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import musicboy from '../media/musicboy.png';
 import companiontalk from '../media/companiontalk.png';
 import therapist from '../media/therapist.png';
 import job from '../media/job.png';
+import {Users} from './Users';
+import { Cards } from './Cards'; 
 
 const Home2 = () => {
     useEffect(() => {
         Aos.init({duration: 1000});
     }, []);
+    const [query, setQuery] = useState("");
+    console.log(Users.filter(user=>user.name.toLowerCase().includes("bi")));
     return (
         <div>
             <div className='banner'>
                 <div className="text-box">
                     <h1 class="heading-primary">
                         <span class="heading-primary-main">The Best One-Stop<br />
-                        Solution for your </span> 
+                        Solution for your<br/>
+                        Career and<br/>
+                        Mental Health.
+                        <br/><br/> </span> 
                         <span className='typewrite heading-primary-main'>
                         <Typewriter 
                                 options={{
@@ -32,20 +40,21 @@ const Home2 = () => {
                                     loop: true,
                                     delay: 40,
                                     strings: [
-                                        "Layoff.",
-                                        "Breakup.",
-                                        "Loneliness.",
-                                        "Stress.",
+                                        "Real Stories",
+                                        "Relatable failures",
+                                        "Your language",
                                     ],
                                 }}
                             /> 
                             </span>
                         <br />
-                        <span class="heading-primary-sub ">Open up about your emotions and pain, and get 100% practical solutions.</span>
+                        
+                        <span class="heading-primary-sub ">Search student stories by college, name, company, problem and more.</span>
                     </h1>
-                    <Link to='/mood' id='button2'>Vibe with AI</Link><br/><br/><br/>
-                    <div id='subtitle_button'>Kaira - your AI Bot</div>
-                    <Link to='/companion' id='button'>Let's Talk</Link>
+                                        
+                        
+                    
+                    
                 </div>
             </div>
             <br />
@@ -53,6 +62,30 @@ const Home2 = () => {
             <br />
             <br />
             <div >
+
+            <input type="text" id='button' className='search' placeholder='Search here' onChange={e=> setQuery(e.target.value)}/>
+                        {/* <button id='go-button'><FaSearch /></button></form> */}
+                        <ul className='list'>
+                            {
+                                
+                                Users.filter((user)=>user.name.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.company.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.mode.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.quote.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.mentalProblem.toLowerCase().includes(query.toLowerCase())
+                                ).map((user) => (
+                                    <li className='listItem'>
+                                        <li className='card-quote'><i>"{user.quote}"</i></li>
+                                        <li className='card-name'><br/>{user.name}</li>
+                                        <li className='card-desc'>{user.company}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.mode}</li></li>
+                                ))
+                            }
+                        </ul>
+
+
+                                
+
+
                 <div data-aos='fade-up'><h2 className='text-center-title'>Why is Opening up to someone so important?</h2></div>
                 <br />
                 <br />
