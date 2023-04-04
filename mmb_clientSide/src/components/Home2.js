@@ -5,11 +5,11 @@ import {FaSearch} from "react-icons/fa";
 import { TbNumber1, TbNumber2, TbNumber3 } from "react-icons/tb";
 import { GiShieldEchoes, GiDragonBalls } from "react-icons/gi";
 import { SiDiscourse } from "react-icons/si";
-import {Link} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import Aos from "aos";
 import 'aos/dist/aos.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import musicboy from '../media/musicboy.png';
 import companiontalk from '../media/companiontalk.png';
 import therapist from '../media/therapist.png';
@@ -23,6 +23,7 @@ const Home2 = () => {
     }, []);
     const [query, setQuery] = useState("");
     console.log(Users.filter(user=>user.name.toLowerCase().includes("bi")));
+
     return (
         <div>
             <div className='banner'>
@@ -65,37 +66,46 @@ const Home2 = () => {
 
             <input type="text" id='button' className='search' placeholder='Search here' onChange={e=> setQuery(e.target.value)}/>
                         {/* <button id='go-button'><FaSearch /></button></form> */}
+                    <div>
                         <ul className='list'>
+                        
                             {
                                 
                                 Users.filter((user)=>user.name.toLowerCase().includes(query.toLowerCase()) ||
                                                      user.company.toLowerCase().includes(query.toLowerCase()) ||
                                                      user.mode.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.college.toLowerCase().includes(query.toLowerCase()) ||
                                                      user.quote.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.careerProblem.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.careerSolution.toLowerCase().includes(query.toLowerCase()) ||
+                                                     user.mentalSolution.toLowerCase().includes(query.toLowerCase()) ||
                                                      user.mentalProblem.toLowerCase().includes(query.toLowerCase())
                                 ).map((user) => (
                                     <li className='listItem'>
                                         <li className='card-quote'><i>"{user.quote}"</i></li>
                                         <li className='card-name'><br/>{user.name}</li>
-                                        <li className='card-desc'>{user.company}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.mode}</li></li>
+                                        <li className='card-desc'>{user.company}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.mode}</li>
+                                        <Link to='/Story' state={{index:user.id}} id='card-button'>Click Here</Link>
+                                        </li>
                                 ))
                             }
-                        </ul>
+                        </ul>  
+                    </div>                 
 
 
                                 
 
 
-                <div data-aos='fade-up'><h2 className='text-center-title'>Why is Opening up to someone so important?</h2></div>
+                <div data-aos='fade-up'><h2 className='text-center-title'>How can stories of others be helpful to you?</h2></div>
                 <br />
                 <br />
                 <Container>
                     <Row className='d-flex flex-wrap'>
                         <Col className="text-center" sm  data-aos='fade-up'><img src={open_up} alt="" className='open_up shadow-4' /></Col>
                         <Col sm className="fs-3">
-                            <div data-aos='fade-up'><TbNumber1 className="ms-1 " size='60' />Releasing stress</div>
+                            <div data-aos='fade-up'><TbNumber1 className="ms-1 " size='60' />Relatable situations</div>
                             <div data-aos='fade-up'><TbNumber2 className="ms-1" size='60' />A different perspective</div>
-                            <div data-aos='fade-up'><TbNumber3 className="ms-1 " size='60' />Proper structure of thinking</div>
+                            <div data-aos='fade-up'><TbNumber3 className="ms-1 " size='60' />Your own language</div>
                         </Col>
                     </Row>
                     <br />
@@ -104,15 +114,16 @@ const Home2 = () => {
                     <div data-aos='fade-up'><h2 className='text-center-title'>What do we Offer</h2></div>
                     <div id='flexbox'>
                         
-                        <div className='flex-list' data-aos='fade-up'>
-                            <div><img src={musicboy} alt='Music' className='offer_img'/></div>
-                            <div className='offer_title'>Music and AI Bot</div>
-                            <Link to='/mood' className='offer_link'>Explore</Link>
-                        </div>
+                        
                         <div className='flex-list' data-aos='fade-up'>
                             <div><img src={companiontalk} alt='Music' className='offer_img'/></div>
-                            <div className='offer_title'>Companion Talks</div>
-                            <Link to='/companion' className='offer_link'>Explore</Link>
+                            <div className='offer_title'>Mind Tales</div>
+                            <Link to='/' className='offer_link'>Explore</Link>
+                        </div>
+                        <div className='flex-list' data-aos='fade-up'>
+                            <div><img src={musicboy} alt='Music' className='offer_img'/></div>
+                            <div className='offer_title'>Velvet Vibes</div>
+                            <Link to='/mood' className='offer_link'>Explore</Link>
                         </div>
                         <div className='flex-list' data-aos='fade-up'>
                             <div><img src={therapist} alt='Music' className='offer_img'/></div>

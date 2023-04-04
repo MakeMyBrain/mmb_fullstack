@@ -58,7 +58,7 @@ function App() {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
-          
+          <Route path="/Story" element={<Story />} />
         </Routes>
       </main>
     </div>
