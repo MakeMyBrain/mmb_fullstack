@@ -65,29 +65,3 @@
     font-weight: 700;
 }
 
-#newNavFlex {
-    display: flex;
-    flex-direction: row;
-}
-
-.nav3 {
-    display: none;
-}
-
-@media screen and (max-width: 750px) {
-    header {
-        display: none;
-    }
-
-    #newNavFlex {
-        flex-direction: column;
-    }
-
-    .nav3 {
-        display: flex;
-        position: fixed;
-        bottom: 0%;
-        width: 100%;
-      
-    }
-}

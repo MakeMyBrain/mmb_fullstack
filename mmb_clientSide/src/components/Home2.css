@@ -1,19 +1,85 @@
 .banner {
     width: 100%;
-    height: 100vh;
-    /*background-image: url('../media/mobile-banner.jpg');
+    height: 90vh;
+    background-image: url('../media/mobile-banner.jpg');
     background-size: cover;
     background-position: 2% 30%;
-    background-repeat: no-repeat;*/
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,65,142,1) 100%);
-
+    
+    background-repeat: no-repeat;
+    margin-top: 60px;
 }
 
-#mmb_logo {
-    height: 100px;
-    margin-top: 60px;
-    margin-bottom: 70px;
+ul {
+    list-style-type: none;
+    font-size: 17px;
+    margin-left: -30px;
+    color: rgba(255, 255, 255, 0.498);
+}
+
+.list {
+    margin-top: -100px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.listItem {
+    background-color: rgb(40, 40, 40);
+    box-shadow: 2px 2px 6px rgb(97, 97, 97);
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    width: 330px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.listItem:hover {
+    background-color: black;
+    transition-duration: 200ms;
+}
+
+.card-name {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(142, 255, 255);
+}
+
+.card-desc {
+    margin-bottom: 40px;
+}
+
+#card-button {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px 10px 0px 10px;
+}
+
+#card-button:hover {
+    background-color: #00558a;
+    color: white;
+    border:  3px solid #00558a;
+    transition-duration: 400ms;
 }
 
 .text-box {
@@ -21,7 +87,7 @@
     top: 50%;
     left: 50%;
     text-align: center;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 .heading-primary {
@@ -29,34 +95,63 @@
     backface-visibility: hidden;
     margin-bottom: 50px;
     word-wrap: break-word;
+   
 }
 
 .heading-primary-main {
     word-wrap: break-word;
     display: block;
-    font-size: 20px;
+    font-size: 35px;
     font-weight: 700;
+    
 
 }
 
 .heading-primary-sub {
     display: block;
-    font-size: 25px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: -25px;
+    margin-top: 30px;
     word-wrap: break-word;
+    position: relative;
+    top: -30px;
 }
 
 #button {
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0);
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 25px;
-    padding: 15px 50px 15px 50px;
-    border-radius: 50px;
-    cursor: pointer;
-    border: 2px solid #00D1FF;
-    box-shadow: 0 0 10px 0px #00D1FF;
+    background-color: rgb(245, 245, 245);
+    color: #4a4a4a;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 5px 20px 5px 20px;
+    width: 300px;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    box-shadow: 0 0 5px 0px #212121;
+    cursor: text;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: -250px;
+}
+
+
+
+#button:active {
+    border: none;
+    text-decoration: none;
+}
+
+#go-button {
+    border: none;
+    font-size: 22px;
+    padding-bottom: 3px;
+    background-color: rgb(211,211,211);
+    border-radius: 0px 50px 50px 0px;
 }
 
 #button2 {
@@ -64,18 +159,11 @@
     color: #ffffff;
     font-weight: 700;
     font-size: 25px;
-    padding: 6px 20px 6px 20px;
+    padding: 3px 30px 28px 30px;
     border-radius: 50px;
-    border: 2px solid #ffffff;
-    background-color: black;
+    border: 2px solid #00D1FF;
     cursor: pointer;
-    box-shadow: 0 0 10px 0px #000000;
-}
-
-#button2:hover {
-    color: black;
-    background-color: white;
-    transition: 1s;
+    box-shadow: 0 0 10px 0px #00D1FF;
 }
 
 .open_up {
@@ -130,7 +218,6 @@
 
 .typewrite {
     color: #00D1FF;
-    margin-bottom: -60px;
 }
 
 #flexbox {

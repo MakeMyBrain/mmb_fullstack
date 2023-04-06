@@ -20,10 +20,10 @@ const Footer = () => {
                         <Col sm={3}>
                             <h5>Navigation</h5>
                             <ul >
-                                <li><Link to={"/companion"} className="text-white text-decoration-none">Let's Talk</Link></li>
-                                <li><Link to={"/"} className="text-white text-decoration-none">Home</Link></li>
+                                <li><Link to={"/"} className="text-white text-decoration-none">Mind Tales</Link></li>
+                                <li><Link to={"/mood"} className="text-white text-decoration-none">Velvet Vibes</Link></li>
                                 <li><Link to={"/about"} className="text-white text-decoration-none">About Us</Link></li>
-                                <li><Link to={"/faq"} className="text-white text-decoration-none">FAQ</Link></li>
+                                <li><Link to={"/companion"} className="text-white text-decoration-none">Let's Talk</Link></li>
                             </ul>
                         </Col>
                         <Col sm={3}>
