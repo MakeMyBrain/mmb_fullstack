@@ -13,8 +13,10 @@ import Companion from "./components/Companion"
 import Therapist from "./components/Therapist"
 import { useState } from "react";
 import { GetSongsAction } from "./actions/songs";
-import {Users} from "./components/Users";
+import { Users } from "./components/Users";
 import Story from "./components/Story";
+import LoginPage from './pages/Login';
+import Otp from "./pages/Otp";
 
 
 function App() {
@@ -59,6 +61,8 @@ function App() {
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
           <Route path="/Story" element={<Story />} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Otp" element={<Otp />} />
         </Routes>
       </main>
     </div>
