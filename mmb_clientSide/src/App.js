@@ -16,6 +16,7 @@ import { GetSongsAction } from "./actions/songs";
 import { Users } from "./components/Users";
 import Story from "./components/Story";
 import LoginPage from './pages/Login';
+import StoryPage from "./pages/StoryPage";
 import Otp from "./pages/Otp";
 
 
@@ -63,6 +64,7 @@ function App() {
           <Route path="/Story" element={<Story />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Otp" element={<Otp />} />
+          <Route path="/Storypage" element={<StoryPage />} />
         </Routes>
       </main>
     </div>
