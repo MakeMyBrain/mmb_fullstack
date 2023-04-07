@@ -1,0 +1,92 @@
+#box {
+    margin-top: 20%;
+}
+
+#button {
+    text-decoration: none;
+    background-color: rgb(245, 245, 245);
+    color: #4a4a4a;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 5px 20px 5px 20px;
+    width: 300px;
+    border-radius: 50px 50px 50px 50px;
+    border: none;
+    box-shadow: 0 0 5px 0px #212121;
+    cursor: text;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#button:active {
+    border: none;
+    text-decoration: none;
+}
+
+.list {
+    padding-top: 5%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.listItem {
+    background-color: rgb(40, 40, 40);
+    box-shadow: 2px 2px 6px rgb(97, 97, 97);
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    width: 330px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+}
+
+.listItem:hover {
+    background-color: black;
+    transition-duration: 200ms;
+}
+
+.cardName {
+    font-weight: 700;
+    font-size: 20px;
+    color: rgb(142, 255, 255);
+}
+
+.cardDesc {
+    margin-bottom: 40px;
+}
+
+#cardButton {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0px 10px 0px 10px;
+}
+
+#card-button:hover {
+    background-color: #00558a;
+    color: white;
+    border: 3px solid #00558a;
+    transition-duration: 400ms;
+}
