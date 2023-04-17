@@ -64,7 +64,7 @@ function App() {
           <Route path="/Story" element={<Story />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Otp" element={<Otp />} />
-          <Route path="/Storypage" element={<StoryPage />} />
+          <Route path="/stories" element={<StoryPage />} />
         </Routes>
       </main>
     </div>

@@ -81,7 +81,7 @@ const Home2 = () => {
                             ))
                         }
                     </ul>
-                    <button>Show More</button>
+                    <Link to="/stories" id='show-more'>Show More</Link>
                 </div>
 
 

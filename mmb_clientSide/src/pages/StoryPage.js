@@ -1,11 +1,18 @@
 import { Link, Navigate } from "react-router-dom";
 import { Users } from '../components/Users';
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import Styles from "./StoryPage.module.css"
 import NavbarComp from '../components/Navbar'
 import Footer from '../components/Footer'
 
 const StoryPage = () => {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    }
+    
+      );
+
     const [query, setQuery] = useState("");
     console.log(Users.filter(user => user.name.toLowerCase().includes("bi")));
     return (
@@ -14,6 +21,9 @@ const StoryPage = () => {
                 <NavbarComp></NavbarComp>
             </header>
             <div >
+                <div className="story-head">
+                    Search student stories by college, name, company, problem and more.
+                </div>
                 <div id={Styles.box}>
                     <input type="text" id={Styles.button} className='search' placeholder='Search here' onChange={e => setQuery(e.target.value)} />
                 </div>
@@ -31,7 +41,8 @@ const StoryPage = () => {
                                 user.careerProblem.toLowerCase().includes(query.toLowerCase()) ||
                                 user.careerSolution.toLowerCase().includes(query.toLowerCase()) ||
                                 user.mentalSolution.toLowerCase().includes(query.toLowerCase()) ||
-                                user.mentalProblem.toLowerCase().includes(query.toLowerCase())
+                                user.mentalProblem.toLowerCase().includes(query.toLowerCase()) ||
+                                user.tags.toLowerCase().includes(query.toLowerCase())
                             ).map((user) => (
                                 <li className={Styles.listItem}>
                                     <li className={Styles.cardQuote}><i>"{user.quote}"</i></li>

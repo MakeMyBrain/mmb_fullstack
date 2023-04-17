@@ -1,6 +1,4 @@
-#box {
-    margin-top: 20%;
-}
+
 
 #button {
     text-decoration: none;
@@ -17,6 +15,7 @@
     justify-content: center;
     align-content: center;
     display: flex;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
 }
