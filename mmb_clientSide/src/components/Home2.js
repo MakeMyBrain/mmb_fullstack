@@ -76,7 +76,7 @@ const Home2 = () => {
                                     <li className='card-quote'><i>"{user.quote}"</i></li>
                                     <li className='card-name'><br />{user.name}</li>
                                     <li className='card-desc'>{user.company}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.mode}</li>
-                                    <Link to='/Story' state={{ index: user.id }} id='card-button'>Click Here</Link>
+                                    <Link to={`/Story/${user.url}`} state={{ index: user.id }} id='card-button'>Click Here</Link>
                                 </li>
                             ))
                         }

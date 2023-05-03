@@ -33,34 +33,35 @@ const StoryPage = () => {
                 <div>
                     <ul className={Styles.list}>
                         {
-                            query.length > 0 ? 
-                            Users.filter((user) => query.every((currentValue) => user.name.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.company.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.mode.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.college.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.quote.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.careerProblem.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.careerSolution.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.mentalSolution.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.mentalProblem.toLowerCase().includes(currentValue.toLowerCase()) ||
-                                user.tags.toLowerCase().includes(currentValue.toLowerCase()))
-                            ).map((user) => (
-                                <li className={Styles.listItem}>
-                                    <li className={Styles.cardQuote}><i>"{user.quote}"</i></li>
-                                    <li className={Styles.cardName}><br />{user.name}</li>
-                                    <li className={Styles.cardDesc}>{user.company}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.mode}</li>
-                                    <Link to={`/Story/${user.id}`} state={{ index: user.id }} id={Styles.cardButton}>Click Here</Link>
-                                </li>
-                            )) : (
-                                Users.map((user) => (
+                            query.length > 0 ?
+                                Users.filter((user) => query.every((currentValue) => user.name.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.company.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.mode.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.college.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.quote.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.careerProblem.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.careerSolution.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.mentalSolution.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.mentalProblem.toLowerCase().includes(currentValue.toLowerCase()) ||
+                                    user.tags.toLowerCase().includes(currentValue.toLowerCase()))
+                                ).map((user) => (
                                     <li className={Styles.listItem}>
                                         <li className={Styles.cardQuote}><i>"{user.quote}"</i></li>
                                         <li className={Styles.cardName}><br />{user.name}</li>
                                         <li className={Styles.cardDesc}>{user.company}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.mode}</li>
-                                        <Link to={`/Story/${user.id}`} state={{ index: user.id }} id={Styles.cardButton}>Click Here</Link>
+                                        <Link to={`/Story/${user.url}`} state={{ index: user.id }} id={Styles.cardButton}>Click Here</Link>
                                     </li>
-                                ))
-                            )
+                                )
+                                ) : (
+                                    Users.map((user) => (
+                                        <li className={Styles.listItem}>
+                                            <li className={Styles.cardQuote}><i>"{user.quote}"</i></li>
+                                            <li className={Styles.cardName}><br />{user.name}</li>
+                                            <li className={Styles.cardDesc}>{user.company}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.mode}</li>
+                                            <Link to={`/Story/${user.url}`} state={{ index: user.id }} id={Styles.cardButton}>Click Here</Link>
+                                        </li>
+                                    ))
+                                )
                         }
                     </ul>
                 </div>
