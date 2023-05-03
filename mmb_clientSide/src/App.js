@@ -61,10 +61,11 @@ function App() {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
-          <Route path="/Story" element={<Story />} />
+          <Route path="/Story/:index" element={<Story />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Otp" element={<Otp />} />
           <Route path="/stories" element={<StoryPage />} />
+          <Route path="/cdc" element={<StoryPage />} />
         </Routes>
       </main>
     </div>
