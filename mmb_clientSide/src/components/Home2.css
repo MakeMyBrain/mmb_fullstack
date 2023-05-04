@@ -1,7 +1,7 @@
 .banner {
     width: 100%;
     height: 90vh;
-    background-image: url('../media/mobile-banner.jpg');
+    background-image: url('../media/bangalore-logo.png');
     background-size: cover;
     background-position: 2% 30%;
 
@@ -95,13 +95,16 @@ ul {
     font-size: 18px;
     font-weight: 600;
     padding: 0px 10px 0px 10px;
+    transition-duration: 200ms;
+    
 }
 
 #card-button:hover {
-    background-color: #00558a;
+    background-color: #000000;
     color: white;
-    border: 3px solid #00558a;
-    transition-duration: 400ms;
+    border: 3px solid #000000;
+    transition-duration: 200ms;
+    
 }
 
 .text-box {
@@ -270,6 +273,19 @@ ul {
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 30px;
+}
+
+.offer_body {
+    color: #181818;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    width: 200px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .offer_link {
