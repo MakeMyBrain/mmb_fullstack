@@ -33,7 +33,6 @@ export default function Signup() {
             .then((res) => {
                 console.log(res);
                 localStorage.setItem("email", signupState.email);
-                localStorage.setItem("logstat", true);
                 navigate("/Otp");
             })
             .catch((error) => {

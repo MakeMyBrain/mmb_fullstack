@@ -18,8 +18,9 @@ const Otp = () => {
                 otp: otp,
             })
             .then((res) => {
-                console.log("sucess");
+                console.log("res");
                 // localStorage.setItem("logstat", true);
+                localStorage.setItem("jwt_token", res.data.token);
                 navigate('/')
             })
             .catch((error) => {

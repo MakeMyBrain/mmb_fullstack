@@ -30,8 +30,6 @@ export default function Login() {
             .then((res) => {
                 console.log(res);
                 localStorage.setItem("email", loginState.email);
-                localStorage.setItem("logstat", true);
-                console.log(loginState.email)
                 navigate("/Otp");
             })
             .catch((error) => {
