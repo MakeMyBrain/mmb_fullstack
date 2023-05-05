@@ -16,7 +16,9 @@ import { GetSongsAction } from "./actions/songs";
 import { Users } from "./components/Users";
 import Story from "./components/Story";
 import LoginPage from './pages/Login';
+import SignupPage from './pages/Signup';
 import StoryPage from "./pages/StoryPage";
+import Private from "./components/PrivateSignup";
 import Otp from "./pages/Otp";
 
 
@@ -59,10 +61,11 @@ function App() {
           <Route path="/mood" element={<Moodselect OnclickTag={OnclickTag} />}
           />
           <Route path="/jobs" element={<Jobs />} />
-          <Route path="/companion" element={<Companion />} />
+          <Route path="/companion" element={<Private><Companion /></Private>} />
           <Route path="/therapist" element={<Therapist />} />
           <Route path="/Story/:index" element={<Story />} />
           <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Signup" element={<SignupPage />} />
           <Route path="/Otp" element={<Otp />} />
           <Route path="/stories" element={<StoryPage />} />
           <Route path="/cdc" element={<StoryPage />} />

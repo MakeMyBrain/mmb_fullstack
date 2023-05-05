@@ -11,6 +11,7 @@ const loginFields = [
     },
 ]
 
+
 const signupFields = [
     {
         labelText: "Username",
@@ -25,7 +26,7 @@ const signupFields = [
     {
         labelText: "Email address",
         labelFor: "email-address",
-        id: "email-address",
+        id: "email",
         name: "email",
         type: "email",
         autoComplete: "email",
@@ -33,25 +34,26 @@ const signupFields = [
         placeholder: "Email address"
     },
     {
-        labelText: "Password",
-        labelFor: "password",
-        id: "password",
-        name: "password",
-        type: "password",
-        autoComplete: "current-password",
+        labelText: "Date of Birth",
+        labelFor: "DOB",
+        id: "dob",
+        name: "DOB",
+        type: "DOB",
+        autoComplete: "Date of Birth",
         isRequired: true,
-        placeholder: "Password"
+        placeholder: "YYYY-MM-DD"
     },
     {
-        labelText: "Confirm Password",
-        labelFor: "confirm-password",
-        id: "confirm-password",
-        name: "confirm-password",
-        type: "password",
-        autoComplete: "confirm-password",
+        labelText: "Gender",
+        labelFor: "Gender",
+        id: "gender",
+        name: "gender",
+        type: "gender",
+        autoComplete: "gender",
         isRequired: true,
-        placeholder: "Confirm Password"
+        placeholder: "Gender"
     }
 ]
+
 
 export { loginFields, signupFields }
