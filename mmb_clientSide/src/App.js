@@ -20,6 +20,18 @@ import SignupPage from './pages/Signup';
 import StoryPage from "./pages/StoryPage";
 import Private from "./components/PrivateSignup";
 import Otp from "./pages/Otp";
+import Openup from "./pages/Openup";
+import OpenupText from "./pages/OpenupText";
+import OpenupSpeak from "./pages/OpenupSpeak";
+import Category from "./pages/Category";
+import Friends from "./pages/Categories/Friends";
+import Parents from "./pages/Categories/Parents";
+import Relationships from "./pages/Categories/Relationships";
+import Parenting from "./pages/Categories/Parenting";
+import Colleagues from "./pages/Categories/Colleagues";
+import Lifestyle from "./pages/Categories/Lifestyle";
+import Loneliness from "./pages/Categories/Loneliness";
+import Marriage from "./pages/Categories/Marriage";
 
 
 function App() {
@@ -61,7 +73,7 @@ function App() {
           <Route path="/mood" element={<Moodselect OnclickTag={OnclickTag} />}
           />
           <Route path="/jobs" element={<Jobs />} />
-          <Route path="/companion" element={<Private><Companion /></Private>} />
+          <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
           <Route path="/Story/:index" element={<Story />} />
           <Route path="/Login" element={<LoginPage />} />
@@ -69,6 +81,19 @@ function App() {
           <Route path="/Otp" element={<Otp />} />
           <Route path="/stories" element={<StoryPage />} />
           <Route path="/cdc" element={<StoryPage />} />
+          <Route path="/openup" element={<Openup />} />
+          <Route path="/openup/text" element={<OpenupText />} />
+          <Route path="/openup/speak" element={<OpenupSpeak />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/category/friends" element={<Friends />} />
+          <Route path="/category/parents" element={<Parents />} />
+          <Route path="/category/relationships" element={<Relationships />} />
+          <Route path="/category/parenting" element={<Parenting />} />
+          <Route path="/category/colleagues" element={<Colleagues />} />
+          <Route path="/category/lifestyle" element={<Lifestyle />} />
+          <Route path="/category/loneliness" element={<Loneliness />} />
+          <Route path="/category/marriage" element={<Marriage />} />
+
         </Routes>
       </main>
     </div>

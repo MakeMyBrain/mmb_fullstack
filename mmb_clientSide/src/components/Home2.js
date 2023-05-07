@@ -19,6 +19,9 @@ import { Users } from './Users';
 import { Cards } from './Cards';
 
 const Home2 = () => {
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+      })
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, []);
@@ -50,7 +53,7 @@ const Home2 = () => {
                             />
                         </span>
                         <br />
-                        <Link to='/' id='card-button'>Start Now</Link>
+                        <Link to='/openup' id='card-button'>Start Now</Link>
                         
                     </h1>
 
@@ -128,7 +131,7 @@ const Home2 = () => {
                             <div><img src={mindtales} alt='Music' className='offer_img' /></div>
                             <div className='offer_title'>Mind Tales</div>
                             <div className='offer_body'>Express your emotions through text or voice in your own language to feel better, and let our AI algorithm recommend you stories of people you faced similar problems.</div>
-                            <Link to='/mood' className='offer_link'>Explore</Link>
+                            <Link to='/openup' className='offer_link'>Explore</Link>
                         </div>
                         <div className='flex-list' data-aos='fade-up'>
                             <div><img src={therapist} alt='Music' className='offer_img' /></div>
