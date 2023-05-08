@@ -19,12 +19,12 @@ const SearchBlogFromQuery = async (query) => {
   const tf_idf = new TfIdf(
     readData.corpus,
     readData.tracker,
-    readData.url,
-    readData.title
+    readData.bloglink,
+    readData.blogtitle
   );
   const search_query = await keyword_string(query);
   const search_result = await tf_idf.rankDocumentsByQuery(search_query);
   console.log(search_result);
 };
 
-SearchBlogFromQuery("doc1 country");
+SearchBlogFromQuery("learn and found the city family");

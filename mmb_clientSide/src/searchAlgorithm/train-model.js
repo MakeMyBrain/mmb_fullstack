@@ -14,27 +14,37 @@ const keyword_string = (str) => {
 };
 
 const arrayOfDocuments = [
-  { title: "doc1", url: "google.com", doc: "doc1 content" },
-  { title: "doc2", url: "google.com", doc: "doc2 content" },
-  { title: "doc3", url: "google.com", doc: "doc3 content" },
+  { blogtitle: "doc1", bloglink: "google.com", doc: "doc1 content" },
+  { blogtitle: "doc2", bloglink: "google.com", doc: "doc2 content" },
+  { blogtitle: "doc3", bloglink: "google.com", doc: "doc3 content" },
 ];
 
 const trainSearchModel = async (arrayOfDocuments) => {
-  let urls = [];
-  let titles = [];
+  let bloglinks = [];
+  let blogtitles = [];
   let docs = [];
   arrayOfDocuments.forEach((documentData) => {
-    urls.push(documentData.url);
-    titles.push(documentData.title);
-    docs.push(keyword_string(documentData.doc));
+    const data = {
+      blogtitle: documentData.blogtitle,
+      bloglink: documentData.bloglink,
+      doc:
+        documentData.category +
+        documentData.subcategory +
+        documentData.blogtitle +
+        documentData.blogmeta +
+        documentData.blogtags,
+    };
+    bloglinks.push(data.bloglink);
+    blogtitles.push(data.blogtitle);
+    docs.push(keyword_string(data.doc));
   });
-  const tf_idf = new TfIdf([], [], urls, titles);
+  const tf_idf = new TfIdf([], [], bloglinks, blogtitles);
   tf_idf.createCorpusFromStringArray(docs);
   const dataTOStore = {
     corpus: tf_idf.corpus,
     tracker: tf_idf.tracker,
-    url: tf_idf.url,
-    title: tf_idf.title,
+    bloglink: tf_idf.bloglink,
+    blogtitle: tf_idf.blogtitle,
   };
   //   fs.writeFile("searchModel.json", JSON.stringify(dataTOStore), (err) => {
   //     if (err) throw err;
@@ -46,8 +56,8 @@ const trainSearchModel = async (arrayOfDocuments) => {
 
 const train = async () => {
   let readData = await fs.readFileSync("./blogs.json", "utf-8");
-  const blogs = JSON.parse(readData);
-  await trainSearchModel(blogs);
+  readData = JSON.parse(readData);
+  await trainSearchModel(readData);
 };
 
 // trainSearchModel(arrayOfDocuments);

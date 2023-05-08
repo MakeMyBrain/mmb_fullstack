@@ -2,18 +2,18 @@ class TfIdf {
   constructor(cp = [], tkr = [], ul = [], tl = []) {
     (this.corpus = cp),
       (this.tracker = tkr),
-      (this.url = ul),
-      (this.title = tl);
+      (this.bloglink = ul),
+      (this.blogtitle = tl);
   }
 
   //Breaks a string into an array of words
-  addDocumentFromString(str, url, title) {
+  addDocumentFromString(str, bloglink, blogtitle) {
     let strArray = str
       .replace(/[\r\n]/g, " ")
       .trim()
       .split(" ");
-    this.url.push(url);
-    this.title.push(title);
+    this.bloglink.push(bloglink);
+    this.blogtitle.push(blogtitle);
     this.corpus.push(strArray);
     this.tracker.push({
       index: this.corpus.length - 1,
@@ -124,8 +124,8 @@ class TfIdf {
     for (let i = 0; i < this.corpus.length; i++) {
       ranking.push({
         document: this.corpus[i],
-        url: this.url[i],
-        title: this.title[i],
+        bloglink: this.bloglink[i],
+        blogtitle: this.blogtitle[i],
         similarityIndex: this.calculateSimilarityIndex(query, this.corpus[i]),
         index: i,
       });
