@@ -27,4 +27,4 @@ const SearchBlogFromQuery = async (query) => {
   console.log(search_result);
 };
 
-SearchBlogFromQuery("learn and found the city family");
+SearchBlogFromQuery("my college is depressing");

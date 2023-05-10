@@ -1,6 +1,7 @@
 const fs = require("fs");
 const TfIdf = require("./tf-idf-search");
 const keyword_extractor = require("keyword-extractor");
+const { convert } = require("html-to-text");
 
 const keyword_string = (str) => {
   const extraction_result = keyword_extractor.extract(str, {
@@ -25,14 +26,16 @@ const trainSearchModel = async (arrayOfDocuments) => {
   let docs = [];
   arrayOfDocuments.forEach((documentData) => {
     const data = {
-      blogtitle: documentData.blogtitle,
-      bloglink: documentData.bloglink,
+      blogtitle: documentData.title,
+      bloglink: documentData.link,
       doc:
-        documentData.category +
-        documentData.subcategory +
-        documentData.blogtitle +
-        documentData.blogmeta +
-        documentData.blogtags,
+        documentData.title +
+        " " +
+        documentData.creator +
+        " " +
+        convert(documentData.encoded[0], {
+          wordwrap: null,
+        }),
     };
     bloglinks.push(data.bloglink);
     blogtitles.push(data.blogtitle);

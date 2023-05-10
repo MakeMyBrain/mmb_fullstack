@@ -123,7 +123,6 @@ class TfIdf {
     let ranking = [];
     for (let i = 0; i < this.corpus.length; i++) {
       ranking.push({
-        document: this.corpus[i],
         bloglink: this.bloglink[i],
         blogtitle: this.blogtitle[i],
         similarityIndex: this.calculateSimilarityIndex(query, this.corpus[i]),
