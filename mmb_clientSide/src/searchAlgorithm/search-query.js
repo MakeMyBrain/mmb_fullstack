@@ -1,4 +1,5 @@
-const fs = require("fs");
+// const fs = require("fs");
+import corpus from '../searchAlgorithm/searchModel'
 const TfIdf = require("./tf-idf-search");
 const keyword_extractor = require("keyword-extractor");
 
@@ -14,8 +15,8 @@ const keyword_string = async (str) => {
 };
 
 const SearchBlogFromQuery = async (query) => {
-  let readData = await fs.readFileSync("./searchModel.json", "utf-8");
-  readData = JSON.parse(readData);
+  let readData = await corpus;
+  // readData = JSON.parse(readData);
   const tf_idf = new TfIdf(
     readData.corpus,
     readData.tracker,
@@ -29,4 +30,7 @@ const SearchBlogFromQuery = async (query) => {
   return search_result;
 };
 
+export default { SearchBlogFromQuery }
 SearchBlogFromQuery("sexual harassment");
+
+

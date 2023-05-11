@@ -3,12 +3,14 @@ import { useState } from 'react'
 import { Blogs } from '../../components/Blogs'
 import Footer from '../../components/Footer'
 import NavbarComp from '../../components/Navbar'
+import SearchBlogFromQuery from '../../searchAlgorithm/search-query'
 import './Categories.css'
 
 const Relationships = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   })
+  // SearchBlogFromQuery('I am horny')
   const [searchResults, setSearchResults] = useState([]);
   const handleClick = (subcategory) => {
     const results = Blogs.filter((blog) => blog.subcategory === subcategory);
