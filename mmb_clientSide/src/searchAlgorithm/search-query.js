@@ -1,7 +1,9 @@
 // const fs = require("fs");
-import corpus from '../searchAlgorithm/searchModel'
-const TfIdf = require("./tf-idf-search");
-const keyword_extractor = require("keyword-extractor");
+import corpus from "../searchAlgorithm/searchModel";
+import TfIdf from "./tf-idf-search";
+// const TfIdf = require("./tf-idf-search");
+import keyword_extractor from "keyword-extractor";
+// const keyword_extractor = require("keyword-extractor");
 
 const keyword_string = async (str) => {
   const extraction_result = keyword_extractor.extract(str, {
@@ -15,8 +17,7 @@ const keyword_string = async (str) => {
 };
 
 const SearchBlogFromQuery = async (query) => {
-  let readData = await corpus;
-  // readData = JSON.parse(readData);
+  let readData = await corpus.corpus;
   const tf_idf = new TfIdf(
     readData.corpus,
     readData.tracker,
@@ -26,11 +27,8 @@ const SearchBlogFromQuery = async (query) => {
   );
   const search_query = await keyword_string(query);
   const search_result = await tf_idf.rankDocumentsByQuery(search_query);
-  console.log(search_result);
   return search_result;
 };
 
-export default { SearchBlogFromQuery }
-SearchBlogFromQuery("sexual harassment");
-
-
+export default SearchBlogFromQuery;
+// SearchBlogFromQuery("sexual harassment");
