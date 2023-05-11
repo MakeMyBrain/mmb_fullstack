@@ -1,10 +1,10 @@
 class TfIdf {
   constructor(cp = [], tkr = [], ul = [], tl = [], bm = []) {
-    (this.corpus = cp),
-      (this.tracker = tkr),
-      (this.bloglink = ul),
-      (this.blogtitle = tl),
-      (this.blogmeta = bm);
+    this.corpus = cp;
+    this.tracker = tkr;
+    this.bloglink = ul;
+    this.blogtitle = tl;
+    this.blogmeta = bm;
   }
 
   //   Creates a corpus from an array of docs
