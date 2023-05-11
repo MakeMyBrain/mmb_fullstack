@@ -14,20 +14,16 @@ const keyword_string = (str) => {
   return ans;
 };
 
-const arrayOfDocuments = [
-  { blogtitle: "doc1", bloglink: "google.com", doc: "doc1 content" },
-  { blogtitle: "doc2", bloglink: "google.com", doc: "doc2 content" },
-  { blogtitle: "doc3", bloglink: "google.com", doc: "doc3 content" },
-];
-
 const trainSearchModel = async (arrayOfDocuments) => {
   let bloglinks = [];
   let blogtitles = [];
   let docs = [];
+  let blogmetas = [];
   arrayOfDocuments.forEach((documentData) => {
     const data = {
       blogtitle: documentData.title,
       bloglink: documentData.link,
+      blogmeta: documentData.blogmeta,
       doc:
         documentData.title +
         " " +
@@ -39,15 +35,17 @@ const trainSearchModel = async (arrayOfDocuments) => {
     };
     bloglinks.push(data.bloglink);
     blogtitles.push(data.blogtitle);
+    blogmetas.push(data.blogmeta);
     docs.push(keyword_string(data.doc));
   });
-  const tf_idf = new TfIdf([], [], bloglinks, blogtitles);
+  const tf_idf = new TfIdf([], [], bloglinks, blogtitles, blogmetas);
   tf_idf.createCorpusFromStringArray(docs);
   const dataTOStore = {
     corpus: tf_idf.corpus,
     tracker: tf_idf.tracker,
     bloglink: tf_idf.bloglink,
     blogtitle: tf_idf.blogtitle,
+    blogmeta: tf_idf.blogmeta,
   };
   //   fs.writeFile("searchModel.json", JSON.stringify(dataTOStore), (err) => {
   //     if (err) throw err;

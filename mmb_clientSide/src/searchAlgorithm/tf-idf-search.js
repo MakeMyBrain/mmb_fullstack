@@ -1,19 +1,21 @@
 class TfIdf {
-  constructor(cp = [], tkr = [], ul = [], tl = []) {
+  constructor(cp = [], tkr = [], ul = [], tl = [], bm = []) {
     (this.corpus = cp),
       (this.tracker = tkr),
       (this.bloglink = ul),
-      (this.blogtitle = tl);
+      (this.blogtitle = tl),
+      (this.blogmeta = bm);
   }
 
   //Breaks a string into an array of words
-  addDocumentFromString(str, bloglink, blogtitle) {
+  addDocumentFromString(str, bloglink, blogtitle, blogmeta) {
     let strArray = str
       .replace(/[\r\n]/g, " ")
       .trim()
       .split(" ");
     this.bloglink.push(bloglink);
     this.blogtitle.push(blogtitle);
+    this.blogmeta.push(blogmeta);
     this.corpus.push(strArray);
     this.tracker.push({
       index: this.corpus.length - 1,
@@ -125,6 +127,7 @@ class TfIdf {
       ranking.push({
         bloglink: this.bloglink[i],
         blogtitle: this.blogtitle[i],
+        blogmeta: this.blogmeta[i],
         similarityIndex: this.calculateSimilarityIndex(query, this.corpus[i]),
         index: i,
       });

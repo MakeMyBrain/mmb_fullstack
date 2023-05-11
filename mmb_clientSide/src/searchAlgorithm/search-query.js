@@ -20,12 +20,13 @@ const SearchBlogFromQuery = async (query) => {
     readData.corpus,
     readData.tracker,
     readData.bloglink,
-    readData.blogtitle
+    readData.blogtitle,
+    readData.blogmeta
   );
   const search_query = await keyword_string(query);
   const search_result = await tf_idf.rankDocumentsByQuery(search_query);
   console.log(search_result);
+  return search_result;
 };
 
-SearchBlogFromQuery("my college is depressing");
-
+SearchBlogFromQuery("sexual harassment");
