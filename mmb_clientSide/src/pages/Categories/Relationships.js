@@ -10,7 +10,7 @@ const Relationships = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   })
-  // SearchBlogFromQuery('I am horny')
+  SearchBlogFromQuery('I am horny')
   const [searchResults, setSearchResults] = useState([]);
   const handleClick = (subcategory) => {
     const results = Blogs.filter((blog) => blog.subcategory === subcategory);

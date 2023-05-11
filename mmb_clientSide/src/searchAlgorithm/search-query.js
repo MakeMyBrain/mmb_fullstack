@@ -1,7 +1,9 @@
 // const fs = require("fs");
 import corpus from '../searchAlgorithm/searchModel'
-const TfIdf = require("./tf-idf-search");
-const keyword_extractor = require("keyword-extractor");
+import TfIdf from './tf-idf-search';
+import keyword_extractor from 'keyword-extractor';
+// const TfIdf = require("./tf-idf-search");
+// const keyword_extractor = require("keyword-extractor");
 
 const keyword_string = async (str) => {
   const extraction_result = keyword_extractor.extract(str, {
@@ -30,7 +32,7 @@ const SearchBlogFromQuery = async (query) => {
   return search_result;
 };
 
-export default { SearchBlogFromQuery }
-SearchBlogFromQuery("sexual harassment");
+export default SearchBlogFromQuery
+// SearchBlogFromQuery("sexual harassment");
 
 
