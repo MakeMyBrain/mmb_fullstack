@@ -1,4 +1,4 @@
-const corpus = {
+const temp = {
   corpus: [
     [
       "exam",
@@ -28455,5 +28455,3 @@ const corpus = {
     "One day, my friend finally mustered up the courage to confess their feelings for me. I was shocked and didn't know how to react...",
   ],
 };
-
-export default { corpus };
