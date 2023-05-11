@@ -28,3 +28,4 @@ const SearchBlogFromQuery = async (query) => {
 };
 
 SearchBlogFromQuery("my college is depressing");
+
