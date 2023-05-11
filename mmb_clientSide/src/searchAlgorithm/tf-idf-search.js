@@ -7,23 +7,6 @@ class TfIdf {
       (this.blogmeta = bm);
   }
 
-  //Breaks a string into an array of words
-  addDocumentFromString(str, bloglink, blogtitle, blogmeta) {
-    let strArray = str
-      .replace(/[\r\n]/g, " ")
-      .trim()
-      .split(" ");
-    this.bloglink.push(bloglink);
-    this.blogtitle.push(blogtitle);
-    this.blogmeta.push(blogmeta);
-    this.corpus.push(strArray);
-    this.tracker.push({
-      index: this.corpus.length - 1,
-      document: str,
-    });
-    return this.corpus;
-  }
-
   //   Creates a corpus from an array of docs
   createCorpusFromStringArray(docs) {
     let corpus = [];
