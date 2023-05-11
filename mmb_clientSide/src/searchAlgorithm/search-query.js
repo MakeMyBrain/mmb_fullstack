@@ -5,19 +5,19 @@ import TfIdf from "./tf-idf-search";
 import keyword_extractor from "keyword-extractor";
 // const keyword_extractor = require("keyword-extractor");
 
-const keyword_string = async (str) => {
+const keyword_string = (str) => {
   const extraction_result = keyword_extractor.extract(str, {
     language: "english",
     remove_digits: true,
     return_changed_case: true,
     remove_duplicates: false,
   });
-  const ans = await extraction_result.join(" ").toLowerCase().trim();
+  const ans = extraction_result.join(" ").toLowerCase().trim();
   return ans;
 };
 
-const SearchBlogFromQuery = async (query) => {
-  let readData = await corpus.corpus;
+const SearchBlogFromQuery = (query) => {
+  let readData = corpus.corpus;
   const tf_idf = new TfIdf(
     readData.corpus,
     readData.tracker,
@@ -25,8 +25,10 @@ const SearchBlogFromQuery = async (query) => {
     readData.blogtitle,
     readData.blogmeta
   );
-  const search_query = await keyword_string(query);
-  const search_result = await tf_idf.rankDocumentsByQuery(search_query);
+  const search_query = keyword_string(query);
+  const search_result = tf_idf.rankDocumentsByQuery(search_query);
+  //TODO: filter array
+
   return search_result;
 };
 

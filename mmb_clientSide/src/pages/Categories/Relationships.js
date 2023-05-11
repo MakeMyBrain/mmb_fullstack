@@ -7,12 +7,12 @@ import SearchBlogFromQuery from "../../searchAlgorithm/search-query";
 import "./Categories.css";
 
 const Relationships = () => {
-  useLayoutEffect(async () => {
-    const def_result = await SearchBlogFromQuery("search query");
-    setSearchResults(def_result);
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   });
 
+  // const def_result = SearchBlogFromQuery("search query");
+  // console.log(def_result);
   const [searchResults, setSearchResults] = useState([]);
   const handleClick = (subcategory) => {
     const results = Blogs.filter((blog) => blog.subcategory === subcategory);
