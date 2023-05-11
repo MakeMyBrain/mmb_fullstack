@@ -1244,7 +1244,7 @@ export const Blogs = [
         "id" : "F004002",
         "category" : "friends",
         "subcategory" : "conflicts due to culture or religion",
-        "blogtitle" : "Breaking Down Barriers: How I Overcame Cultural Misunderstandings with My Friend",
+        "blogtitle" : "Navigating Religious Differences in Friendship: How I Learned to Embrace Diversity",
         "blogmeta" : "I grew up in a traditional Hindu family in India, where religion played a significant role in our daily lives. My parents always...",
         "bloglink" : "https://makemybrain.com/blog/2023/05/10/navigating-religious-differences-in-friendship-how-i-learned-to-embrace-diversity/",
         "blogtags" : "friends"
