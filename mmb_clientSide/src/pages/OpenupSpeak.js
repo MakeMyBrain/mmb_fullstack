@@ -19,10 +19,6 @@ const OpenupSpeak = () => {
   const handleChildVariable = (variable) => {
     setChildVariable(variable);
   };
-  const handleClick = () => {
-    const def_result = SearchBlogFromQuery(childVariable);
-    console.log(def_result);
-  }
   useEffect(() => {
     document.title = "Speak - Express your Emotions | MakeMyBrain"
   }, [])
@@ -35,7 +31,7 @@ const OpenupSpeak = () => {
         <div id='openup-subhead-speak'>Select your preferred language to start speaking.</div>
         <SpeechRecognitionComponent sendVariable={handleChildVariable} />
         <Link to='/openup/text' className='openup-express'>Type</Link>
-        <Link to='/category' className='openup-express' onClick={handleClick}>Next</Link>
+        <Link to={`/category?RecognizedText=${encodeURIComponent(childVariable)}`} className='openup-express'>Next</Link>
       </div>
       <Footer></Footer>
     </div>

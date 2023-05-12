@@ -31,6 +31,7 @@ import Colleagues from "./pages/Categories/Colleagues";
 import Lifestyle from "./pages/Categories/Lifestyle";
 import Loneliness from "./pages/Categories/Loneliness";
 import Marriage from "./pages/Categories/Marriage";
+import AllCategorisBlogs from "./pages/Categories/AllCategoriesBlogs"
 
 
 function App() {
@@ -91,7 +92,7 @@ function App() {
           <Route path="/category/lifestyle" element={<Lifestyle />} />
           <Route path="/category/loneliness" element={<Loneliness />} />
           <Route path="/category/marriage" element={<Marriage />} />
-
+          <Route path="/All" element={<AllCategorisBlogs />} />
         </Routes>
       </main>
     </div>

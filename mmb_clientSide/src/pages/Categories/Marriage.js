@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { Blogs } from '../../components/Blogs'
 import Footer from '../../components/Footer'
@@ -9,11 +10,10 @@ const Marriage = () => {
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   })
-  const [searchResults, setSearchResults] = useState([]);
+  const RecognizedText = "Power struggles"
   const handleClick = (subcategory) => {
-    const results = Blogs.filter((blog) => blog.subcategory === subcategory);
-    setSearchResults(results);
-    console.log(results);
+    // const results = Blogs.filter((blog) => blog.subcategory === subcategory);
+    // setRecognizedText(subcategory);
   }
 
   return (
@@ -22,7 +22,7 @@ const Marriage = () => {
       <h1 id='subcategory-head'>Marriage</h1>
       <div id='subcategory-subhead'>Select the category that relates to your problem.</div>
       <div id='subcategory-list'>
-        <div className='subcategory-items' onClick={() => handleClick('Power struggles')}>Power struggles</div>
+        <Link to={`/All?RecognizedText=${encodeURIComponent('Power struggles')}`}><div className='subcategory-items' >Power struggles</div></Link>
         <div className='subcategory-items' onClick={() => handleClick('Violence')}>Violence</div>
         <div className='subcategory-items' onClick={() => handleClick('Substance abuse')}>Substance abuse</div>
         <div className='subcategory-items' onClick={() => handleClick('Emotional harassment')}>Emotional harassment</div>

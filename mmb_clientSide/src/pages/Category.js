@@ -11,21 +11,28 @@ import { Link } from 'react-router-dom'
 import './Category.css'
 import NavbarComp from '../components/Navbar'
 import Footer from '../components/Footer'
+import { useLocation } from 'react-router-dom'
+import SearchBlogFromQuery from '../searchAlgorithm/search-query'
 
 const Category = () => {
+  const location = useLocation();
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   })
-    useEffect(() => {
-        document.title = "Category of mental health issues | MakeMyBrain"
-    }, []) 
+  useEffect(() => {
+    document.title = "Category of mental health issues | MakeMyBrain"
+  }, [])
+  const queryParams = new URLSearchParams(location.search);
+  const RecognizedText = queryParams.get('RecognizedText');
+  const data_ref = SearchBlogFromQuery(RecognizedText).slice(0, 4);
+  console.log(data_ref);
   return (
     <div>
-        <NavbarComp></NavbarComp>
-        <div id='category-container'>
+      <NavbarComp></NavbarComp>
+      <div id='category-container'>
         <h1 id='category-head'>Which of these is causing you problems?</h1>
         <div id='category-cover'>
-        <div id='category-list'>
+          <div id='category-list'>
             <Link className='category-items' to='/category/relationships' ><img className='category-image' src={Relationships} placeholder='Relationships' /></Link>
             <Link className='category-items' to='/category/parents' ><img className='category-image' src={Parents} placeholder='Parents' /></Link>
             <Link className='category-items' to='/category/colleagues' ><img className='category-image' src={Colleagues} placeholder='Colleagues' /></Link>
@@ -34,11 +41,11 @@ const Category = () => {
             <Link className='category-items' to='/category/marriage' ><img className='category-image' src={Marriage} placeholder='Marriage' /></Link>
             <Link className='category-items' to='/category/loneliness' ><img className='category-image' src={Loneliness} placeholder='Loneliness' /></Link>
             <Link className='category-items' to='/category/lifestyle' ><img className='category-image' src={Lifestyle} placeholder='Lifestyle' /></Link>
+          </div>
+
         </div>
-      
-        </div>
-        </div>
-        <Footer></Footer>
+      </div>
+      <Footer></Footer>
     </div>
   )
 }
