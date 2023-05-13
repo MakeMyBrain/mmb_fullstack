@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import "./Header.css"
 
 export default function Header({
     heading,
@@ -7,19 +8,16 @@ export default function Header({
     linkUrl = "#"
 }) {
     return (
-        <div className="mb-10">
+        <div className="mb-10 header-back-form">
             <div className="flex justify-center">
-                <img
-                    alt=""
-                    className="h-5 w-5"
-                    src="https://ik.imagekit.io/pibjyepn7p9/Lilac_Navy_Simple_Line_Business_Logo_CGktk8RHK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649962071315" />
+                
             </div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 extra-format-head">
                 {heading}
             </h2>
-            <p className="mt-2 text-center text-sm text-gray-600 mt-5">
+            <p className="mt-2 text-center text-sm text-gray-600 mt-5 extra-format-subhead">
                 {paragraph} {' '}
-                <Link to={linkUrl} className="font-medium text-purple-600 hover:text-purple-500">
+                <Link to={linkUrl} className="transfer-link-format font-medium text-purple-600 hover:text-purple-500 extra-format-link">
                     {linkName}
                 </Link>
             </p>

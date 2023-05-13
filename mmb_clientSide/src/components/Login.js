@@ -4,6 +4,7 @@ import FormAction from "./FormAction";
 import Input from "./Input";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom"
+import './Header.css'
 
 const fields = loginFields;
 let fieldsState = {};
@@ -53,6 +54,7 @@ export default function Login() {
                             type={field.type}
                             isRequired={field.isRequired}
                             placeholder={field.placeholder}
+                            
                         />
 
                     )

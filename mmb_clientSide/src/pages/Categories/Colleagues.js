@@ -5,6 +5,9 @@ import NavbarComp from '../../components/Navbar'
 import './Categories.css'
 import { Blogs } from '../../components/Blogs'
 import { Link } from 'react-router-dom'
+import './Colleagues.css'
+import background from '../../media/categories/colleagues_bck.png'
+
 
 const Colleagues = () => {
   useLayoutEffect(() => {

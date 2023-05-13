@@ -31,6 +31,7 @@ const Category = () => {
       <NavbarComp></NavbarComp>
       <div id='category-container'>
         <h1 id='category-head'>Recommended Stories</h1>
+        <Link to='/therapist' id="book-session-click">Click here to book session with therapist</Link>
         <div id='recommended-blogs'>
         {data_ref.map((item, index) => (
           <div key={index} id='recommended-item'>

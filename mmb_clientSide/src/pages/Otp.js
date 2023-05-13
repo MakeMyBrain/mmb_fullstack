@@ -3,6 +3,7 @@ import React from 'react';
 import axios from "axios";
 import { useState } from 'react';
 import OtpInput from 'react-otp-input';
+import "../components/Header.css"
 
 const Otp = () => {
     const navigate = useNavigate();
@@ -29,15 +30,21 @@ const Otp = () => {
     }
     return (
         <div >
-            <div>
+            <div className="otp-container">
+                <h1 id="otp-head">Enter OTP</h1>
+                <div id="otp-subhead">Please enter the OTP that we have just sent you on your email address. This OTP is being used for the verification of the email address provided by you.</div>
+                    <div className="otp-box">
                 <OtpInput
                     value={otp}
                     onChange={setOtp}
                     numInputs={4}
                     renderSeparator={<span>-</span>}
-                    renderInput={(props) => <input {...props} />}
+                    renderInput={(props) => <input {...props} 
+                    className='otp-input'
+                    />}
                 />
-                <button onClick={handleSubmit}>Submit</button>
+                </div>
+                <button onClick={handleSubmit} className='otp-button'>Submit</button>
             </div>
         </div>
     );
