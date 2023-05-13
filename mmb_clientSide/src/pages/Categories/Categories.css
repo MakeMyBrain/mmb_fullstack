@@ -27,6 +27,10 @@
     padding-bottom: 80px;
 }
 
+.subcategory-links {
+    text-decoration: none;
+}
+
 .subcategory-items {
     text-decoration: none;
     color: white;

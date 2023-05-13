@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Blogs } from "../../components/Blogs";
 import Footer from "../../components/Footer";
 import NavbarComp from "../../components/Navbar";
@@ -27,48 +28,14 @@ const Relationships = () => {
         Select the category that relates to your problem.
       </div>
       <div id="subcategory-list">
-        <div
-          className="subcategory-items"
-          onClick={() => handleClick("Trust issues")}
-        >
-          Trust issues
-        </div>
-        <div
-          className="subcategory-items"
-          onClick={() => handleClick("Breakup")}
-        >
-          Breakup
-        </div>
-        <div
-          className="subcategory-items"
-          onClick={() => handleClick("Power struggles")}
-        >
-          Power struggles
-        </div>
-        <div
-          className="subcategory-items"
-          onClick={() => handleClick("Compatibility with partner")}
-        >
-          Compatibility with partner
-        </div>
-        <div
-          className="subcategory-items"
-          onClick={() => handleClick("Incompatible families")}
-        >
-          Incompatible families
-        </div>
-        <div
-          className="subcategory-items"
-          onClick={() => handleClick("Not available for each other")}
-        >
-          Not available for each other
-        </div>
-        <div
-          className="subcategory-items"
-          onClick={() => handleClick("False expectations")}
-        >
-          False expectations
-        </div>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Trust issues')}`}><div className='subcategory-items' >Trust issues</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Breakup')}`}><div className='subcategory-items' >Breakup</div></Link>  
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Power struggles')}`}><div className='subcategory-items' >Power struggles</div></Link>  
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Compatibility with partner')}`}><div className='subcategory-items' >Compatibility with partner</div></Link>  
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Incompatible families')}`}><div className='subcategory-items' >Incompatible families</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Not available for each other')}`}><div className='subcategory-items' >Not available for each other</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('False expectations')}`}><div className='subcategory-items' >False expectations</div></Link>
+        
       </div>
       <Footer></Footer>
     </div>

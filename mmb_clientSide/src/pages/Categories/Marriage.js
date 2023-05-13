@@ -22,14 +22,13 @@ const Marriage = () => {
       <h1 id='subcategory-head'>Marriage</h1>
       <div id='subcategory-subhead'>Select the category that relates to your problem.</div>
       <div id='subcategory-list'>
-        <Link to={`/All?RecognizedText=${encodeURIComponent('Power struggles')}`}><div className='subcategory-items' >Power struggles</div></Link>
-        <div className='subcategory-items' onClick={() => handleClick('Violence')}>Violence</div>
-        <div className='subcategory-items' onClick={() => handleClick('Substance abuse')}>Substance abuse</div>
-        <div className='subcategory-items' onClick={() => handleClick('Emotional harassment')}>Emotional harassment</div>
-        <div className='subcategory-items' onClick={() => handleClick('Difference of beliefs')}>Difference of beliefs</div>
-        <div className='subcategory-items' onClick={() => handleClick('Divorce')}>Divorce</div>
-        <div className='subcategory-items' onClick={() => handleClick('Trust issues')}>Trust issues</div>
-        <div className='subcategory-items' onClick={() => handleClick('False expectations')}>False expectations</div>
+        <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Power struggles')}`}><div className='subcategory-items' >Power struggles</div></Link>
+        <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Violence')}`}><div className='subcategory-items' >Violence in marriage</div></Link>
+        <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Emotional harassment')}`}><div className='subcategory-items' >Emotional harassment</div></Link>
+        <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Difference of beliefs')}`}><div className='subcategory-items' >Difference of beliefs</div></Link>
+        <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Divorce')}`}><div className='subcategory-items' >Divorce</div></Link>
+        <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Trust issues')}`}><div className='subcategory-items' >Trust issues</div></Link>
+        <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('False expectations')}`}><div className='subcategory-items' >False expectations</div></Link>
 
       </div>
       <Footer></Footer>

@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Blogs } from '../../components/Blogs'
 import Footer from '../../components/Footer'
 import NavbarComp from '../../components/Navbar'
@@ -21,8 +22,8 @@ const Loneliness = () => {
       <h1 id='subcategory-head'>Loneliness</h1>
       <div id='subcategory-subhead'>Select the category that relates to your problem.</div>
       <div id='subcategory-list'>
-        <div className='subcategory-items' onClick={() => handleClick('I want to learn to live alone')}>I want to learn to live alone</div>
-        <div className='subcategory-items' onClick={() => handleClick('I want to find someone')}>I want to find someone</div>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('I want to learn to live alone')}`}><div className='subcategory-items' >I want to learn to live alone</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('I want to find someone')}`}><div className='subcategory-items' >I want to find someone</div></Link>
       </div>
       <Footer></Footer>
     </div>

@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Blogs } from '../../components/Blogs'
 import Footer from '../../components/Footer'
 import NavbarComp from '../../components/Navbar'
@@ -21,14 +22,14 @@ const Parenting = () => {
       <h1 id='subcategory-head'>Parenting</h1>
       <div id='subcategory-subhead'>Select the category that relates to your problem.</div>
       <div id='subcategory-list'>
-        <div className='subcategory-items' onClick={() => handleClick('Unable to spend time with child')}>Unable to spend time with child</div>
-        <div className='subcategory-items' onClick={() => handleClick('Death of a child')}>Death of a child</div>
-        <div className='subcategory-items' onClick={() => handleClick('Depression after childbirth')}>Depression after childbirth</div>
-        <div className='subcategory-items' onClick={() => handleClick('Talking about sex with child')}>Talking about sex with child</div>
-        <div className='subcategory-items' onClick={() => handleClick('Treating children equally')}>Treating children equally</div>
-        <div className='subcategory-items' onClick={() => handleClick('Dividing roles among parents')}>Dividing roles among parents</div>
-        <div className='subcategory-items' onClick={() => handleClick('Comparison with other kids')}>Comparison with other kids</div>
-        <div className='subcategory-items' onClick={() => handleClick('Burnout due to parenting')}>Burnout due to parenting</div>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Unable to spend time with child')}`}><div className='subcategory-items' >Unable to spend time with child</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Death of a child')}`}><div className='subcategory-items' >Death of a child</div></Link>  
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Depression after childbirth')}`}><div className='subcategory-items' >Depression after childbirth</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Talking about sex with child')}`}><div className='subcategory-items' >Talking about sex with child</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Treating children equally')}`}><div className='subcategory-items' >Treating children equally</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('dividing roles among parents')}`}><div className='subcategory-items' >Dividing roles among parents</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('comparison with other kids')}`}><div className='subcategory-items' >Comparison with other kids</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Burnout due to parenting')}`}><div className='subcategory-items' >Burnout due to parenting</div></Link>
       </div>
       <Footer></Footer>
     </div>

@@ -30,6 +30,16 @@ const Category = () => {
     <div>
       <NavbarComp></NavbarComp>
       <div id='category-container'>
+        <h1 id='category-head'>Recommended Stories</h1>
+        <div id='recommended-blogs'>
+        {data_ref.map((item, index) => (
+          <div key={index} id='recommended-item'>
+          <h2 id='recommended-blogtitle'>{item.blogtitle}</h2>
+          <p id='recommended-blogmeta'>{item.blogmeta}</p>
+          <a href={item.bloglink} id="recommended-bloglink">Read more</a>
+        </div>))}
+        </div>
+        <div id='intermediate-text'>Could not find a solution? Check below...</div>
         <h1 id='category-head'>Which of these is causing you problems?</h1>
         <div id='category-cover'>
           <div id='category-list'>
@@ -42,11 +52,11 @@ const Category = () => {
             <Link className='category-items' to='/category/loneliness' ><img className='category-image' src={Loneliness} placeholder='Loneliness' /></Link>
             <Link className='category-items' to='/category/lifestyle' ><img className='category-image' src={Lifestyle} placeholder='Lifestyle' /></Link>
           </div>
-
         </div>
       </div>
       <Footer></Footer>
     </div>
+  
   )
 }
 

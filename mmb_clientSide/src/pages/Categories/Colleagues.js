@@ -4,6 +4,7 @@ import Footer from '../../components/Footer'
 import NavbarComp from '../../components/Navbar'
 import './Categories.css'
 import { Blogs } from '../../components/Blogs'
+import { Link } from 'react-router-dom'
 
 const Colleagues = () => {
   useLayoutEffect(() => {
@@ -21,16 +22,16 @@ const Colleagues = () => {
       <h1 id='subcategory-head'>Colleagues</h1>
       <div id='subcategory-subhead'>Select the category that relates to your problem.</div>
       <div id='subcategory-list'>
-        <div className='subcategory-items' onClick={() => handleClick('Bullying and harassment')}>Bullying and harassment</div>
-        <div className='subcategory-items' onClick={() => handleClick('Sexual harassment by colleague')}>Sexual harassment by colleague</div>
-        <div className='subcategory-items' onClick={() => handleClick('Incompatible boss')}>Incompatible boss</div>
-        <div className='subcategory-items' onClick={() => handleClick('Narcissist nature of a colleague')}>Narcissist nature of a colleague</div>
-        <div className='subcategory-items' onClick={() => handleClick('Colleague does not talk properly')}>Colleague does not talk properly</div>
-        <div className='subcategory-items' onClick={() => handleClick('Colleagues gossip about me')}>Colleagues gossip about me</div>
-        <div className='subcategory-items' onClick={() => handleClick('Colleagues do bitching to boss')}>Colleagues do bitching to boss</div>
-        <div className='subcategory-items' onClick={() => handleClick('A colleague is too much friendly')}>A colleague is too much friendly</div>
-        <div className='subcategory-items' onClick={() => handleClick('Colleague does not work in team')}>Colleague does not work in team</div>
-        <div className='subcategory-items' onClick={() => handleClick('Peer pressure of performance')}>Peer pressure of performance</div>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Bullying and harassment')}`}><div className='subcategory-items' >Bullying and harassment</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Sexual harrassment by colleague')}`}><div className='subcategory-items' >Sexual harassment by colleague</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Incompatible boss')}`}><div className='subcategory-items' >Incompatible boss</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Narcissist nature of a colleague')}`}><div className='subcategory-items' >Narcissist nature of a colleague</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent("Colleague doesn't talk properly")}`}><div className='subcategory-items' >Colleague does not talk properly</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Colleagues gossip about me')}`}><div className='subcategory-items' >Colleagues gossip about me</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Colleagues do bitching to boss')}`}><div className='subcategory-items' >Colleagues do bitching to boss</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('A colleague is too much friendly')}`}><div className='subcategory-items' >A colleague is too much friendly</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent("Colleague doesn't work in team")}`}><div className='subcategory-items' >Colleague does not work in team</div></Link>
+      <Link className='subcategory-links' to={`/All?RecognizedText=${encodeURIComponent('Peer pressure of performance')}`}><div className='subcategory-items' >Peer pressure of performance</div></Link>
       </div>
       <Footer></Footer>
     </div>
