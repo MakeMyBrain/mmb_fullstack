@@ -8,9 +8,7 @@ import Footer from '../components/Footer'
 import Timer from '../components/Timer'
 
 const OpenupText = () => {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  })
+
   const [RecognizedText, setRecognizedText] = useState('');
   const handleInputChange = (event) => {
     setRecognizedText(event.target.value);

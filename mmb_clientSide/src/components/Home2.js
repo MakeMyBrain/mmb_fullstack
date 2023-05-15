@@ -34,7 +34,7 @@ const Home2 = () => {
                 <div className="text-box">
                     <h1 class="heading-primary">
                         <span class="heading-primary-main">Namaskara<br />
-                            Bengaluru                            
+                            India                            
                             <br /><br /> </span>
                             <span class="heading-primary-sub ">Your One-Stop solution for</span>
                         <span className='typewrite heading-primary-main'>

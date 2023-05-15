@@ -140,4 +140,4 @@ class TfIdf {
   }
 }
 
-module.exports = TfIdf;
+export default TfIdf;

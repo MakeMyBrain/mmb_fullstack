@@ -30,7 +30,8 @@ const NavbarComp = () => {
                         <Nav expand="lg" className='ma-auto gap-3  font-Segoe UI'>
                             
                             <Nav.Link as={Link} to={"/openup"} id='talk_button'>Get Solution</Nav.Link>
-                            <a href='https://makemybrain.com/blog' id='blog_link'>Blogs</a>
+                            <Nav.Link as={Link} to={"/category"}>Blogs</Nav.Link>
+                            {/* <a href='https://makemybrain.com/blog' id='blog_link'>Blogs</a> */}
                             <Nav.Link as={Link} to={"/companion"}>Find Therapist</Nav.Link>
                             <Nav.Link as={Link} to={"/about"}>About Us</Nav.Link>
                         </Nav>

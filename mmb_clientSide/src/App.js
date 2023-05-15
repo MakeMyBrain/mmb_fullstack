@@ -71,7 +71,7 @@ function App() {
           <Route path="/song" element={<Song song={songs} />} />
           <Route path="/mood" element={<Moodselect OnclickTag={OnclickTag} />}
           />
-          <Route path="/jobs" element={<Jobs />} />
+          {/* <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Private><Companion /></Private>} />
           <Route path="/therapist" element={<Private><Therapist /></Private>} />
           <Route path="/Story/:index" element={<Story />} />
@@ -92,7 +92,31 @@ function App() {
           <Route path="/category/lifestyle" element={<Private><Lifestyle /></Private>} />
           <Route path="/category/loneliness" element={<Private><Loneliness /></Private>} />
           <Route path="/category/marriage" element={<Private><Marriage /></Private>} />
-          <Route path="/All" element={<Private><AllCategorisBlogs /></Private>} />
+          <Route path="/All" element={<Private><AllCategorisBlogs /></Private>} /> */}
+
+
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/companion" element={<Companion />} />
+          <Route path="/therapist" element={<Therapist />} />
+          <Route path="/Story/:index" element={<Story />} />
+          <Route path="/Login" element={<LoginPage />} />
+          <Route path="/Signup" element={<SignupPage />} />
+          <Route path="/Otp" element={<Otp />} />
+          <Route path="/stories" element={<StoryPage />} />
+          <Route path="/cdc" element={<StoryPage />} />
+          <Route path="/openup" element={<Openup />} />
+          <Route path="/openup/text" element={<OpenupText />} />
+          <Route path="/openup/speak" element={<OpenupSpeak />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/category/friends" element={<Friends />} />
+          <Route path="/category/parents" element={<Parents />} />
+          <Route path="/category/relationships" element={<Relationships />} />
+          <Route path="/category/parenting" element={<Parenting />} />
+          <Route path="/category/colleagues" element={<Colleagues />} />
+          <Route path="/category/lifestyle" element={<Lifestyle />} />
+          <Route path="/category/loneliness" element={<Loneliness />} />
+          <Route path="/category/marriage" element={<Marriage />} />
+          <Route path="/All" element={<AllCategorisBlogs />} />
         </Routes>
       </main>
     </div>
