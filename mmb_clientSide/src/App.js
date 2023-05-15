@@ -32,6 +32,7 @@ import Lifestyle from "./pages/Categories/Lifestyle";
 import Loneliness from "./pages/Categories/Loneliness";
 import Marriage from "./pages/Categories/Marriage";
 import AllCategorisBlogs from "./pages/Categories/AllCategoriesBlogs"
+import Pricing from "./pages/Pricing";
 
 
 function App() {
@@ -92,7 +93,8 @@ function App() {
           <Route path="/category/lifestyle" element={<Private><Lifestyle /></Private>} />
           <Route path="/category/loneliness" element={<Private><Loneliness /></Private>} />
           <Route path="/category/marriage" element={<Private><Marriage /></Private>} />
-          <Route path="/All" element={<Private><AllCategorisBlogs /></Private>} /> */}
+          <Route path="/All" element={<Private><AllCategorisBlogs /></Private>} /> 
+          <Route path="/pricing" element={<Pricing />} />*/}
 
 
           <Route path="/jobs" element={<Jobs />} />
@@ -117,6 +119,7 @@ function App() {
           <Route path="/category/loneliness" element={<Loneliness />} />
           <Route path="/category/marriage" element={<Marriage />} />
           <Route path="/All" element={<AllCategorisBlogs />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
       </main>
     </div>
