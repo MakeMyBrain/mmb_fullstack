@@ -4,6 +4,9 @@ import FormAction from "./FormAction";
 import Input from "./Input";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom"
+import { ToastContainer, toast } from 'react-toastify';
+import { showToastMessage } from './Toasty';
+
 
 const fields = signupFields;
 let fieldsState = {};
@@ -37,6 +40,7 @@ export default function Signup() {
             })
             .catch((error) => {
                 console.log("error.message", error.message);
+                showToastMessage("User already registed", "negative");
             });
     }
 
@@ -61,6 +65,7 @@ export default function Signup() {
                     )
                 }
                 <FormAction handleSubmit={handleSubmit} text="Signup" />
+                <ToastContainer />
             </div>
 
 

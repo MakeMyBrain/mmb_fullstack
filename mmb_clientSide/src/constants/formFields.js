@@ -37,8 +37,8 @@ const signupFields = [
         labelText: "Date of Birth",
         labelFor: "DOB",
         id: "dob",
-        name: "DOB",
-        type: "DOB",
+        name: "date",
+        type: "date",
         autoComplete: "Date of Birth",
         isRequired: true,
         placeholder: "YYYY-MM-DD"

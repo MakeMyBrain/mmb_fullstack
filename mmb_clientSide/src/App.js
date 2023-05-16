@@ -72,7 +72,7 @@ function App() {
           <Route path="/song" element={<Song song={songs} />} />
           <Route path="/mood" element={<Moodselect OnclickTag={OnclickTag} />}
           />
-          {/* <Route path="/jobs" element={<Jobs />} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Private><Companion /></Private>} />
           <Route path="/therapist" element={<Private><Therapist /></Private>} />
           <Route path="/Story/:index" element={<Story />} />
@@ -93,11 +93,11 @@ function App() {
           <Route path="/category/lifestyle" element={<Private><Lifestyle /></Private>} />
           <Route path="/category/loneliness" element={<Private><Loneliness /></Private>} />
           <Route path="/category/marriage" element={<Private><Marriage /></Private>} />
-          <Route path="/All" element={<Private><AllCategorisBlogs /></Private>} /> 
-          <Route path="/pricing" element={<Pricing />} />*/}
+          <Route path="/All" element={<Private><AllCategorisBlogs /></Private>} />
+          <Route path="/pricing" element={<Pricing />} />
 
 
-          <Route path="/jobs" element={<Jobs />} />
+          {/* <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
           <Route path="/Story/:index" element={<Story />} />
@@ -119,7 +119,7 @@ function App() {
           <Route path="/category/loneliness" element={<Loneliness />} />
           <Route path="/category/marriage" element={<Marriage />} />
           <Route path="/All" element={<AllCategorisBlogs />} />
-          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/pricing" element={<Pricing />} /> */}
         </Routes>
       </main>
     </div>

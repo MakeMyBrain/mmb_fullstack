@@ -5,6 +5,8 @@ import Input from "./Input";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom"
 import './Header.css'
+import { ToastContainer, toast } from 'react-toastify';
+import { showToastMessage } from './Toasty';
 
 const fields = loginFields;
 let fieldsState = {};
@@ -32,9 +34,11 @@ export default function Login() {
                 console.log(res);
                 localStorage.setItem("email", loginState.email);
                 navigate("/Otp");
+
             })
             .catch((error) => {
                 console.log("error.message", error.message);
+                showToastMessage("User not registed");
             });
     }
 
@@ -54,16 +58,14 @@ export default function Login() {
                             type={field.type}
                             isRequired={field.isRequired}
                             placeholder={field.placeholder}
-                            
+
                         />
 
                     )
                 }
             </div>
-
-
             <FormAction handleSubmit={handleSubmit} text="Login" />
-
+            <ToastContainer />
         </form>
     )
 }

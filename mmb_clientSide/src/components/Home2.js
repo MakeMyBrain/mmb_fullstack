@@ -18,25 +18,26 @@ import job from '../media/job.png';
 import { Users } from './Users';
 import { Cards } from './Cards';
 
+
+
 const Home2 = () => {
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
-      })
+    })
     useEffect(() => {
         Aos.init({ duration: 1000 });
     }, []);
     const [query, setQuery] = useState("");
     console.log(Users.filter(user => user.name.toLowerCase().includes("bi")));
-
     return (
         <div>
             <div className='banner'>
                 <div className="text-box">
                     <h1 class="heading-primary">
                         <span class="heading-primary-main">Namaskara<br />
-                            India                            
+                            India
                             <br /><br /> </span>
-                            <span class="heading-primary-sub ">Your One-Stop solution for</span>
+                        <span class="heading-primary-sub ">Your One-Stop solution for</span>
                         <span className='typewrite heading-primary-main'>
                             <Typewriter
                                 options={{
@@ -54,7 +55,7 @@ const Home2 = () => {
                         </span>
                         <br />
                         <Link to='/openup' id='card-button'>Start Now</Link>
-                        
+
                     </h1>
 
 
@@ -64,44 +65,44 @@ const Home2 = () => {
             </div>
             <br />
             <br />
-            
+
             <div >
 
 
 
-                                
-            <div >
-                <div data-aos='fade-up'><h2 className='text-center-title'>What our Customers say</h2></div>
 
-                <div className='test_flexbox' data-aos='fade-up'>
-                    <div className='test_flexitem'>
-                        <div className='test_para'>I felt a lot of relief after the talk. I would recommend it to
-                            people who can not afford costly therapies.</div>
-                        <div className='test_name'>Shruti Khokhar</div>
+                <div >
+                    <div data-aos='fade-up'><h2 className='text-center-title'>What our Customers say</h2></div>
+
+                    <div className='test_flexbox' data-aos='fade-up'>
+                        <div className='test_flexitem'>
+                            <div className='test_para'>I felt a lot of relief after the talk. I would recommend it to
+                                people who can not afford costly therapies.</div>
+                            <div className='test_name'>Shruti Khokhar</div>
+                        </div>
+                        <div className='test_flexitem' data-aos='fade-up'>
+                            <div className='test_para'>It was a very interactive session with my companion, and I could
+                                say things I hesitated to talk about.</div>
+                            <div className='test_name'>Radhika Jangra</div>
+                        </div>
+                        <div className='test_flexitem' data-aos='fade-up'>
+                            <div className='test_para'>My companion listened to my whole story without
+                                judging, and I got a new perspective.</div>
+                            <div className='test_name'>Pooja Bhatt</div>
+                        </div>
+                        <div className='test_flexitem' data-aos='fade-up'>
+                            <div className='test_para'>I am not willing to go to a therapist for every
+                                small issue, but here I can take talks due to low prices.</div>
+                            <div className='test_name'>Priya Saha</div>
+                        </div>
+
                     </div>
-                    <div className='test_flexitem' data-aos='fade-up'>
-                        <div className='test_para'>It was a very interactive session with my companion, and I could
-                            say things I hesitated to talk about.</div>
-                        <div className='test_name'>Radhika Jangra</div>
-                    </div>
-                    <div className='test_flexitem' data-aos='fade-up'>
-                        <div className='test_para'>My companion listened to my whole story without
-                            judging, and I got a new perspective.</div>
-                        <div className='test_name'>Pooja Bhatt</div>
-                    </div>
-                    <div className='test_flexitem' data-aos='fade-up'>
-                        <div className='test_para'>I am not willing to go to a therapist for every
-                            small issue, but here I can take talks due to low prices.</div>
-                        <div className='test_name'>Priya Saha</div>
-                    </div>
+
 
                 </div>
 
-
-            </div>
-
-                <br/>
-                <br/>
+                <br />
+                <br />
 
 
 
@@ -126,7 +127,7 @@ const Home2 = () => {
                     <div id='flexbox'>
 
 
-                        
+
                         <div className='flex-list' data-aos='fade-up'>
                             <div><img src={mindtales} alt='Music' className='offer_img' /></div>
                             <div className='offer_title'>Mind Tales</div>
@@ -174,9 +175,9 @@ const Home2 = () => {
                 <br />
                 <br />
             </div>
-            
-            
+
         </div>
+
     );
 }
 
