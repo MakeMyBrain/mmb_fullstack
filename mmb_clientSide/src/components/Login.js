@@ -27,11 +27,12 @@ export default function Login() {
     //Handle Login API Integration here
     const authenticateUser = () => {
         axios
-            .post(`http://localhost:5000/users/login`, {
+            .post(`https://mmb-auth.onrender.com/users/login`, {
                 email: loginState.email,
             })
             .then((res) => {
-                console.log(res);
+                //console.log(res);
+                localStorage.removeItem("email");
                 localStorage.setItem("email", loginState.email);
                 navigate("/Otp");
 

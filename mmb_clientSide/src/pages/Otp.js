@@ -16,13 +16,16 @@ const Otp = () => {
         console.log(otp);
         const email = localStorage.getItem("email");
         axios
-            .post(`http://localhost:5000/users/verify`, {
+            .post(`https://mmb-auth.onrender.com/users/verify`, {
                 email: email,
                 otp: otp,
             })
             .then((res) => {
                 // console.log("res");
                 // localStorage.setItem("logstat", true);
+                //console.log(res.data.token);
+                localStorage.removeItem("jwt_token");
+                localStorage.removeItem("subs");
                 localStorage.setItem("jwt_token", res.data.token);
                 localStorage.setItem("subs", res.data.subscribe);
                 // showToastMessage("Successfull login", "positive");

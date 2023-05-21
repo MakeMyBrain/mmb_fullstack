@@ -74,7 +74,7 @@ function App() {
           />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Private><Companion /></Private>} />
-          <Route path="/therapist" element={<Private><Therapist /></Private>} />
+          <Route path="/therapist" element={<Therapist />} />
           <Route path="/Story/:index" element={<Story />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Signup" element={<SignupPage />} />

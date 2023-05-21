@@ -26,7 +26,7 @@ export default function Signup() {
     //handle Signup API Integration here
     const createAccount = () => {
         axios
-            .post(`http://localhost:5000/users/signup`, {
+            .post(`https://mmb-auth.onrender.com/users/signup`, {
                 name: signupState.username,
                 email: signupState.email,
                 gender: signupState.gender,
