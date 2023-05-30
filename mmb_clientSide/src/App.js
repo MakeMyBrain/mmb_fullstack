@@ -44,6 +44,26 @@ function App() {
     },
   ]);
 
+  //Function for Api call in after 20 min automatically
+  function callLinkRepeatedly() {
+    fetch('https://mmb-auth.onrender.com', {
+      method: 'GET', // or 'POST' if required
+      // Additional headers or body if necessary
+    })
+      .then(response => {
+        // Process the response if needed
+        console.log('Link called successfully.');
+      })
+      .catch(error => {
+        // Handle any errors
+        console.error('Error calling the link:', error);
+      });
+    setTimeout(callLinkRepeatedly, 20 * 60 * 1000);
+  }
+
+  // Start the initial call
+  callLinkRepeatedly();
+
   //TODO: suffle array
   const OnclickTag = async (tag) => {
     const Allsongs = await GetSongsAction({}, tag);
