@@ -1,5 +1,6 @@
 /*------------Fisrt Container "ASCEND"-------------*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 .banner {
 	width: 100%;
 	height: 95vh;
@@ -64,10 +65,12 @@
 		letter-spacing: 0.5em;
 		margin-right: -0.5em;
 	}
+
 	.heading-primary-sub {
 		font-size: 25px;
 		letter-spacing: 0.118em;
 	}
+
 	.product-box {
 		font-size: 34px;
 		letter-spacing: 0.12em;
@@ -80,15 +83,18 @@
 		letter-spacing: 0.5em;
 		margin-right: -0.5em;
 	}
+
 	.heading-primary-sub {
 		font-size: 17px;
 		letter-spacing: 0.118em;
 	}
+
 	.product-box {
 		font-size: 24px;
 		letter-spacing: 0.1em;
 	}
 }
+
 /*-----------------------------*/
 
 /*-----------Clients & Partners Section ----------------*/
@@ -118,6 +124,7 @@
 		line-height: 100px;
 		letter-spacing: 0.1em;
 	}
+
 	.partnerLogo {
 		width: 95px;
 	}
@@ -129,16 +136,19 @@
 		line-height: 80px;
 		letter-spacing: 0.08em;
 	}
+
 	.partnerLogo {
 		width: 75px;
 	}
 }
+
 /*------------------------------------*/
 
 .slick-prev,
 .slick-next {
 	color: #000;
 }
+
 /*-----------Courses Section ----------------*/
 .courses {
 	display: flex;
@@ -152,7 +162,7 @@
 	padding-top: 40px;
 	padding-bottom: 20px;
 	position: relative;
-	height: 75vmin;
+	height: 85vh;
 }
 
 .courses-text span {
@@ -210,7 +220,7 @@
 	border-bottom-left-radius: 12px;
 }
 
-.carousel-card-img > img {
+.carousel-card-img>img {
 	width: 100%;
 	height: auto;
 	background-position: center;
@@ -266,6 +276,7 @@
 		margin-bottom: 50px;
 	}
 }
+
 /*------------------------------------*/
 
 /*-----------Stories Section ----------------*/
@@ -342,7 +353,7 @@
 	padding-top: 18px;
 }
 
-.stories-card-heading > h4 {
+.stories-card-heading>h4 {
 	font-family: "Inter", sans-serif;
 	font-weight: 800;
 	font-size: 18px;
@@ -357,7 +368,7 @@
 	padding-bottom: 14px;
 }
 
-.stories-card-para > p {
+.stories-card-para>p {
 	font-family: "Inter", sans-serif;
 	font-weight: 400;
 	font-size: 15px;
@@ -379,6 +390,7 @@
 		font-size: 12px;
 	}
 }
+
 /*------------------------------------*/
 
 /*--------------------Quality Section------------------*/
@@ -405,14 +417,14 @@
 	display: inline;
 }
 
-.quality-card-text > h2 {
+.quality-card-text>h2 {
 	text-align: center;
 	color: #fff;
 	font-size: 32px;
 	padding: 15px 40px;
 }
 
-.quality-card-text > p {
+.quality-card-text>p {
 	text-align: center;
 	color: #fff;
 	padding: 15px 60px;
@@ -441,10 +453,12 @@
 		min-height: 450px;
 		margin: 30px 10px;
 	}
-	.quality-card-text > h2 {
+
+	.quality-card-text>h2 {
 		font-size: 27px;
 	}
-	.quality-card-text > p {
+
+	.quality-card-text>p {
 		font-size: 12px;
 	}
 }
@@ -457,13 +471,16 @@
 		min-height: 375px;
 		margin: 30px 10px;
 	}
-	.quality-card-text > h2 {
+
+	.quality-card-text>h2 {
 		font-size: 22px;
 	}
-	.quality-card-text > p {
+
+	.quality-card-text>p {
 		font-size: 12px;
 	}
 }
+
 /*----------------*/
 
 #show-more {
