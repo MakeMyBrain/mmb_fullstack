@@ -1,31 +1,31 @@
-import React, { useEffect } from 'react'
-import './Home.css'
-import logo from '../media/logo.png'
-import stock from '../media/website image.PNG'
-import diff from '../media/difference.PNG'
-import review from '../media/reviews.PNG'
-import { Link } from 'react-router-dom'
-import NavbarComp from './Navbar'
-import Footer from './Footer'
-import Home2 from './Home2'
+import React, { useEffect } from "react";
+import "./Home.css";
+import logo from "../media/logo.png";
+import stock from "../media/website image.PNG";
+import diff from "../media/difference.PNG";
+import review from "../media/reviews.PNG";
+import { Link } from "react-router-dom";
+import NavbarComp from "./Navbar";
+import Footer from "./Footer";
+import Home3 from "./Home3";
 
 const Home = () => {
-    useEffect(() => {
-        document.title = "One-Stop Solution for Career and Mental Health"
-    }, [])
-    return (
-        <div>
-            {/* <header id='headerbar'>
+	useEffect(() => {
+		document.title = "One-Stop Solution for Career and Mental Health";
+	}, []);
+	return (
+		<div>
+			{/* <header id='headerbar'>
                 <div id='head_text'>MakeMyBrain</div>
                 <img src={logo} alt="logo" id='logo_img' />
             </header> */}
-            <header>
-                <NavbarComp></NavbarComp>
-            </header>
-            <section>
-                <Home2></Home2>
-            </section>
-            {/* <main id='main_doc'>
+			<header>
+				<NavbarComp></NavbarComp>
+			</header>
+			<section>
+				<Home3></Home3>
+			</section>
+			{/* <main id='main_doc'>
                 <div id='flexbox' >
                     <div id='textbox'>
                         <div id='headline'>
@@ -61,14 +61,14 @@ const Home = () => {
                     </div>
                 </div>
             </main> */}
-            <footer>
-                <Footer></Footer>
-                {/* <div id='footer'>
+			<footer>
+				<Footer></Footer>
+				{/* <div id='footer'>
                     Copyright © 2022, MakeMyBrain. All Rights Reserved.
                 </div> */}
-            </footer>
-        </div>
-    )
-}
+			</footer>
+		</div>
+	);
+};
 
-export default Home
+export default Home;

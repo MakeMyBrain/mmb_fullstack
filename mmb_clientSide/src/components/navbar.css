@@ -1,31 +1,30 @@
 #header {
-    background-color: #181818;
-    z-index: 9000;
+	background-color: #000000;
+	z-index: 9000;
 }
 
 .talk {
-    text-decoration: none;
-    padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	padding: 10px 20px 10px 20px;
 }
 
 #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 }
 
 #talk_button {
-    border: 2px solid white;
-    border-radius: 40px;
-    color: white;
-    padding: 5px 10px 5px 10px;
+	border: 2px solid white;
+	border-radius: 40px;
+	color: white;
+	padding: 5px 10px 5px 10px;
 }
 
 #blog_link {
-    text-decoration: none;
-    color: rgb(155, 155, 154);
-    font-weight: 400;
-    margin-top: 5px;
-    
+	text-decoration: none;
+	color: rgb(155, 155, 154);
+	font-weight: 400;
+	margin-top: 5px;
 }

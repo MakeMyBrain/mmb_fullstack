@@ -1,12 +1,12 @@
 .footer {
-    background-color: #181818;
+	background-color: #000;
 }
 
 .footerbottom {
-    background-color: #181818;
+	background-color: #000;
 }
 
 #footer_text {
-    padding-bottom: 50px;
-    color: white;
+	padding-bottom: 50px;
+	color: white;
 }
