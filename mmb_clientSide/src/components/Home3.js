@@ -232,7 +232,10 @@ const Home3 = () => {
 						<h2>Real Life Relatable Stories</h2>
 					</div>
 					<div className={Styles["stories-btn"]}>
-						<Link className={Styles["stories-button"]}>
+						<Link
+							to="/mindTales"
+							className={Styles["stories-button"]}
+						>
 							Start Search
 						</Link>
 					</div>

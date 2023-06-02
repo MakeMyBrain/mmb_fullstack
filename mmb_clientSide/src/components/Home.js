@@ -9,6 +9,8 @@ import NavbarComp from "./Navbar";
 import Footer from "./Footer";
 import Home3 from "./Home3";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 const Home = () => {
 	useEffect(() => {
 		document.title = "One-Stop Solution for Career and Mental Health";
@@ -19,9 +21,6 @@ const Home = () => {
                 <div id='head_text'>MakeMyBrain</div>
                 <img src={logo} alt="logo" id='logo_img' />
             </header> */}
-			<header>
-				<NavbarComp></NavbarComp>
-			</header>
 			<section>
 				<Home3></Home3>
 			</section>
