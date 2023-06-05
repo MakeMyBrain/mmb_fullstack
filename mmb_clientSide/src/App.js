@@ -35,6 +35,7 @@ import Marriage from "./pages/Categories/Marriage";
 import AllCategorisBlogs from "./pages/Categories/AllCategoriesBlogs";
 import Pricing from "./pages/Pricing";
 import MindTales from "./components/MindTales";
+import Courses from "./components/Courses";
 
 function App() {
 	const [songs, setSongs] = useState([
@@ -107,6 +108,7 @@ function App() {
 							</Private>
 						}
 					/>
+					<Route path="/courses" element={<Courses />} />
 					<Route path="/mindTales" element={<MindTales />} />
 					<Route path="/therapist" element={<Therapist />} />
 					<Route path="/Story/:index" element={<Story />} />
