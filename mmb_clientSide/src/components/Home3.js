@@ -215,7 +215,10 @@ const Home3 = () => {
 						</h2>
 					</div>
 					<div className={Styles["courses-btn"]}>
-						<Link className={Styles["courses-button"]}>
+						<Link
+							to="/courses"
+							className={Styles["courses-button"]}
+						>
 							Explore Courses
 						</Link>
 					</div>

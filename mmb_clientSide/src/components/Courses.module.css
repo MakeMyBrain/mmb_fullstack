@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.container {
+	margin-top: 65px;
+}
+
+.heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #000;
+	height: 40vh;
+}
+
+.heading > h1 {
+	font-family: "Inter", sans-serif;
+	font-weight: 900;
+	font-size: 60px;
+	letter-spacing: 0.17em;
+}
+
+.heading > p {
+	font-family: "Inter", sans-serif;
+	font-size: 28px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-align: center;
+}
+
+@media (max-width: 700px) {
+	.heading > h1 {
+		font-size: 32px;
+		letter-spacing: 0.12em;
+	}
+
+	.heading > p {
+		font-size: 16px;
+		letter-spacing: 0.06em;
+	}
+}
+
+@media (max-width: 320px) {
+	.heading > h1 {
+		font-size: 24px;
+		letter-spacing: 0.12em;
+	}
+
+	.heading > p {
+		font-size: 12px;
+		letter-spacing: 0.06em;
+	}
+}
+
+/*----------------Course Content-------------*/
+.course-details {
+	font-family: "Inter", sans-serif;
+	/* overflow-x: hidden; */
+	height: 100vh;
+	display: flex;
+	border-top: 1px solid #cecece;
+}
+
+.course-outline {
+	background-color: #fff;
+	width: 300px;
+	height: 100%;
+	position: absolute;
+}
+
+.course-outline-wrap {
+	padding: 0 16px;
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+.intro-text {
+	border-bottom: 2px solid #8e8e8e;
+}
+
+.intro-text > h2 {
+	padding: 16px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #000;
+	margin: 0;
+}
+
+.unit-title {
+	padding: 16px;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #000;
+	border-bottom: 1px solid #e1e1e1;
+	cursor: pointer;
+}
+
+.lessons-list {
+	will-change: max-height;
+	margin: 0;
+	height: 0;
+	overflow: hidden;
+	transition: height 0.3s ease-in-out;
+}
+
+.lessons-list.open {
+	height: auto;
+}
+
+.lesson {
+	margin: 0;
+	padding: 16px;
+	overflow: hidden;
+	font-size: 0.875rem;
+	font-weight: 400;
+	color: #000;
+	border-bottom: 1px solid #e1e1e1;
+	cursor: pointer;
+}
+
+.course-content {
+	margin-left: 300px;
+	padding: 0 30px;
+	width: 100%;
+	height: auto;
+}
+
+.video-container {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.video-container > iframe {
+	width: 649px;
+	height: 365px;
+	border-radius: 10px;
+}
+
+.lower-box {
+	height: 60vh;
+	background-color: black;
+}
+
+.chapter-descp {
+	font-size: 0.975rem;
+	font-weight: 400;
+	padding: 15px;
+}
