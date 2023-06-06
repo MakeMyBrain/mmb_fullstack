@@ -2,20 +2,26 @@ import { Blogs } from "./Blogs";
 import Styles from "./MindTales.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Link } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MindTales = () => {
 	const [searchQuery, setSearchQuery] = useState("");
-
+	const navigate = useNavigate();
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		// Navigate to the Category page with the searchQuery as a parameter
+		navigate(`/category?query=${searchQuery}`);
+	};
+
 	const handleInputChange = (e) => {
 		setSearchQuery(e.target.value);
 	};
-
-	console.log(searchQuery); // logging out the variable stored from search box
+	console.log(searchQuery);  // logging out the variable stored from search box
 
 	const renderCards = () =>
 		Blogs.map((card) => (
@@ -43,7 +49,7 @@ const MindTales = () => {
 				<p>Real Life Relatable Stories</p>
 			</div>
 			<div class={Styles["search-form-box"]}>
-				<form class={Styles["search-form"]}>
+				<form class={Styles["search-form"]} onSubmit={handleSubmit}>
 					<input
 						type="text"
 						id="searchInput"
@@ -51,7 +57,9 @@ const MindTales = () => {
 						placeholder="What are you facing or feeling..."
 						onChange={handleInputChange}
 					/>
-					<button type="submit" class={Styles["search-button"]}>
+					{/* <Link to={`/category?RecognizedText=${encodeURIComponent(searchQuery)}`}>Next</Link> */}
+					<button type="submit" class={Styles["search-button"]} >
+
 						<FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
 					</button>
 				</form>

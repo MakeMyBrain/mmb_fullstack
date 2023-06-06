@@ -23,8 +23,9 @@ const Category = () => {
     document.title = "Category of mental health issues | MakeMyBrain"
   }, [])
   const queryParams = new URLSearchParams(location.search);
-  const RecognizedText = queryParams.get('RecognizedText');
+  const RecognizedText = queryParams.get('query');
   const data_ref = SearchBlogFromQuery(RecognizedText).slice(0, 4);
+  console.log(RecognizedText)
   console.log(data_ref);
   return (
     <div>
@@ -33,12 +34,12 @@ const Category = () => {
         <h1 id='category-head'>Recommended Stories</h1>
         <Link to='/therapist' id="book-session-click">Click here to book session with therapist</Link>
         <div id='recommended-blogs'>
-        {data_ref.map((item, index) => (
-          <div key={index} id='recommended-item'>
-          <h2 id='recommended-blogtitle'>{item.blogtitle}</h2>
-          <p id='recommended-blogmeta'>{item.blogmeta}</p>
-          <a href={item.bloglink} id="recommended-bloglink">Read more</a>
-        </div>))}
+          {data_ref.map((item, index) => (
+            <div key={index} id='recommended-item'>
+              <h2 id='recommended-blogtitle'>{item.blogtitle}</h2>
+              <p id='recommended-blogmeta'>{item.blogmeta}</p>
+              <a href={item.bloglink} id="recommended-bloglink">Read more</a>
+            </div>))}
         </div>
         <div id='intermediate-text'>Could not find a solution? Check below...</div>
         <h1 id='category-head'>Which of these is causing you problems?</h1>
@@ -57,7 +58,7 @@ const Category = () => {
       </div>
       <Footer></Footer>
     </div>
-  
+
   )
 }
 

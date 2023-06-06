@@ -144,9 +144,10 @@ function App() {
 					<Route
 						path="/category"
 						element={
-							<Private>
-								<Category />
-							</Private>
+							<Category />
+							// <Private>
+							// 	<Category />
+							// </Private>
 						}
 					/>
 					<Route
