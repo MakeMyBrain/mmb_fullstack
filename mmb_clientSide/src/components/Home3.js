@@ -24,6 +24,7 @@ import img2 from "../media/carouselCourses/img2.png";
 import img3 from "../media/carouselCourses/img3.png";
 import img4 from "../media/carouselCourses/img4.png";
 import img5 from "../media/carouselCourses/img5.png";
+import stresskit from "../media/web-product-non.png";
 // import musicboy from "../media/musicboy.png";
 // import companiontalk from "../media/companiontalk.png";
 // import therapist from "../media/therapist.png";
@@ -157,10 +158,13 @@ const Home3 = () => {
 						</h1>
 					</div>
 					<div className={Styles["banner-links"]}>
-						<a href="/">Learn More &#62;</a>
-						<a href="/">Buy Now &#62;</a>
+						<Link to='/product'>Learn More &#62;</Link>
+						<Link to='/buynow'>Buy Now &#62;</Link>
+						{/* <a href="/">Learn More &#62;</a> */}
+						{/* <a href="/">Buy Now &#62;</a> */}
 					</div>
-					<div className={Styles["product-box"]}>Product</div>
+					<div className={Styles["product-space"]}></div>
+					<div className={Styles["product-box"]}><img src={stresskit} alt='Products' className={Styles["product-img"]}/></div>
 				</div>
 			</section>
 			{/* <span class="heading-primary-sub ">

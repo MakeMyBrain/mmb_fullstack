@@ -36,6 +36,9 @@ import AllCategorisBlogs from "./pages/Categories/AllCategoriesBlogs";
 import Pricing from "./pages/Pricing";
 import MindTales from "./components/MindTales";
 import Courses from "./components/Courses";
+import Product from "./pages/Product";
+import BuyNow from "./pages/BuyNow";
+import Tnc from "./components/Tnc";
 
 function App() {
 	const [songs, setSongs] = useState([
@@ -117,7 +120,7 @@ function App() {
 					<Route path="/Otp" element={<Otp />} />
 					<Route path="/stories" element={<StoryPage />} />
 					<Route path="/cdc" element={<StoryPage />} />
-					<Route
+					{/* <Route
 						path="/openup"
 						element={
 							<Private>
@@ -223,8 +226,13 @@ function App() {
 						}
 					/>
 					<Route path="/pricing" element={<Pricing />} />
+					
+					<Route path="/product" element={<Product />} />
+					<Route path="/buynow" element={<BuyNow />} />
+					<Route path="/tnc" element={<Tnc />} />
+					*/}
 
-					{/* <Route path="/jobs" element={<Jobs />} />
+		  <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
           <Route path="/therapist" element={<Therapist />} />
           <Route path="/Story/:index" element={<Story />} />
@@ -246,7 +254,10 @@ function App() {
           <Route path="/category/loneliness" element={<Loneliness />} />
           <Route path="/category/marriage" element={<Marriage />} />
           <Route path="/All" element={<AllCategorisBlogs />} />
-          <Route path="/pricing" element={<Pricing />} /> */}
+          <Route path="/pricing" element={<Pricing />} />
+		  <Route path="/product" element={<Product />} />
+		  <Route path="/buynow" element={<BuyNow />} />
+		  <Route path="/tnc" element={<Tnc />} />
 				</Routes>
 			</main>
 		</div>

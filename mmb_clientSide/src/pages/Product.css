@@ -1,0 +1,84 @@
+.ascend_container {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.ascend_img {
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.ascend_head {
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+.ascend_subhead {
+    font-size: 15px;
+
+}
+
+.ascend_about {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ascend_content {
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.ascend_points {
+    color: black;
+    max-width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    
+}
+
+.ascend_button {
+    text-decoration: none;
+    background-color: rgb(6, 93, 198);
+    color: white;
+    font-weight: 600;
+    padding: 5px 15px 5px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition-duration: 200ms;
+}
+
+.ascend_button:hover {
+    background-color: rgb(0, 137, 135);
+    color: white;
+    transition-duration: 200ms;
+}
+
+.ascend_offer {
+    color: red;
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 10px;
+
+}
+
+@media screen and (max-width : 400px) {
+    .ascend_content {
+        max-width: 330px;
+    }
+
+    .ascend_points {
+        max-width: 330px;
+    }
+}

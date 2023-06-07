@@ -11,7 +11,9 @@ const MindTales = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
+	useEffect(() => {
+        document.title = "Mind Tales - Stories that inspire | MakeMyBrain"
+      }, [])
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		// Navigate to the Category page with the searchQuery as a parameter

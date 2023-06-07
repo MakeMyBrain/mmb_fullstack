@@ -3,25 +3,28 @@ import Styles from "./Courses.module.css";
 // import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
 import { Modules } from "./Modules";
+import Footer from "./Footer";
 
 const Courses = () => {
 	const [openModule, setOpenModule] = useState(null);
 	const [selectedChapter, setSelectedChapter] = useState({
 		heading: "Hi! You're Welcome to the course",
-		videoLink: "https://www.youtube.com/embed/RE87rQkXdNw",
-		content: "Happy Mind, Happy Life 😇",
+		videoLink: "https://www.youtube.com/embed/dWm8PXlzDpI",
+		content: "We begin the course with an emotional hindi poem on mental health. Hope you learn a lot from this course that has been carefully created through research. Happy Learning!",
 	});
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
+	useEffect(() => {
+        document.title = "Mind Your Mind - Mental Health Wellness Course | MakeMyBrain"
+      }, [])
 	const handleModuleClick = (index) => {
 		setOpenModule(index === openModule ? null : index);
 		setSelectedChapter({
 			heading: "Hi! You're Welcome to the course",
-			videoLink: "https://www.youtube.com/embed/RE87rQkXdNw",
-			content: "Happy Mind, Happy Life 😇",
+			videoLink: "https://www.youtube.com/embed/dWm8PXlzDpI",
+			content: "We begin the course with an emotional hindi poem on mental health. Hope you learn a lot from this course that has been carefully created through research. Happy Learning!",
 		});
 	};
 
@@ -105,8 +108,9 @@ const Courses = () => {
 						)}
 					</section>
 				</main>
-				<div className={Styles["lower-box"]}>1</div>
-			</div>
+				
+			</div><br/><br/><br/>
+			<Footer></Footer>
 		</div>
 	);
 };
