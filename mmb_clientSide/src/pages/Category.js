@@ -25,6 +25,7 @@ const Category = () => {
   const queryParams = new URLSearchParams(location.search);
   const RecognizedText = queryParams.get('query');
   const data_ref = SearchBlogFromQuery(RecognizedText).slice(0, 4);
+  console.log(SearchBlogFromQuery("angry"))
   console.log(RecognizedText)
   console.log(data_ref);
   return (
