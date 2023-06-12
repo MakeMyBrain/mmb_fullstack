@@ -26,7 +26,8 @@ const BuyNow = () => {
             </div>
             <img src={stresskit} className='ascend_img'/>
 
-            <div className='ascend_content'>We are going to begin our sale shortly. Until that golden day, 
+            <div className='ascend_content'>We are going to begin our sale shortly. The product is originally priced 
+            at Rs. 499/- per kit. Until that golden day of sales launch, 
             we are accepting pre-orders from you, so that you can avail a huge 30% discount on the original 
             price, and decrease your stress 30% more than others :P
         </div>

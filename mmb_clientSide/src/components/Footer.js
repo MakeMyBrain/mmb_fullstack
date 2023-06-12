@@ -61,6 +61,14 @@ const Footer = () => {
 										Terms & Conditions
 									</Link>
 								</li>
+								<li>
+									<Link
+										to={"/privacy"}
+										className="text-white text-decoration-none"
+									>
+										Privacy Policy
+									</Link>
+								</li>
 							</ul>
 						</Col>
 						<Col sm={3}>
@@ -85,7 +93,7 @@ const Footer = () => {
 							<Row>
 								<h7>Connect with us</h7>
 								<Col>
-									<a href="">
+									<a href="https://www.facebook.com/profile.php?id=100093381436424">
 										<FaFacebookSquare
 											className="text-white ms-1"
 											size="40"

@@ -39,6 +39,7 @@ import Courses from "./components/Courses";
 import Product from "./pages/Product";
 import BuyNow from "./pages/BuyNow";
 import Tnc from "./components/Tnc";
+import Privacy from "./components/Privacy";
 
 function App() {
 	const [songs, setSongs] = useState([
@@ -230,6 +231,7 @@ function App() {
 					<Route path="/product" element={<Product />} />
 					<Route path="/buynow" element={<BuyNow />} />
 					<Route path="/tnc" element={<Tnc />} />
+					<Route path="/privacy" element={<Privacy />} />
 					*/}
 
 		  <Route path="/jobs" element={<Jobs />} />
@@ -258,6 +260,7 @@ function App() {
 		  <Route path="/product" element={<Product />} />
 		  <Route path="/buynow" element={<BuyNow />} />
 		  <Route path="/tnc" element={<Tnc />} />
+		  <Route path="/privacy" element={<Privacy />} />
 				</Routes>
 			</main>
 		</div>

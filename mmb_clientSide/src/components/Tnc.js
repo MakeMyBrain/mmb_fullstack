@@ -24,7 +24,7 @@ const Tnc = () => {
                 <h1 id='head_about'>
                     Terms & Conditions
                 </h1>
-                <p>Welcome to MakeMyBrain! These Terms and Conditions ("Terms") govern your access to and use of the MakeMyBrain website (the "Website") and the purchase of products available on the Website. By accessing or using the Website and making a purchase, you agree to be bound by these Terms. Please read them carefully.</p>
+                <p>Welcome to MakeMyBrain! These Terms and Conditions govern your access to and use of the MakeMyBrain website (makemybrain.com) and the purchase of products available on the Website. By accessing or using the Website and making a purchase, you agree to be bound by these Terms. Please read them carefully.</p>
                 <div id='containers'>
                     <h2 className='about_subhead'>
                         1. General
@@ -57,7 +57,8 @@ const Tnc = () => {
                     </h2>
                     <p>
                     4.1 Delivery Partners: MakeMyBrain uses Shiprocket as the delivery partner for shipping products. Delivery times may vary depending on your location and other factors beyond our control. MakeMyBrain will make reasonable efforts to ensure timely delivery but cannot be held responsible for any delays or delivery issues.<br/><br/>
-                    4.2 Shipping Charges: Shipping charges may apply to your order and will be displayed during the checkout process. These charges may vary depending on the shipping address and the weight or dimensions of the products.
+                    4.2 Shipping Charges: Shipping charges may apply to your order and will be displayed during the checkout process. These charges may vary depending on the shipping address and the weight or dimensions of the products.<br/><br/>
+                    4.3 Delivery Time: We deliver our products within the duration of 4-15 days. In case you do not receive the product within the specified duration, kindly revert back to us on the provided contacts.
                     
                     </p>
                     <hr/>
