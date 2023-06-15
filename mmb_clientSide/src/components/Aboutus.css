@@ -1,26 +1,25 @@
 #head_about {
     text-align: center;
     padding-top: 30px;
-    margin-top: 40px;
+    margin-top: 65px;
 }
 
 #banner_about {
-    max-width:350px;
+    max-width:500px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     display: block;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
+   
 }
 
-h2 {
+.about_subhead {
     font-weight: 700;
+    font-size: 20px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 15px;
     color: #181818;
     z-index: 1000;
     text-align: left;
@@ -30,4 +29,24 @@ p {
     margin-left: 20px;
     margin-right: 20px;
     color: #181818;
+}
+
+.about_body {
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width : 400px) {
+    .about_body {
+        max-width: 320px;
+    }
+
+    #banner_about {
+    max-width:300px;
+   
+   
+}
+
 }

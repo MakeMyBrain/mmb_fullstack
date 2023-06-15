@@ -1,8 +1,8 @@
 import NavbarComp from './Navbar'
 import Footer from './Footer'
-import about from '../media/about us banner.jpg'
+import about from '../media/about us banner.png'
 import './Aboutus.css'
-import { useLayoutEffect } from 'react'
+import { useEffect, useLayoutEffect } from 'react'
 
 const AboutUs = () => {
 
@@ -11,30 +11,47 @@ const AboutUs = () => {
     }
       
       );
+      useEffect(() => {
+        document.title = "About Us | MakeMyBrain"
+      }, [])
 
     return (
         <div>
             <header>
                 <NavbarComp></NavbarComp>
             </header>
-            <main>
+            <main className='about_body'>
                 <h1 id='head_about'>
                     About Us.
                 </h1>
                 <img src={about} alt='About Us' id='banner_about'/>
                 <div id='containers'>
-                    <h2>
+                    <h2 className='about_subhead'>
                         Our Story
                     </h2>
                     <p>
                     Started in 2022, MakeMyBrain is an Indian startup in 
-                    the career and Mental Health space. This platform has been 
+                    the Mental Health wellness space. This platform has been 
                     created by some students of IIT Kharagpur, driven by 
                     the purpose to make mental health more affordable and 
-                    approachable for the youth.
+                    approachable for the country through practical modern 
+                    solution that are more acceptable by people.<br/><br/>
+                    The startup was founded by Binay Bhattacharya in 2022, and incorporated 
+                    as a private limited company in 2023. Gradually 
+                    the team grew as the strategic and tech arms unfolded. Ujjwal Raj, 
+                    Shivam Dwivedi, Sayan Layek and Shrit Gautam brought the tech side 
+                    of the company to life, and on the other side Yash Jangade, Abhishek 
+                    Kabi, Aryan Gupta and Prithviraj Suryavanshi significantly contributed 
+                    to give a direction to the startup. Mr. Arvind Verma, CEO of Vehiclecare, 
+                    Mr. Rajiv Sikka, Ex-CEO of Indian Oil - Adani Gas Pvt Ltd, and 
+                    Nishant Jindal, CEO of Jumbo and a successful Educational Youtuber have 
+                    remained a constant support on the growth journey.<br/><br/>
+                    Link for Relevant certificate - <a href='https://drive.google.com/file/d/1Z_9Cz9LApWzkTzc_bBVtwG4Kx2HDiPxh/view?usp=sharing'>Click Here</a>
+
+
                     </p>
                     <hr/>
-                    <h2>
+                    <h2 className='about_subhead'>
                         Our Mission
                     </h2>
                     <p>
@@ -43,24 +60,29 @@ const AboutUs = () => {
                     problem that you are presently facing. Standing 
                     firm by the tagline, “Because You Matter”, we are 
                     working hard to increase the awareness regarding mental 
-                    health among the youth.
+                    health among the Indians.
                     </p>
                     <hr/>
-                    <h2>
+                    <h2 className='about_subhead'>
                         Our Products
                     </h2>
                     <p>
-                    We offer aMind Tales - a huge library of real-life stories on how people 
+
+                    Our first product is <b>"ASCEND Stress Relief Kit"</b>, that sontains a variety of 
+                    instant stress and anxiety relief gadgets and booklets that will help you get 
+                    back to a normal state, so that you can carry on with your work in a more 
+                    focused manner. <br/><br/>    
+                    We offer <b>Mind Tales</b> - a huge library of real-life stories on how people 
                     overcame their mental health issues, may it be in career, relationships, 
                     loneliness or trauma. You can read your favorite stories in your own language. 
                     Along with that we have a pool of handpicked therapists who specialize in various 
-                    aspects of psychology and have the experience to handle your issues. <br/><br/>The 
-                    platform is accompanied by "Velvet Vibes" feature that plays suitable 
-                    music as per your chosen present mood. Unlike clinical 
-                    therapies, we are a platform where you can comfortably discuss 
-                    your life without being judged, and also check out the various ways the people 
-                    all over the world have solved their issues, in your own Indian language. 
-                    However, in case of extreme mental health issues, we advise taking clinical help.
+                    aspects of psychology and have the experience to handle your issues. <br/><br/>
+                    The 
+                    platform is accompanied by <b>"Mind Your Mind"</b> course on Preventive Mental Health wellness 
+                    which contains our recorded videos and chapters on various aspects of mental wellness. The 
+                    chapters have been carefully researched upon and verified in order to keep it interesting as 
+                    well as meaningful for the audience.
+                    
                     </p>
                 </div>
             </main>

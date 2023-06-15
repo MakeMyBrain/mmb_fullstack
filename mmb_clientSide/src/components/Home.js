@@ -13,7 +13,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Home = () => {
 	useEffect(() => {
-		document.title = "One-Stop Solution for Career and Mental Health";
+		document.title = "One-Stop solution for Stress and Mental Health issues - MakeMyBrain";
 	}, []);
 	return (
 		<div>

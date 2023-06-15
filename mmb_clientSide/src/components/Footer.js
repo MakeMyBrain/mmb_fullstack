@@ -18,11 +18,12 @@ const Footer = () => {
 				<Container>
 					<Row className="justify-content-md-center text-white">
 						<Col sm={3}>
-							<h5>About Us</h5>
+							<h5>Address</h5>
 							<p id="footer_text">
-								MakeMyBrain aims to empower you to express your
-								emotions and thoughts to the fullest, without
-								the fear of being judged.
+								302, Second Floor, Block A, Bokaro Enclave, 
+								Baghraibera, Bokaro Steel City, Jharkhand - 827013<br/>
+								WhatsApp - 7979033873<br/>
+								Email - binay@makemybrain.com
 							</p>
 						</Col>
 						<Col sm={3}>
@@ -30,7 +31,7 @@ const Footer = () => {
 							<ul>
 								<li>
 									<Link
-										to={"/category"}
+										to={"/mindTales"}
 										className="text-white text-decoration-none"
 									>
 										Mind Tales
@@ -38,10 +39,10 @@ const Footer = () => {
 								</li>
 								<li>
 									<Link
-										to={"/openup"}
+										to={"/courses"}
 										className="text-white text-decoration-none"
 									>
-										Feel Better
+										Mind Your Mind
 									</Link>
 								</li>
 								<li>
@@ -54,10 +55,18 @@ const Footer = () => {
 								</li>
 								<li>
 									<Link
-										to={"/therapist"}
+										to={"/tnc"}
 										className="text-white text-decoration-none"
 									>
-										Find Therapist
+										Terms & Conditions
+									</Link>
+								</li>
+								<li>
+									<Link
+										to={"/privacy"}
+										className="text-white text-decoration-none"
+									>
+										Privacy Policy
 									</Link>
 								</li>
 							</ul>
@@ -84,7 +93,7 @@ const Footer = () => {
 							<Row>
 								<h7>Connect with us</h7>
 								<Col>
-									<a href="">
+									<a href="https://www.facebook.com/profile.php?id=100093381436424">
 										<FaFacebookSquare
 											className="text-white ms-1"
 											size="40"
@@ -92,7 +101,7 @@ const Footer = () => {
 									</a>
 								</Col>
 								<Col>
-									<a href="https://www.instagram.com/makemybrain_india/">
+									<a href="https://www.instagram.com/make.my.brain/">
 										<FaInstagram
 											className="text-white "
 											size="40"
