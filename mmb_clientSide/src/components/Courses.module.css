@@ -28,14 +28,14 @@
 	text-align: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 	.heading > h1 {
-		font-size: 32px;
+		font-size: 34px;
 		letter-spacing: 0.12em;
 	}
 
 	.heading > p {
-		font-size: 16px;
+		font-size: 18px;
 		letter-spacing: 0.06em;
 	}
 }
@@ -55,7 +55,6 @@
 /*----------------Course Content-------------*/
 .course-details {
 	font-family: "Inter", sans-serif;
-	/* overflow-x: hidden; */
 	height: 100vh;
 	display: flex;
 	border-top: 1px solid #cecece;
@@ -66,6 +65,7 @@
 	width: 300px;
 	height: 100%;
 	position: absolute;
+	z-index: 1;
 }
 
 .course-outline-wrap {
@@ -128,16 +128,41 @@
 
 .video-container {
 	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 
-.video-container > iframe {
-	width: 649px;
-	height: 365px;
-	border-radius: 10px;
+.player-wrapper {
+	position: relative;
+	padding-top: 56.25%;
+	max-width: 711px;
+	margin: 0 auto;
+}
+
+@media (min-width: 1070px) {
+	.player-wrapper {
+		padding-top: 0;
+		width: 711px;
+		height: 400px;
+	}
+}
+
+.react-player {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+@media (max-width: 768px) {
+	.intro-text > h2 {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+}
+
+@media (max-width: 420px) {
+	.intro-text > h2 {
+		font-size: 1rem;
+		font-weight: 600;
+	}
 }
 
 .lower-box {
@@ -149,4 +174,68 @@
 	font-size: 0.975rem;
 	font-weight: 400;
 	padding: 15px;
+	z-index: inherit;
+	overflow-wrap: anywhere;
+}
+
+.course-content {
+	flex: 1;
+}
+
+.arrow-button {
+	display: none;
+	position: absolute;
+	cursor: pointer;
+	background-color: #000;
+	color: #fff;
+	padding: 8.6px;
+	text-align: center;
+	width: 40px;
+	border-radius: 2px;
+	z-index: 2;
+}
+
+.arrow-button span {
+	font-size: 30px;
+}
+
+@media (max-width: 768px) {
+	.arrow-button {
+		display: block;
+		padding: 9.6px;
+	}
+
+	.arrow-button span {
+		font-size: 25px;
+	}
+
+	.intro-text > h2 {
+		margin-left: 10px;
+	}
+
+	.course-content {
+		flex: 1 0 100%;
+		margin-left: 0px;
+	}
+
+	.course-outline {
+		border-right: 1px solid black;
+	}
+
+	.shift {
+		color: #000;
+		background-color: transparent;
+		margin-left: 250px;
+	}
+}
+
+@media (max-width: 420px) {
+	.arrow-button {
+		display: block;
+		padding: 9.8px;
+	}
+
+	.arrow-button span {
+		font-size: 22px;
+	}
 }
