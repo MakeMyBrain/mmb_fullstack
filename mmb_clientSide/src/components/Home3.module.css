@@ -3,13 +3,23 @@
 
 .banner {
 	width: 100%;
-	height: 130vh;
+	height: 100vh;
 	background-color: #000000;
 	margin-top: 65px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+
+.therapy {
+	margin-bottom: 60px;
+	margin-top: 40px;
+}
+
+.therapy_title {
+	size: 40px;
+	color: white;
 }
 
 .heading-primary {
@@ -20,18 +30,30 @@
 
 .heading-primary-main {
 	font-family: "Inter", sans-serif;
-	font-weight: 900;
-	font-size: 60px;
-	letter-spacing: 0.3em;
+	font-weight: 700;
+	font-size: 40px;
+	/* letter-spacing: 0.1em; */
 	margin-right: -0.5em;
-	text-shadow: 0 0px 0.7px rgba(211, 211, 211, 0.9),
+	text-shadow: 0 0px 0.3px rgba(211, 211, 211, 0.9),
 		0 0 38px rgba(255, 255, 255, 0.7);
+}
+
+.therapy-links {
+	text-decoration: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 25px;
+	padding-top: 50px;
+	color: #00d1ff;
+	font-weight: 600;
 }
 
 .heading-primary-sub {
 	font-weight: 400;
-	font-size: 25px;
-	letter-spacing: 0.118em;
+	font-size: 20px;
+	padding-top: 20px;
+	/* letter-spacing: 0.118em; */
 }
 
 .banner-links {
@@ -71,8 +93,8 @@
 
 @media (max-width: 700px) {
 	.heading-primary-main {
-		font-size: 50px;
-		letter-spacing: 0.5em;
+		font-size: 35px;
+		/* letter-spacing: 0.2em; */
 		margin-right: -0.5em;
 	}
 
@@ -81,8 +103,8 @@
 	}
 
 	.heading-primary-sub {
-		font-size: 25px;
-		letter-spacing: 0.118em;
+		font-size: 20px;
+		/* letter-spacing: 0.118em; */
 	}
 
 	.product-img {
@@ -92,14 +114,14 @@
 
 @media (max-width: 400px) {
 	.heading-primary-main {
-		font-size: 35px;
-		letter-spacing: 0.5em;
+		font-size: 25px;
+		/* letter-spacing: 0.2em; */
 		margin-right: -0.5em;
 	}
 
 	.heading-primary-sub {
-		font-size: 17px;
-		letter-spacing: 0.118em;
+		font-size: 15px;
+		/* letter-spacing: 0.118em; */
 	}
 
 	.product-img {

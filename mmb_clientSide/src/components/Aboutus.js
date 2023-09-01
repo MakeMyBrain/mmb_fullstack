@@ -3,6 +3,7 @@ import Footer from './Footer'
 import about from '../media/about us banner.png'
 import './Aboutus.css'
 import { useEffect, useLayoutEffect } from 'react'
+import certi from '../media/certificate.JPG'
 
 const AboutUs = () => {
 
@@ -44,9 +45,10 @@ const AboutUs = () => {
                     Kabi, Aryan Gupta and Prithviraj Suryavanshi significantly contributed 
                     to give a direction to the startup. Mr. Arvind Verma, CEO of Vehiclecare, 
                     Mr. Rajiv Sikka, Ex-CEO of Indian Oil - Adani Gas Pvt Ltd, and 
-                    Nishant Jindal, CEO of Jumbo and a successful Educational Youtuber have 
+                    Nishant Jindal, a successful Educational Youtuber have 
                     remained a constant support on the growth journey.<br/><br/>
-                    Link for Relevant certificate - <a href='https://drive.google.com/file/d/1Z_9Cz9LApWzkTzc_bBVtwG4Kx2HDiPxh/view?usp=sharing'>Click Here</a>
+                    Relevant certificate -<br/> 
+                    <img src={certi} className='certificate' alt='certificate of practice'/>
 
 
                     </p>
@@ -68,10 +70,9 @@ const AboutUs = () => {
                     </h2>
                     <p>
 
-                    Our first product is <b>"ASCEND Stress Relief Kit"</b>, that sontains a variety of 
-                    instant stress and anxiety relief gadgets and booklets that will help you get 
-                    back to a normal state, so that you can carry on with your work in a more 
-                    focused manner. <br/><br/>    
+                    Our first product is <b>"Counselling Therapies"</b>, made for people seeking help 
+                    with mental issues like depression, anxiety, sleepa and anger problems, OCD, and many 
+                    more. Our therapies are highly effective when taken in a pack of 2-3. <br/><br/>    
                     We offer <b>Mind Tales</b> - a huge library of real-life stories on how people 
                     overcame their mental health issues, may it be in career, relationships, 
                     loneliness or trauma. You can read your favorite stories in your own language. 

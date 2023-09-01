@@ -38,6 +38,13 @@ p {
     margin-right: auto;
 }
 
+.certificate {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
 @media screen and (max-width : 400px) {
     .about_body {
         max-width: 320px;

@@ -147,24 +147,26 @@ const Home3 = () => {
 			<section>
 				<div className={Styles["banner"]}>
 					<div className={Styles["text-box"]}>
+						
 						<h1 className={Styles["heading-primary"]}>
 							<span className={Styles["heading-primary-main"]}>
-								ASCEND
+								Counselling Therapy.
 							</span>
 							<br />
 							<span className={Styles["heading-primary-sub"]}>
-								YOUR STRESS RELIEF KIT
-							</span>
+								Solution for all your Mental Health Problems
+							</span><br/>
+							<a href="https://api.whatsapp.com/send?phone=7979033873&text=I%20want%20Therapy" className={Styles["therapy-links"]}>Click Here &gt;</a>
 						</h1>
 					</div>
 					<div className={Styles["banner-links"]}>
-						<Link to='/product'>Learn More &#62;</Link>
-						<Link to='/buynow'>Buy Now &#62;</Link>
+						{/* <Link to='/product'>Learn More &#62;</Link>
+						<Link to='/buynow'>Buy Now &#62;</Link> */}
 						{/* <a href="/">Learn More &#62;</a> */}
 						{/* <a href="/">Buy Now &#62;</a> */}
 					</div>
-					<div className={Styles["product-space"]}></div>
-					<div className={Styles["product-box"]}><img src={stresskit} alt='Products' className={Styles["product-img"]}/></div>
+					{/* <div className={Styles["product-space"]}></div>
+					<div className={Styles["product-box"]}><img src={stresskit} alt='Products' className={Styles["product-img"]}/></div> */}
 				</div>
 			</section>
 			{/* <span class="heading-primary-sub ">

@@ -67,6 +67,9 @@ const NavbarComp = () => {
 							<Nav.Link as={Link} to={"/"}>
 								Home
 							</Nav.Link>
+							<Nav.Link as={Link} to={"/therapist"}>
+								Therapists
+							</Nav.Link>
 							<Nav.Link as={Link} to={"/category"}>
 								Blogs
 							</Nav.Link>

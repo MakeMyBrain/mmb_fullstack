@@ -39,10 +39,10 @@ const Footer = () => {
 								</li>
 								<li>
 									<Link
-										to={"/courses"}
+										to={"/therapist"}
 										className="text-white text-decoration-none"
 									>
-										Mind Your Mind
+										Therapists
 									</Link>
 								</li>
 								<li>

@@ -40,6 +40,8 @@ import Product from "./pages/Product";
 import BuyNow from "./pages/BuyNow";
 import Tnc from "./components/Tnc";
 import Privacy from "./components/Privacy";
+import UserVoice from "./pages/UserVoice";
+import TalkToKaira from "./pages/TalkToKaira";
 
 function App() {
 	const [songs, setSongs] = useState([
@@ -97,6 +99,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<AboutUs />} />
+					<Route path="/heybabe" element={<TalkToKaira />} />
 					<Route path="/faq" element={<Faq />} />
 					<Route path="/song" element={<Song song={songs} />} />
 					<Route
@@ -114,7 +117,7 @@ function App() {
 					/>
 					<Route path="/courses" element={<Courses />} />
 					<Route path="/mindTales" element={<MindTales />} />
-					<Route path="/therapist" element={<Therapist />} />
+					<Route path="/therapist" element={<Home />} />
 					<Route path="/Story/:index" element={<Story />} />
 					<Route path="/Login" element={<LoginPage />} />
 					<Route path="/Signup" element={<SignupPage />} />
@@ -236,7 +239,7 @@ function App() {
 
 		  <Route path="/jobs" element={<Jobs />} />
           <Route path="/companion" element={<Companion />} />
-          <Route path="/therapist" element={<Therapist />} />
+          <Route path="/therapist" element={<Home />} />
           <Route path="/Story/:index" element={<Story />} />
           <Route path="/Login" element={<LoginPage />} />
           <Route path="/Signup" element={<SignupPage />} />
@@ -261,6 +264,7 @@ function App() {
 		  <Route path="/buynow" element={<BuyNow />} />
 		  <Route path="/tnc" element={<Tnc />} />
 		  <Route path="/privacy" element={<Privacy />} />
+		  <Route path="/heybabe" element={<TalkToKaira />} />
 				</Routes>
 			</main>
 		</div>

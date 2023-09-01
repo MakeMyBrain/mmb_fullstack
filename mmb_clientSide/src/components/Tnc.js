@@ -63,11 +63,12 @@ const Tnc = () => {
                     </p>
                     <hr/>
                     <h2 className='about_subhead'>
-                        5. Returns and Refunds
+                        5. Returns, cancellation and Refunds
                     </h2>
                     <p>
                     5.1 Return Policy: MakeMyBrain accepts returns within 7 days from the date of delivery, subject to certain conditions. Please text us on WhatsApp on the number provided, or send us an E-mail regarding your return as per the email ID provided on the Website.<br/><br/>
-                    5.2 Refunds: Refunds will be issued in accordance with our Return Policy. MakeMyBrain reserves the right to refuse a refund if the returned product does not meet the specified conditions.                    
+                    5.2 Cancellation policy: Once the product is ordered, it can not be cancelled. The only option to get a refund is to return it once received by the customer.<br/><br/>
+                    5.3 Refunds: Refunds will be issued in accordance with our Return Policy. MakeMyBrain reserves the right to refuse a refund if the returned product does not meet the specified conditions.                    
                     </p>
                     <hr/>
                     <h2 className='about_subhead'>
