@@ -18,9 +18,14 @@ import speak from "../controllers/kaira";
 const TalkToKaira = () => {
   const [recognizedText, setRecognizedText] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("en-US");
+  const [displayedTranscript, setDisplayedTranscript] = useState("");
   const { transcript, resetTranscript } = useSpeechRecognition({
     language: selectedLanguage,
   });
+
+  useEffect(() => {
+    setDisplayedTranscript(transcript);
+  }, [transcript]);
 
   const [messagest1, setMessagest1] = useState([
     {
@@ -56,8 +61,6 @@ const TalkToKaira = () => {
     const fetchData = async () => {
       try {
         document.title = "Talk to Kaira | MakeMyBrain";
-
-        console.log(messagest1 + messagest2);
 
         const chaplusi = await getResponse(1, messagest1);
         await speak(chaplusi);
@@ -103,6 +106,7 @@ const TalkToKaira = () => {
   const handleChildVariable2 = () => {
     setRecognizedText(transcript);
     console.log(transcript);
+    setDisplayedTranscript("");
   };
 
   return (
@@ -148,7 +152,7 @@ const TalkToKaira = () => {
               Stop Speaking
             </button>
           </div>
-          <div className="transcript">{transcript}</div>
+          <div className="transcript">{displayedTranscript}</div>
         </div>
 
         <Link
