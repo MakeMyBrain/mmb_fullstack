@@ -1,8 +1,11 @@
+async function speak(text) {
+  await new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 5000);
+  });
 
-
-const speak=async(text)=>{
-    await setTimeout(async() => console.log("speaking..."), 3000);
-    console.log(text)
+  console.log("done speaking...", text);
 }
 
-export default speak
+export default speak;
