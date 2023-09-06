@@ -19,14 +19,10 @@ const TalkToKaira = () => {
   const [recognizedText, setRecognizedText] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("en-US");
   const [displayedTranscript, setDisplayedTranscript] = useState("");
+  const [kairaActivated, setKairaActivated] = useState(false);
   const { transcript, resetTranscript } = useSpeechRecognition({
     language: selectedLanguage,
   });
-
-  useEffect(() => {
-    setDisplayedTranscript(transcript);
-  }, [transcript]);
-
   const [messagest1, setMessagest1] = useState([
     {
       role: "system",
@@ -40,76 +36,69 @@ const TalkToKaira = () => {
         "Give answers in 10-15 words. Gently Ask counter questions over what the user has told. Do not show sympathy.",
     },
   ]);
-  // useLayoutEffect(() => {
-  //   window.scrollTo(0, 0);
-  // });
-  //childVariable containg the text given by user
-  // useEffect(() => {
-  //   document.title = "Speak - Express your Emotions | MakeMyBrain"
-  //   const chaplusi = await getResponse(1,messagest1);
-  //   await speak(chaplusi);
-  //   const reply = await getResponse(1,messagest1);
-  //   let temp1=messagest1;
-  //   let temp2=messagest2;
-  //   temp1.append({'role':'system','content':reply})
-  //   temp2.append({'role':'system','content':reply})
-  //   setMessagest1(temp1)
-  //   setMessagest2(temp2)
-  //   await speak(reply);
-  // }, [recognizedText])
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        document.title = "Talk to Kaira | MakeMyBrain";
-        const temp11 = [...messagest1, { role: "user", content: transcript }];
-        const temp22 = [...messagest2, { role: "user", content: transcript }];
-        setMessagest1(temp11);
-        setMessagest2(temp22);
-        const chaplusi = await getResponse(1, messagest1);
-        // await speak(chaplusi);
-        
-        const reply = await getResponse(2, messagest2);
 
-        console.log(reply + `hey`);
+  const wait = (milliseconds) =>
+    new Promise((resolve) => setTimeout(resolve, milliseconds));
+  const speakAsync = (reply, selectedLanguage) =>
+    new Promise((resolve, reject) => {
+      const speechSynthesis = window.speechSynthesis;
+      const utterance = new SpeechSynthesisUtterance(reply);
+      const voices = speechSynthesis.getVoices();
+      const femaleVoice = voices.find((voice) => voice.name.includes("Female"));
 
-        if(!reply)return
-        const temp1 = [...messagest1, { role: "system", content: reply }];
-        const temp2 = [...messagest2, { role: "system", content: reply }];
-        // console.log("TestPrint1: ",temp1)
-        // console.log("TestPrint2: ",temp2)
-
-        setMessagest1(temp1);
-        setMessagest2(temp2);
-
-        const speechSynthesis = window.speechSynthesis;
-        const utterance = new SpeechSynthesisUtterance(reply);
-
-         // Find and set a female voice. You may need to customize this based on available voices in your browser.
-        const voices = speechSynthesis.getVoices();
-        const femaleVoice = voices.find((voice) => voice.name.includes("Female"));
-
-        if (femaleVoice) {
-          utterance.voice = femaleVoice;
-        }
-
-        // You can customize the voice and other settings here if needed
-        utterance.lang = selectedLanguage;
-
-        // Event handler when speech finishes
-        utterance.onend = () => {
-          // Handle any actions after speech playback ends
-        };
-
-        // Start speech synthesis
-        speechSynthesis.speak(utterance);
-
-        await speak(reply);
-      } catch (error) {
-        console.error("Error:", error);
+      if (femaleVoice) {
+        utterance.voice = femaleVoice;
       }
-    };
 
-    fetchData();
+      utterance.lang = selectedLanguage;
+
+      utterance.onend = () => {
+        resolve();
+      };
+
+      utterance.onerror = (error) => {
+        reject(error);
+      };
+
+      speechSynthesis.speak(utterance);
+    });
+
+  useEffect(() => {
+    setDisplayedTranscript(transcript);
+  }, [transcript]);
+  const fetchData = async () => {
+    try {
+      document.title = "Talk to Kaira | MakeMyBrain";
+      const temp11 = [...messagest1, { role: "user", content: transcript }];
+      const temp22 = [...messagest2, { role: "user", content: transcript }];
+      const chaplusi = await getResponse(1, temp11);
+      await speakAsync(chaplusi, selectedLanguage);
+      await wait(5000);
+      console.log("chaplusi: ", chaplusi);
+      const reply = await getResponse(2, temp22);
+      await speakAsync(reply, selectedLanguage);
+      await wait(5000);
+      console.log("reply: ", reply);
+      const temp1 = [
+        ...messagest1,
+        { role: "user", content: transcript },
+        { role: "system", content: reply },
+      ];
+      const temp2 = [
+        ...messagest2,
+        { role: "user", content: transcript },
+        { role: "system", content: reply },
+      ];
+      await setMessagest1(temp1);
+      await setMessagest2(temp2);
+      await resetTranscript();
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+  useEffect(() => {
+    if (kairaActivated) fetchData();
+    else setKairaActivated(true);
   }, [recognizedText]);
 
   const handleListen = () => {
@@ -132,9 +121,8 @@ const TalkToKaira = () => {
   }
 
   const handleChildVariable2 = () => {
-    setRecognizedText(transcript);
-    console.log(transcript);
     setDisplayedTranscript("");
+    setRecognizedText(transcript);
   };
 
   return (
