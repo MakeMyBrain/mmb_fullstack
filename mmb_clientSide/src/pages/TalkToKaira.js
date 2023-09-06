@@ -40,9 +40,9 @@ const TalkToKaira = () => {
         "Give answers in 10-15 words. Gently Ask counter questions over what the user has told. Do not show sympathy.",
     },
   ]);
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
+  // useLayoutEffect(() => {
+  //   window.scrollTo(0, 0);
+  // });
   //childVariable containg the text given by user
   // useEffect(() => {
   //   document.title = "Speak - Express your Emotions | MakeMyBrain"
@@ -61,19 +61,47 @@ const TalkToKaira = () => {
     const fetchData = async () => {
       try {
         document.title = "Talk to Kaira | MakeMyBrain";
-
+        const temp11 = [...messagest1, { role: "user", content: transcript }];
+        const temp22 = [...messagest2, { role: "user", content: transcript }];
+        setMessagest1(temp11);
+        setMessagest2(temp22);
         const chaplusi = await getResponse(1, messagest1);
-        await speak(chaplusi);
-
+        // await speak(chaplusi);
+        
         const reply = await getResponse(2, messagest2);
 
         console.log(reply + `hey`);
 
+        if(!reply)return
         const temp1 = [...messagest1, { role: "system", content: reply }];
         const temp2 = [...messagest2, { role: "system", content: reply }];
+        // console.log("TestPrint1: ",temp1)
+        // console.log("TestPrint2: ",temp2)
 
         setMessagest1(temp1);
         setMessagest2(temp2);
+
+        const speechSynthesis = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance(reply);
+
+         // Find and set a female voice. You may need to customize this based on available voices in your browser.
+        const voices = speechSynthesis.getVoices();
+        const femaleVoice = voices.find((voice) => voice.name.includes("Female"));
+
+        if (femaleVoice) {
+          utterance.voice = femaleVoice;
+        }
+
+        // You can customize the voice and other settings here if needed
+        utterance.lang = selectedLanguage;
+
+        // Event handler when speech finishes
+        utterance.onend = () => {
+          // Handle any actions after speech playback ends
+        };
+
+        // Start speech synthesis
+        speechSynthesis.speak(utterance);
 
         await speak(reply);
       } catch (error) {

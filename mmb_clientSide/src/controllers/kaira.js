@@ -2,7 +2,7 @@ async function speak(text) {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 5000);
+    }, 0);
   });
 
   console.log("done speaking...", text);
