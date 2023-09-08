@@ -20,6 +20,9 @@ const TalkToKaira = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("en-US");
   const [displayedTranscript, setDisplayedTranscript] = useState("");
   const [kairaActivated, setKairaActivated] = useState(false);
+  const [kairaSpokeForFirstTime, setKairaSpokeForFirstTime] = useState(false);
+  const [kairaSpokeForSecondTime, setKairaSpokeForSecondTime] = useState(false);
+  const [kairaSpokeForThirdTime, setKairaSpokeForThirdTime] = useState(false);
   const { transcript, resetTranscript } = useSpeechRecognition({
     language: selectedLanguage,
   });
@@ -72,12 +75,61 @@ const TalkToKaira = () => {
       const temp11 = [...messagest1, { role: "user", content: transcript }];
       const temp22 = [...messagest2, { role: "user", content: transcript }];
       const chaplusi = await getResponse(1, temp11);
-      await speakAsync(chaplusi, selectedLanguage);
-      await wait(5000);
+
+      if (
+        kairaSpokeForThirdTime ||
+        !kairaSpokeForFirstTime ||
+        !kairaSpokeForSecondTime
+      ) {
+        await speakAsync(chaplusi, selectedLanguage);
+      }
+      if (
+        kairaSpokeForFirstTime &&
+        kairaSpokeForSecondTime &&
+        !kairaSpokeForThirdTime
+      ) {
+        setKairaSpokeForThirdTime(true);
+      }
+
+      if (!kairaSpokeForFirstTime) {
+        setKairaSpokeForFirstTime(true);
+        const temp1 = [
+          ...messagest1,
+          { role: "user", content: transcript },
+          { role: "system", content: chaplusi },
+        ];
+        const temp2 = [
+          ...messagest2,
+          { role: "user", content: transcript },
+          { role: "system", content: chaplusi },
+        ];
+        await setMessagest1(temp1);
+        await setMessagest2(temp2);
+        await resetTranscript();
+        return;
+      }
+      if (!kairaSpokeForSecondTime) {
+        setKairaSpokeForSecondTime(true);
+        const temp1 = [
+          ...messagest1,
+          { role: "user", content: transcript },
+          { role: "system", content: chaplusi },
+        ];
+        const temp2 = [
+          ...messagest2,
+          { role: "user", content: transcript },
+          { role: "system", content: chaplusi },
+        ];
+        await setMessagest1(temp1);
+        await setMessagest2(temp2);
+        await resetTranscript();
+        return;
+      }
+      await wait(100);
       console.log("chaplusi: ", chaplusi);
       const reply = await getResponse(2, temp22);
       await speakAsync(reply, selectedLanguage);
-      await wait(5000);
+      await wait(100);
       console.log("reply: ", reply);
       const temp1 = [
         ...messagest1,
